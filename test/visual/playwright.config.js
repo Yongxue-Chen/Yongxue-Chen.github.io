@@ -1,0 +1,1 @@
+const{defineConfig:defineConfig}=require("@playwright/test"),path=require("path");module.exports=defineConfig({testDir:__dirname,timeout:3e4,use:{baseURL:"http://127.0.0.1:4173",browserName:"chromium"},webServer:{command:"python3 -m http.server 4173 --bind 127.0.0.1 --directory _site",cwd:path.resolve(__dirname,"../.."),url:"http://127.0.0.1:4173",reuseExistingServer:!0}});
