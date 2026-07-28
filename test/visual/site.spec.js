@@ -1,9 +1,11 @@
 const { test, expect } = require("@playwright/test");
 
-test("homepage has clear identity and research summary", async ({ page }) => {
+test("homepage has clear identity and prose research summary", async ({ page }) => {
   await page.goto("/");
   await expect(page.locator(".site-brand")).toHaveText("Yongxue Chen");
-  await expect(page.locator(".home-stat")).toHaveCount(3);
+  await expect(page.locator(".home-stat")).toHaveCount(0);
+  await expect(page.locator("article .lang-en").first()).toContainText("13 peer-reviewed journal articles");
+  await expect(page.locator("article .lang-en").first()).toContainText("5 granted Chinese invention patents");
   await expect(page.locator(".profile img")).toHaveAttribute("alt", /Yongxue Chen|prof_pic/i);
 });
 
@@ -22,6 +24,21 @@ test("publications use one consistent expanded layout", async ({ page }) => {
     }),
   );
   expect(new Set(styles.map((style) => style.join("|"))).size).toBe(1);
+});
+
+test("CV navigation wraps as plain links and sections are visually distinct", async ({ page }) => {
+  await page.goto("/cv/");
+  const nav = page.locator(".cv-nav");
+  const navStyle = await nav.evaluate((node) => getComputedStyle(node));
+  expect(navStyle.position).toBe("static");
+  expect(navStyle.flexWrap).toBe("wrap");
+  expect(navStyle.overflowX).toBe("visible");
+  const linkStyle = await page.locator(".cv-nav a").first().evaluate((node) => getComputedStyle(node));
+  expect(linkStyle.backgroundColor).toBe("rgba(0, 0, 0, 0)");
+  expect(linkStyle.borderTopWidth).toBe("0px");
+  const headingStyle = await page.locator("h2.cv-heading").first().evaluate((node) => getComputedStyle(node));
+  expect(headingStyle.borderLeftWidth).toBe("4px");
+  expect(headingStyle.backgroundImage).not.toBe("none");
 });
 
 test("language selection updates document semantics and navigation", async ({ page }) => {

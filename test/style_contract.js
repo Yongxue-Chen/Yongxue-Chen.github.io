@@ -21,12 +21,17 @@ requireMatch(config, /^search_enabled: false$/m, "Global search should stay disa
 requireMatch(config, /^footer_fixed: false$/m, "The footer must not obscure page content.");
 requireMatch(config, /^serve_og_meta: true\b/m, "Open Graph metadata must stay enabled.");
 requireMatch(config, /^serve_schema_org: true\b/m, "Schema.org metadata must stay enabled.");
-requireMatch(home, /class="home-stats"/, "The homepage research summary is missing.");
+requireMatch(home, /13 peer-reviewed journal articles/, "The homepage publication count is missing from the prose.");
+requireMatch(home, /5 granted Chinese invention patents/, "The homepage patent count is missing from the prose.");
+if (/class="home-stat/.test(home)) throw new Error("Homepage metrics must remain in prose, not cards.");
 requireMatch(language, /include site_enhancements\.liquid/, "Shared site enhancements are not wired in.");
 requireMatch(enhancements, /max-height: none !important/, "Publication abstracts must remain expanded.");
 requireMatch(enhancements, /text-align: left !important/, "Publication abstracts must remain left aligned.");
 requireMatch(enhancements, /border-bottom: 1px solid var\(--site-border\)/, "Publication separators are missing.");
 requireMatch(enhancements, /grid-template-columns: 144px minmax\(0, 1fr\)/, "Publication rows lost their consistent grid.");
+requireMatch(enhancements, /--global-theme-color: #b55432/, "The warm terracotta palette is missing.");
+requireMatch(enhancements, /position: static;[\s\S]*?flex-wrap: wrap !important;[\s\S]*?overflow: visible;/, "CV navigation must wrap without a scrolling bar.");
+if (/\.cv-nav a \{[\s\S]*?background: var\(--site-surface\)/.test(enhancements)) throw new Error("CV navigation links must not look like cards.");
 requireMatch(publications, /bibliography --query @\*\[author_type=first\]/, "First-author publications are missing.");
 requireMatch(publications, /bibliography --query @\*\[author_type=co\]/, "Co-authored publications are missing.");
 requireMatch(cv, /date_zh: "2025\.10"/, "Quoted Chinese October date regressed.");
