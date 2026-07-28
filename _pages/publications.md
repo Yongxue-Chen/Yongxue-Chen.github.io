@@ -10,17 +10,7 @@ nav_order: 2
 {% include lang_toggle.liquid %}
 
 <style>
-  /* Abstracts stay collapsed until the "Abs" button is pressed; the theme handles the
-     toggle, so only the opened state needs styling here. */
-  .publications ol.bibliography li div.abstract.hidden.open {
-    font-size: 0.9rem;
-    text-align: left;
-    margin-top: 0.35rem;
-  }
-  .publications ol.bibliography li div.abstract.hidden p {
-    margin: 0;
-    line-height: 1.5em;
-  }
+  /* Abstract styling lives in site_enhancements.liquid so both places cannot drift. */
   .pub-group-title {
     border-bottom: 2px solid var(--global-theme-color);
     padding-bottom: 0.3rem;

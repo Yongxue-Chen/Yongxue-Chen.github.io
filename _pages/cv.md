@@ -27,11 +27,22 @@ description: Education, publications, patents, teaching, awards, and research ex
     padding-bottom: 0.25rem;
     border-bottom: 2px solid var(--global-theme-color);
   }
+  /* Lighter than a section heading: separates groups inside one section. */
+  h3.cv-subheading {
+    font-size: 0.92rem;
+    font-weight: 650;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+    margin: 1.1rem 0 0.1rem;
+  }
+  h3.cv-subheading:first-child { margin-top: 0.2rem; }
   .cv-entry {
     padding: 0.55rem 0;
     border-bottom: 1px solid var(--global-divider-color);
   }
-  .cv-entry:last-child { border-bottom: none; }
+  .cv-entry:last-child,
+  .cv-entry:has(+ h3.cv-subheading) { border-bottom: none; }
   .cv-entry-head {
     display: flex;
     justify-content: space-between;
@@ -73,7 +84,13 @@ description: Education, publications, patents, teaching, awards, and research ex
 <h2 class="cv-heading" id="{{ section.name | slugify }}"><span class="lang-en">{{ section.name }}</span><span class="lang-zh">{{ section.name_zh | default: section.name }}</span></h2>
 
 <div class="cv-section">
+{% assign current_group = "" %}
 {% for item in section.items %}
+  {% if item.group and item.group != current_group %}
+    {% assign current_group = item.group %}
+    {% assign g_zh = item.group_zh | default: item.group %}
+  <h3 class="cv-subheading"><span class="lang-en">{{ item.group }}</span><span class="lang-zh">{{ g_zh }}</span></h3>
+  {% endif %}
   {% assign t_zh = item.title_zh | default: item.title %}
   {% assign s_zh = item.subtitle_zh | default: item.subtitle %}
   {% assign d_zh = item.date_zh | default: item.date %}
