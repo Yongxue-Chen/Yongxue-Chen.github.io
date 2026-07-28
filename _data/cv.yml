@@ -1,35 +1,57 @@
-# Custom CV data, rendered by _pages/cv.md.
-# Every section has: name + items[]; every item may use:
-#   title, subtitle, date, url, details[]
+# Bilingual CV data, rendered by _pages/cv.md.
+# Each section: name / name_zh + items[].
+# Each item may use: title, subtitle, date, url, details[]
+#   plus the Chinese counterparts title_zh, subtitle_zh, date_zh, details_zh.
+# When a *_zh field is omitted, the English text is reused.
 sections:
   - name: Education
+    name_zh: 教育背景
     items:
       - title: PhD in Production and Manufacturing Engineering
+        title_zh: 生产与制造工程，博士
         subtitle: The University of Manchester, UK
+        subtitle_zh: 曼彻斯特大学，英国
         date: Sept 2023 – Feb 2027 (expected)
+        date_zh: 2023.09 – 2027.02（预计）
         details:
           - "Supervisor: Prof. Charlie C. L. Wang"
           - "Research focus: robot-assisted manufacturing, hybrid additive-subtractive manufacturing, multi-axis 3D printing, carbon-fiber printing, and process planning"
+        details_zh:
+          - "导师：Charlie C. L. Wang 教授"
+          - "研究方向：机器人辅助制造、增减材复合制造、多轴 3D 打印、碳纤维打印、过程规划"
 
       - title: MEng in Mechanical Engineering
+        title_zh: 机械工程，硕士
         subtitle: Shanghai Jiao Tong University, China
+        subtitle_zh: 上海交通大学，中国
         date: Sept 2020 – Mar 2023
+        date_zh: 2020.09 – 2023.03
         details:
           - "Supervisor: Prof. Ye Ding"
           - "Research focus: robot-assisted milling, motion and trajectory planning, and geometric modeling"
+        details_zh:
+          - "导师：丁烨 教授"
+          - "研究方向：机器人辅助加工、多轴铣削加工、运动与轨迹规划、几何建模"
 
       - title: BEng in Mechanical Engineering
+        title_zh: 机械工程，本科
         subtitle: Shanghai Jiao Tong University, China
+        subtitle_zh: 上海交通大学，中国
         date: Sept 2016 – Jun 2020
+        date_zh: 2016.09 – 2020.06
         details:
           - "GPA: 3.797/4.3 (ranked 6/146)"
+        details_zh:
+          - "GPA：3.797/4.3，专业排名 6/146"
 
   - name: First-Author Journal Articles
+    name_zh: 第一作者期刊论文
     items:
       - title: "Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive-Subtractive Manufacturing"
         subtitle: "<strong>Y. Chen</strong>, T. Liu, Y. Huang, W. Wang, T. Zhang, K. Qian, Z. Shi, and C. C. L. Wang. <em>ACM Transactions on Graphics (SIGGRAPH Asia)</em>. Oral presentation."
+        subtitle_zh: "<strong>Y. Chen</strong>, T. Liu, Y. Huang, W. Wang, T. Zhang, K. Qian, Z. Shi, and C. C. L. Wang. <em>ACM Transactions on Graphics (SIGGRAPH Asia)</em>，口头报告。"
         date: "2025"
-        url: https://dl.acm.org/doi/10.1145/3763355
+        url: https://doi.org/10.1145/3763355
 
       - title: "Co-Optimization of Tool Orientations, Kinematic Redundancy, and Waypoint Timing for Robot-Assisted Manufacturing"
         subtitle: "<strong>Y. Chen</strong>, T. Zhang, Y. Huang, T. Liu, and C. C. L. Wang. <em>IEEE Transactions on Automation Science and Engineering</em>."
@@ -54,9 +76,10 @@ sections:
       - title: "An Efficient Method for Collision-Free and Jerk-Constrained Trajectory Generation with Sparse Way-Points for a Flying Robot"
         subtitle: "<strong>Y. Chen</strong>, W. Dong, and Y. Ding. <em>Science China Technological Sciences</em>."
         date: "2021"
-        url: https://link.springer.com/article/10.1007/s11431-021-1836-7
+        url: https://doi.org/10.1007/s11431-021-1836-7
 
   - name: Co-Authored Journal Articles
+    name_zh: 合作作者期刊论文
     items:
       - title: "Co-Optimization of Structure and Manufacturable Semi-Continuous Layers for Laminated Composites"
         subtitle: "T. Liu, A. Lyu, <strong>Y. Chen</strong>, Y. Jiang, M. J. Petty, and C. C. L. Wang. <em>ACM Transactions on Graphics</em>."
@@ -76,7 +99,7 @@ sections:
       - title: "Neural Co-Optimization of Structural Topology, Manufacturable Layers, and Path Orientations for Fiber-Reinforced Composites"
         subtitle: "T. Liu, T. Zhang, <strong>Y. Chen</strong>, W. Wang, Y. Jiang, Y. Huang, and C. C. L. Wang. <em>ACM Transactions on Graphics</em>."
         date: "2025"
-        url: https://dl.acm.org/doi/10.1145/3730922
+        url: https://doi.org/10.1145/3730922
 
       - title: "Toolpath Generation for High Density Spatial Fiber Printing Guided by Principal Stresses"
         subtitle: "T. Zhang, T. Liu, N. Dutta, <strong>Y. Chen</strong>, R. Su, Z. Zhang, W. Wang, and C. C. L. Wang. <em>Composites Part B</em>."
@@ -94,146 +117,252 @@ sections:
         url: https://doi.org/10.1016/j.cad.2023.103588
 
   - name: Patents
+    name_zh: 授权发明专利
     items:
       - title: Unmanned Aerial Vehicle Speed Planning Method
+        title_zh: 无人机速度规划方法
         subtitle: "<strong>Y. Chen</strong>, W. Dong, and Y. Ding. Granted Chinese invention patent, CN110879614B."
+        subtitle_zh: "<strong>陈永学</strong>、董伟、丁烨。中国发明专利，CN110879614B。"
         date: Sept 2021
+        date_zh: 2021.09
         url: https://patents.google.com/patent/CN110879614B/en
 
       - title: Analytical Calculation Method for the Envelope Surface of Rotary Cutting Tools
+        title_zh: 一种回转刀具刚体运动包络面解析计算方法、系统
         subtitle: "Y. Ding, <strong>Y. Chen</strong>, and Q. Li. Granted Chinese invention patent, CN112487657B."
+        subtitle_zh: "丁烨、<strong>陈永学</strong>、李秦川。中国发明专利，CN112487657B。"
         date: Nov 2022
+        date_zh: 2022.11
         url: https://patents.google.com/patent/CN112487657B/en
 
       - title: Collision-Free Path Planning Method for Unmanned Aerial Vehicles
+        title_zh: 适用于无人机的无碰撞路径规划方法、系统及介质
         subtitle: "Y. Ding, <strong>Y. Chen</strong>, and W. Dong. Granted Chinese invention patent, CN112504279B."
+        subtitle_zh: "丁烨、<strong>陈永学</strong>、董伟。中国发明专利，CN112504279B。"
         date: Dec 2022
+        date_zh: 2022.12
         url: https://patents.google.com/patent/CN112504279B/en
 
       - title: Trajectory Smoothing Method for Linear Motion of a Robotic Arm
+        title_zh: 机械臂线性运动轨迹平滑方法及系统和存储介质
         subtitle: "Y. Ding and <strong>Y. Chen</strong>. Granted Chinese invention patent, CN114536337B."
+        subtitle_zh: "丁烨、<strong>陈永学</strong>。中国发明专利，CN114536337B。"
         date: Jun 2023
+        date_zh: 2023.06
         url: https://patents.google.com/patent/CN114536337B/en
 
       - title: Pose Optimization Method for Flat-End Milling with Industrial Robots
+        title_zh: 工业机器人平底铣削加工姿态优化方法及系统
         subtitle: "Y. Ding and <strong>Y. Chen</strong>. Granted Chinese invention patent, CN115016258B."
+        subtitle_zh: "丁烨、<strong>陈永学</strong>。中国发明专利，CN115016258B。"
         date: Feb 2025
+        date_zh: 2025.02
         url: https://patents.google.com/patent/CN115016258B/en
 
   - name: Conference Presentations
+    name_zh: 会议报告
     items:
       - title: "Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive-Subtractive Manufacturing"
         subtitle: "Oral presentation, ACM SIGGRAPH Asia, Hong Kong"
+        subtitle_zh: "口头报告，ACM SIGGRAPH Asia，中国香港"
         date: Dec 2025
+        date_zh: 2025.12
 
       - title: "Co-Optimization of Tool Orientations, Kinematic Redundancy, and Waypoint Timing for Robot-Assisted Manufacturing"
         subtitle: "Oral presentation, IEEE/RSJ IROS, Hangzhou, China"
+        subtitle_zh: "口头报告，IEEE/RSJ IROS，中国杭州"
         date: Oct 2025
+        date_zh: 2025.10
 
   - name: Teaching
+    name_zh: 教学经历
     items:
       - title: "Teaching Assistant — Additive Manufacturing & 3D Product Modelling"
+        title_zh: "助教 — Additive Manufacturing & 3D Product Modelling"
         subtitle: The University of Manchester
+        subtitle_zh: 曼彻斯特大学
         date: "2026"
         details:
           - Taught 3D scanning and printing labs, and assessed reports with design and manufacturing feedback.
+        details_zh:
+          - 负责 3D 扫描与 3D 打印实验教学，并批改学生报告、反馈设计与制造任务。
 
       - title: "Teaching Assistant — MATLAB and Its Applications in Engineering"
+        title_zh: "助教 — MATLAB 与工程应用"
         subtitle: Shanghai Jiao Tong University
+        subtitle_zh: 上海交通大学
         date: "2021"
         details:
           - Designed and graded coursework assignments, and supported students through Q&A sessions.
+        details_zh:
+          - 设计并批改课程作业，协助学生答疑。
 
   - name: Awards
+    name_zh: 荣誉奖励
     items:
       - title: Departmental Doctoral Scholarship
+        title_zh: 曼彻斯特大学博士奖学金
         subtitle: The University of Manchester
+        subtitle_zh: 曼彻斯特大学
         date: "2023"
       - title: Shanghai Municipal Outstanding Graduate
+        title_zh: 上海市优秀毕业生
         subtitle: Shanghai Municipal Education Commission
+        subtitle_zh: 上海市教育委员会
         date: "2023"
       - title: Outstanding Student Award
+        title_zh: 上海交通大学三好学生
         subtitle: Shanghai Jiao Tong University
+        subtitle_zh: 上海交通大学
         date: "2022"
       - title: National Scholarship for Postgraduate Students
+        title_zh: 研究生国家奖学金
         subtitle: Ministry of Education, China
+        subtitle_zh: 中华人民共和国教育部
         date: "2021"
       - title: Outstanding Graduate
+        title_zh: 上海交通大学优秀毕业生
         subtitle: Shanghai Jiao Tong University
+        subtitle_zh: 上海交通大学
         date: "2020"
 
   - name: Academic Service
+    name_zh: 学术服务
     items:
       - title: Reviewer for international journals and conferences
+        title_zh: 担任国际期刊与会议审稿人
         subtitle: "ACM SIGGRAPH Asia; <em>IEEE Transactions on Visualization and Computer Graphics</em>; <em>IEEE/ASME Transactions on Mechatronics</em>; <em>Robotics and Computer-Integrated Manufacturing</em>; <em>Computer-Aided Design</em>; <em>Journal of Manufacturing Processes</em>"
 
   - name: Technical Expertise
+    name_zh: 专业技能
     items:
       - title: Research areas
+        title_zh: 研究方向
         subtitle: Robotics, advanced manufacturing, computational process planning
+        subtitle_zh: 机器人学、先进制造、计算工艺规划
       - title: Methods
+        title_zh: 方法工具
         subtitle: Learning-based methods, geometric modeling, numerical optimization, geometric algebra
+        subtitle_zh: 学习方法、几何建模、数值优化、几何代数
       - title: Programming
+        title_zh: 编程语言
         subtitle: C++, Python, MATLAB
+        subtitle_zh: C++、Python、MATLAB
 
   - name: Research Experience
+    name_zh: 科研经历
     items:
       - title: Neural Field Optimization for Hybrid Manufacturing
+        title_zh: 基于神经网络的增减材复合制造过程规划
         subtitle: The University of Manchester
+        subtitle_zh: 曼彻斯特大学
         date: May 2025 – May 2026
+        date_zh: 2025.05 – 2026.05
         details:
           - Developed a neural field-based optimization framework for hybrid additive-subtractive manufacturing, jointly optimizing fabrication sequences and tool orientations for complex geometries.
           - Formulated an FEA-guided, distortion-aware optimization strategy to improve the mechanical stability of intermediate structures under manufacturability constraints.
           - Improved efficiency on large-scale models and manufacturing accuracy; first-author manuscript under review.
+        details_zh:
+          - 构建面向增减材复合制造的神经场规划框架，解决具有精细特征复杂几何的可扩展工艺规划问题。
+          - 建立考虑变形的优化策略，在制造可行性目标与约束下提升制造过程中中间结构的力学稳定性。
+          - 提升大规模模型的规划效率，生成更连续的制造路径并提高制造精度；期刊论文正在审稿中。
 
       - title: Inverse Operation-Based Planning for Hybrid Manufacturing
+        title_zh: 基于逆向操作的增减材复合制造过程规划
         subtitle: The University of Manchester
+        subtitle_zh: 曼彻斯特大学
         date: May 2024 – May 2025
+        date_zh: 2024.05 – 2025.05
         details:
           - Developed an inverse-operation-based planning framework formulating fabrication as a reverse process from the target geometry to an initial state.
           - Formulated localized stability constraints and an efficient planning strategy for scalability on complex fabrication sequences.
           - Published in <em>ACM Transactions on Graphics (SIGGRAPH Asia 2025)</em> with oral presentation.
+        details_zh:
+          - 提出基于逆向操作的复合制造规划框架，将制造过程表述为从目标几何回溯至空状态的逆过程。
+          - 建立局部稳定性约束与高效规划策略，提升复杂制造序列的可扩展性，并减少冗余操作。
+          - 理论上去除了复杂几何的可制造性约束，形成复合制造新范式；成果发表于 <em>ACM Transactions on Graphics (SIGGRAPH Asia 2025)</em> 并作口头报告。
 
       - title: Trajectory Co-Optimization for Robot-Assisted Manufacturing
+        title_zh: 机器人辅助制造的并行轨迹优化
         subtitle: The University of Manchester
+        subtitle_zh: 曼彻斯特大学
         date: Sept 2023 – May 2024
+        date_zh: 2023.09 – 2024.05
         details:
           - Developed a unified framework jointly optimizing tool orientations, kinematic redundancy, and waypoint timing for multi-axis robot-assisted manufacturing.
           - Introduced a decomposition-based scheme for efficient solution of the resulting large-scale constrained optimization.
           - Published in <em>IEEE Transactions on Automation Science and Engineering</em>, 2025.
+        details_zh:
+          - 建立机器人辅助制造统一轨迹优化框架，联合优化工具姿态、运动学冗余自由度与加工速度。
+          - 将问题建模为关于运动学冗余和时间参数的大规模约束优化，并提出基于分解的高效求解策略。
+          - 在复杂大规模刀具路径上实现平滑高效的机器人运动；成果发表于 <em>IEEE Transactions on Automation Science and Engineering</em>, 2025。
 
       - title: 6-DoF Path Optimization in Robotic Flank Milling
+        title_zh: 机器人侧铣加工中的六自由度路径优化
         subtitle: Shanghai Jiao Tong University
+        subtitle_zh: 上海交通大学
         date: Oct 2022 – Mar 2023
+        date_zh: 2022.10 – 2023.03
         details:
           - Developed a unified optimization framework for 6-DoF toolpath planning jointly considering machining accuracy, kinematic smoothness, and robot stiffness.
           - Derived analytical models using conformal geometric algebra for efficient gradient-based optimization.
           - Published in <em>Robotics and Computer-Integrated Manufacturing</em>, 2023.
+        details_zh:
+          - 针对机器人侧铣建立六自由度刀具路径规划的统一优化框架，联合考虑加工精度、运动平滑性与机器人刚度。
+          - 基于共形几何代数推导加工误差与刚度的解析模型，实现高效准确的梯度优化。
+          - 提升加工质量与计算效率；成果发表于 <em>Robotics and Computer-Integrated Manufacturing</em>, 2023。
 
       - title: Posture Optimization in Robotic Flat-End Milling
+        title_zh: 机器人平底铣削位姿优化
         subtitle: Shanghai Jiao Tong University
+        subtitle_zh: 上海交通大学
         date: Oct 2021 – Oct 2022
+        date_zh: 2021.10 – 2022.10
         details:
           - Developed an SQP-based framework jointly optimizing tool orientation and kinematic redundancy under geometric and kinematic constraints.
           - Published in <em>ASME Journal of Manufacturing Science and Engineering</em>, 2023.
+        details_zh:
+          - 建立基于序列二次规划的优化框架，在几何与运动学约束下联合优化刀具姿态和运动学冗余。
+          - 构建基于机器人关节三阶光顺性以及切削宽度的优化目标，同时避免几何干涉与其他运动学约束。
+          - 为后续机器人制造中的统一优化框架奠定基础；成果发表于 <em>ASME Journal of Manufacturing Science and Engineering</em>, 2023。
 
       - title: Corner Smoothing of Five-Axis Toolpaths
+        title_zh: 五轴刀具路径转角平滑
         subtitle: Shanghai Jiao Tong University
+        subtitle_zh: 上海交通大学
         date: Mar 2021 – Oct 2021
+        date_zh: 2021.03 – 2021.10
         details:
           - Built a unified analytical conformal-geometric-algebra framework constructing G³-continuous transitions in 6D without iterative synchronization.
           - Published in <em>Computer-Aided Design</em>, 2022.
+        details_zh:
+          - 建立六维配置空间中的五轴刀具路径平滑几何建模框架，保证刀具运动的高阶连续性。
+          - 利用共形几何代数构造 G³ 连续过渡曲线，提供解析且统一的刀具路径几何表达。
+          - 通过避免迭代同步过程提升运动平滑性与计算效率；成果发表于 <em>Computer-Aided Design</em>, 2022。
 
       - title: Analytical Modeling of Cutter Swept Envelopes
+        title_zh: 刀具扫掠包络面的解析建模
         subtitle: Shanghai Jiao Tong University
+        subtitle_zh: 上海交通大学
         date: Sept 2020 – Feb 2023
+        date_zh: 2020.09 – 2023.02
         details:
           - Developed a compact, unified model of cutter swept envelopes using conformal geometric algebra and point-pair primitives.
           - Published in <em>Computer-Aided Design</em>, 2023.
+        details_zh:
+          - 建立多轴加工刀具扫掠包络面的解析建模框架，为刀具运动提供统一几何表达。
+          - 结合共形几何代数与点对基元，推导紧凑一致的包络面解析表达。
+          - 通过消除局部坐标变换需求提升计算鲁棒性与效率；成果发表于 <em>Computer-Aided Design</em>, 2023。
 
       - title: Trajectory Planning for Quadrotors
+        title_zh: 四旋翼飞行器轨迹规划
         subtitle: Shanghai Jiao Tong University
+        subtitle_zh: 上海交通大学
         date: Jul 2019 – Sept 2020
+        date_zh: 2019.07 – 2020.09
         details:
           - Generated smooth, collision-free, jerk-constrained trajectories via sequential convex programming.
           - Published in <em>Science China Technological Sciences</em>, 2021.
+        details_zh:
+          - 基于序列凸优化提出平滑、无碰撞且满足跃度约束的轨迹生成方法。
+          - 相比已有方法实现更高效、更高质量的轨迹生成并缩短计算时间；成果发表于 <em>Science China Technological Sciences</em>, 2021。

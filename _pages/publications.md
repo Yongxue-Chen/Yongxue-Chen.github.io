@@ -7,6 +7,8 @@ nav: true
 nav_order: 2
 ---
 
+{% include lang_toggle.liquid %}
+
 <style>
   /* Abstracts are always shown — no expand/collapse toggle. */
   .publications ol.bibliography li .abstract.hidden,
@@ -57,13 +59,13 @@ nav_order: 2
 
 <div class="publications">
 
-<h2 class="pub-group-title">First-author journal articles</h2>
-<p class="pub-group-note">Papers on which I am the first author.</p>
+<h2 class="pub-group-title"><span class="lang-en">First-author journal articles</span><span class="lang-zh">第一作者期刊论文</span></h2>
+<p class="pub-group-note"><span class="lang-en">Papers on which I am the first author.</span><span class="lang-zh">本人为第一作者的期刊论文。</span></p>
 
 {% bibliography --query @*[author_type=first] %}
 
-<h2 class="pub-group-title">Co-authored journal articles</h2>
-<p class="pub-group-note">Collaborative work with colleagues at Manchester and SJTU.</p>
+<h2 class="pub-group-title"><span class="lang-en">Co-authored journal articles</span><span class="lang-zh">合作作者期刊论文</span></h2>
+<p class="pub-group-note"><span class="lang-en">Collaborative work with colleagues at Manchester and SJTU.</span><span class="lang-zh">与曼彻斯特大学、上海交通大学同事的合作成果。</span></p>
 
 {% bibliography --query @*[author_type=co] %}
 

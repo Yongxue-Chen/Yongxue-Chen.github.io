@@ -1,0 +1,91 @@
+{% comment %}
+Site-wide English / Chinese switch.
+
+Usage: wrap content in <span class="lang-en"> / <span class="lang-zh"> (or divs).
+Visibility is driven purely by a data-lang attribute on <html>, so no inline
+display styles are needed and there is no flash of the wrong language.
+The choice is stored in localStorage and therefore persists across pages.
+{% endcomment %}
+
+<style>
+  /* Before JS runs, and whenever English is active, hide the Chinese copy. */
+  .lang-zh { display: none; }
+  html[data-lang="zh"] .lang-zh { display: revert; }
+  html[data-lang="zh"] .lang-en { display: none; }
+
+  .lang-switch {
+    position: fixed;
+    top: 68px;
+    right: 16px;
+    z-index: 1000;
+    display: inline-flex;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
+    overflow: hidden;
+    background-color: var(--global-bg-color);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+  }
+  .lang-switch button {
+    border: 0;
+    background: transparent;
+    color: var(--global-text-color);
+    font-size: 0.78rem;
+    line-height: 1;
+    padding: 0.4rem 0.7rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+  .lang-switch button:hover { color: var(--global-theme-color); }
+  .lang-switch button.active {
+    background-color: var(--global-theme-color);
+    color: var(--global-hover-text-color);
+    font-weight: 600;
+  }
+  @media (max-width: 576px) {
+    .lang-switch { top: 62px; right: 8px; }
+    .lang-switch button { font-size: 0.72rem; padding: 0.32rem 0.55rem; }
+  }
+</style>
+
+<div class="lang-switch" role="group" aria-label="Language">
+  <button type="button" id="lang-btn-en" onclick="setSiteLang('en')">EN</button>
+  <button type="button" id="lang-btn-zh" onclick="setSiteLang('zh')">中文</button>
+</div>
+
+<script>
+  (function () {
+    function apply(lang) {
+      document.documentElement.setAttribute("data-lang", lang);
+      var en = document.getElementById("lang-btn-en");
+      var zh = document.getElementById("lang-btn-zh");
+      if (en && zh) {
+        en.classList.toggle("active", lang === "en");
+        zh.classList.toggle("active", lang === "zh");
+      }
+      try {
+        localStorage.setItem("site-lang", lang);
+      } catch (e) {
+        /* private mode — switching still works for this page view */
+      }
+    }
+    window.setSiteLang = apply;
+
+    var saved = "en";
+    try {
+      saved = localStorage.getItem("site-lang") || "en";
+    } catch (e) {
+      /* ignore */
+    }
+    // Set the attribute immediately so the correct language paints first.
+    document.documentElement.setAttribute("data-lang", saved);
+
+    function init() {
+      apply(saved);
+    }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init);
+    } else {
+      init();
+    }
+  })();
+</script>
