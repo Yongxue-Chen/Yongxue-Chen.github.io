@@ -32,6 +32,7 @@ requireMatch(enhancements, /border-bottom: 1px solid var\(--site-border\)/, "Pub
 requireMatch(enhancements, /grid-template-columns: 144px minmax\(0, 1fr\)/, "Publication rows lost their consistent grid.");
 requireMatch(enhancements, /--global-theme-color: #3f7191/, "The light blue academic palette is missing.");
 requireMatch(enhancements, /border-left: 4px solid var\(--global-theme-color\)/, "Homepage section hierarchy is missing.");
+requireMatch(enhancements, /html\[data-lang="zh"\] body h1,[\s\S]*?letter-spacing: 0\.045em;/, "Chinese heading spacing is missing.");
 requireMatch(enhancements, /position: static;[\s\S]*?flex-wrap: wrap !important;[\s\S]*?overflow: visible;/, "CV navigation must wrap without a scrolling bar.");
 if (/\.cv-nav a \{[\s\S]*?background: var\(--site-surface\)/.test(enhancements)) throw new Error("CV navigation links must not look like cards.");
 requireMatch(publications, /bibliography --query @\*\[author_type=first\]/, "First-author publications are missing.");
