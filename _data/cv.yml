@@ -172,7 +172,7 @@ sections:
         subtitle: "Oral presentation, IEEE/RSJ IROS, Hangzhou, China"
         subtitle_zh: "口头报告，IEEE/RSJ IROS，中国杭州"
         date: Oct 2025
-        date_zh: 2025.10
+        date_zh: "2025.10"
 
   - name: Teaching
     name_zh: 教学经历
