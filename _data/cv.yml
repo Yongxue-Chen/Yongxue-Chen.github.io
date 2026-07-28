@@ -141,6 +141,120 @@ cv:
         awarder: "Shanghai Jiao Tong University"
         date: "2020"
 
+    Publications:
+      - title: "Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive-Subtractive Manufacturing"
+        authors:
+          - "Yongxue Chen"
+          - "Tianyu Liu"
+          - "Yingjun Huang"
+          - "Weiming Wang"
+          - "Tao Zhang"
+          - "Kang Qian"
+          - "Zhonggui Shi"
+          - "Charlie C. L. Wang"
+        publisher: "ACM Transactions on Graphics (SIGGRAPH Asia)"
+        releaseDate: "2025"
+        url: "https://dl.acm.org/doi/10.1145/3763355"
+        summary: "Oral Presentation"
+
+      - title: "Co-Optimization of Tool Orientations, Kinematic Redundancy, and Waypoint Timing for Robot-Assisted Manufacturing"
+        authors:
+          - "Yongxue Chen"
+          - "Tao Zhang"
+          - "Yingjun Huang"
+          - "Tianyu Liu"
+          - "Charlie C. L. Wang"
+        publisher: "IEEE Transactions on Automation Science and Engineering"
+        releaseDate: "2025"
+        url: "https://ieeexplore.ieee.org/document/10891882"
+
+      - title: "Toolpath Generation for Robotic Flank Milling via Smoothness and Stiffness Optimization"
+        authors:
+          - "Yongxue Chen"
+          - "Yang Lu"
+          - "Ye Ding"
+        publisher: "Robotics and Computer-Integrated Manufacturing"
+        releaseDate: "2023"
+        url: "https://doi.org/10.1016/j.rcim.2023.102640"
+
+      - title: "Posture Optimization in Robotic Flat-End Milling Based on Sequential Quadratic Programming"
+        authors:
+          - "Yongxue Chen"
+          - "Ye Ding"
+        publisher: "ASME Journal of Manufacturing Science and Engineering"
+        releaseDate: "2023"
+        url: "https://doi.org/10.1115/1.4056707"
+
+      - title: "An Analytical Method for Corner Smoothing of Five-Axis Linear Paths Using Conformal Geometric Algebra"
+        authors:
+          - "Yongxue Chen"
+          - "Peng Huang"
+          - "Ye Ding"
+        publisher: "Computer-Aided Design"
+        releaseDate: "2022"
+        url: "https://doi.org/10.1016/j.cad.2022.103408"
+
+      - title: "An Efficient Method for Collision-Free and Jerk-Constrained Trajectory Generation with Sparse Way-Points for a Flying Robot"
+        authors:
+          - "Yongxue Chen"
+          - "Wei Dong"
+          - "Ye Ding"
+        publisher: "Science China Technological Sciences"
+        releaseDate: "2021"
+        url: "https://link.springer.com/article/10.1007/s11431-021-1836-7"
+
+    Patents:
+      - title: "Unmanned Aerial Vehicle Speed Planning Method"
+        authors:
+          - "Yongxue Chen"
+          - "Wei Dong"
+          - "Ye Ding"
+        awarder: "Granted Chinese Invention Patent, CN110879614B"
+        date: ""
+
+      - title: "Collision-Free Path Planning Method for Unmanned Aerial Vehicles"
+        authors:
+          - "Ye Ding"
+          - "Yongxue Chen"
+          - "Wei Dong"
+        awarder: "Granted Chinese Invention Patent, CN112504279B"
+        date: ""
+
+      - title: "Pose Optimization Method for Flat-End Milling with Industrial Robots"
+        authors:
+          - "Ye Ding"
+          - "Yongxue Chen"
+        awarder: "Granted Chinese Invention Patent, CN115016258B"
+        date: ""
+
+      - title: "Trajectory Smoothing Method for Linear Motion of a Robotic Arm"
+        authors:
+          - "Ye Ding"
+          - "Yongxue Chen"
+        awarder: "Granted Chinese Invention Patent, CN114536337B"
+        date: ""
+
+      - title: "Analytical Calculation Method for the Envelope Surface of Rotary Cutting Tools"
+        authors:
+          - "Ye Ding"
+          - "Yongxue Chen"
+          - "Qiang Li"
+        awarder: "Granted Chinese Invention Patent, CN112487657B"
+        date: ""
+
+    Conference Presentations:
+      - title: "Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive-Subtractive Manufacturing (Oral)"
+        awarder: "ACM SIGGRAPH Asia, Hong Kong"
+        date: "2025-12"
+
+      - title: "Co-Optimization of Tool Orientations, Kinematic Redundancy, and Waypoint Timing for Robot-Assisted Manufacturing (Oral)"
+        awarder: "IEEE/RSJ IROS, Hangzhou, China"
+        date: "2025-10"
+
+    Service:
+      - name: "Journal & Conference Reviewer"
+        keywords: "ACM SIGGRAPH Asia, IEEE Transactions on Visualization and Computer Graphics, IEEE/ASME Transactions on Mechatronics, Robotics and Computer-Integrated Manufacturing, Computer-Aided Design, Journal of Manufacturing Processes"
+
     Skills:
       - name: "Research Areas"
         keywords: "Robotics, advanced manufacturing, computational process planning"

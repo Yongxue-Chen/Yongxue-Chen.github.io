@@ -22,6 +22,10 @@ latest_posts:
   enabled: false
 ---
 
+<style>
+.profile { max-width: 200px !important; }
+</style>
+
 <div style="margin-bottom: 1em;">
   <button onclick="setSiteLang('en')" id="lang-btn-en" style="padding: 4px 12px; margin-right: 6px; cursor: pointer;">English</button>
   <button onclick="setSiteLang('zh')" id="lang-btn-zh" style="padding: 4px 12px; cursor: pointer;">中文</button>
@@ -53,10 +57,6 @@ function setSiteLang(lang) {
     enBtn.style.fontWeight = (lang === 'en') ? 'bold' : 'normal';
     zhBtn.style.fontWeight = (lang === 'zh') ? 'bold' : 'normal';
   }
-  localStorage.setItem('site-lang', lang);
 }
-(function() {
-  var saved = localStorage.getItem('site-lang') || 'en';
-  setSiteLang(saved);
-})();
+setSiteLang('en');
 </script>
