@@ -505,13 +505,22 @@
   /* Below the sm breakpoint the theme hides the links behind the hamburger. Keep the
      three links on a second row instead; navbar height is then synced from JS because
      the row can wrap on narrow screens. Must follow the 767px block to win on order. */
+  /* Tailwind ships `.collapse { display: none !important }` inside `@layer components`.
+     An important declaration in a layer outranks an unlayered one before specificity is
+     ever compared, so this override has to join the same layer to win. Only the display
+     reset belongs here — the layout rules below stay unlayered so they keep beating the
+     767px block. */
+  @layer components {
+    @media (max-width: 575.98px) {
+      .navbar .navbar-collapse-main.collapse {
+        display: flex !important;
+        visibility: visible !important;
+      }
+    }
+  }
+
   @media (max-width: 575.98px) {
     .navbar .navbar-toggler { display: none !important; }
-    .navbar .navbar-collapse-main,
-    .navbar .navbar-collapse-main.collapse {
-      display: flex !important;
-      visibility: visible !important;
-    }
     .navbar .navbar-menu-list {
       flex-direction: row;
       flex-wrap: wrap;
