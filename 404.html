@@ -521,6 +521,10 @@
 
   @media (max-width: 575.98px) {
     .navbar .navbar-toggler { display: none !important; }
+    /* Drop the brand slot on phones: the social icons move down next to the photo and
+       the name is already the page heading, so the navbar carries links only. */
+    .navbar .navbar-brand,
+    .navbar.navbar-light .navbar-brand.social { display: none !important; }
     .navbar .navbar-menu-list {
       flex-direction: row;
       flex-wrap: wrap;
@@ -531,6 +535,32 @@
     }
     .navbar.navbar-light .navbar-nav .nav-item .nav-link { padding: 0.35rem 0.55rem; }
     .lang-switch-item { margin-top: 0; margin-left: 0.1rem; }
+
+    /* Reorder the about page to photo → social icons → copy. The theme renders the
+       social block last, after all the page content. */
+    .post > article { display: flex; flex-direction: column; }
+    .post > article > .profile { order: 1; }
+    .post > article > .social { order: 2; }
+    .post > article > .clearfix { order: 3; }
+    /* Let the contact lines use the full column width so the email stays on one line;
+       only the picture keeps the narrow width. */
+    .profile {
+      width: 100% !important;
+      margin: -0.75rem 0 0.8rem !important;
+    }
+    .profile figure { width: min(48%, 170px); margin: 0; }
+    .profile .more-info {
+      width: 100%;
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+    .post > article > .social { margin: 0 0 1.5rem; }
+    .post > article > .social .contact-icons {
+      justify-content: flex-start;
+      gap: 1.1rem;
+      font-size: 1.3rem;
+    }
   }
 </style> <script>
   (function () {
