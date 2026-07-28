@@ -4,22 +4,39 @@
   html:not([data-lang="zh"]) .lang-zh,
   html[data-lang="zh"] .lang-en { display: none !important; }
   :root {
-    --global-theme-color: #315efb !important;
-    --global-hover-color: #2448c9 !important;
-    --global-text-color-light: #5f6978 !important;
-    --site-surface: #f6f8fc;
-    --site-border: #e2e7f0;
+    --global-theme-color: #3f7191 !important;
+    --global-hover-color: #285873 !important;
+    --global-text-color-light: #62717c !important;
+    --site-surface: #f5f9fc;
+    --site-border: #d7e3ec;
+    --site-accent-soft: #e8f1f7;
+    --site-accent-strong: #78a4bf;
     --site-radius: 14px;
   }
   html[data-theme="dark"] {
-    --global-theme-color: #7ea2ff !important;
-    --global-hover-color: #a8bfff !important;
-    --global-text-color-light: #aab3c2 !important;
-    --site-surface: #24272d;
-    --site-border: #363b45;
+    --global-theme-color: #8fc1df !important;
+    --global-hover-color: #b6d9ed !important;
+    --global-text-color-light: #aebec9 !important;
+    --site-surface: #1b2a34;
+    --site-border: #334955;
+    --site-accent-soft: #233945;
+    --site-accent-strong: #6ca3c1;
   }
   body {
-    font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-image: linear-gradient(180deg, color-mix(in srgb, var(--site-accent-soft) 62%, transparent), transparent 30rem);
+    background-repeat: no-repeat;
+    font-family:
+      Inter,
+      "SF Pro Text",
+      ui-sans-serif,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      "PingFang SC",
+      "Microsoft YaHei",
+      "Noto Sans CJK SC",
+      "Source Han Sans SC",
+      sans-serif;
     font-size: 1rem;
     line-height: 1.65;
     letter-spacing: -0.006em;
@@ -103,62 +120,92 @@
   }
 
   .profile {
-    max-width: 230px !important;
+    width: 190px !important;
+    max-width: 190px !important;
+    margin-top: -7.8rem !important;
     margin-left: 2.4rem !important;
   }
-  .profile figure { margin-bottom: 0.85rem; }
+  .profile figure {
+    width: 100%;
+    margin: 0 0 0.85rem;
+  }
   .profile img {
     border: 1px solid var(--site-border);
     border-radius: var(--site-radius) !important;
-    box-shadow: 0 18px 44px rgba(20, 36, 70, 0.12);
+    box-shadow: 0 18px 44px rgba(47, 91, 118, 0.15);
   }
   .profile .more-info {
+    width: 100%;
+    margin: 0;
     font-family: inherit;
     color: var(--global-text-color-light);
     font-size: 0.84rem;
     line-height: 1.55;
+    text-align: left;
+    overflow-wrap: anywhere;
   }
-  .profile .more-info p { display: block; }
-  .home-section { margin-top: 2.8rem !important; }
-  .home-section h3 {
-    margin-bottom: 1.1rem !important;
-    padding-bottom: 0.65rem !important;
-    border-bottom: 1px solid var(--site-border) !important;
-    font-size: 1.35rem !important;
-  }
-  .home-stats {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.75rem;
-    clear: both;
-    margin: 2rem 0 0;
-  }
-  .home-stat {
-    padding: 1rem 1.1rem;
-    border: 1px solid var(--site-border);
-    border-radius: var(--site-radius);
-    background: var(--site-surface);
-  }
-  .home-stat strong {
+  .profile .more-info p {
     display: block;
+    margin: 0.15rem 0;
+  }
+  .home-intro {
+    max-width: 47rem;
+  }
+  .home-intro .home-eyebrow {
+    margin: 0 0 0.75rem;
     color: var(--global-theme-color);
-    font-size: 1.55rem;
-    line-height: 1.1;
+    font-size: 0.76rem;
+    font-weight: 760;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
   }
-  .home-stat span {
-    display: block;
-    margin-top: 0.3rem;
-    color: var(--global-text-color-light);
-    font-size: 0.82rem;
+  .home-intro > p:not(.home-eyebrow) {
+    margin-bottom: 1rem;
+  }
+  .home-section {
+    clear: both;
+    margin-top: 3.5rem !important;
+    padding-top: 0.15rem;
+  }
+  .home-section h3 {
+    margin: 0 0 0.8rem !important;
+    padding: 0.68rem 0.9rem !important;
+    border-bottom: 0 !important;
+    border-left: 4px solid var(--global-theme-color);
+    background: linear-gradient(90deg, var(--site-accent-soft), transparent 88%);
+    color: color-mix(in srgb, var(--global-theme-color) 88%, var(--global-text-color));
+    font-size: 1.32rem !important;
   }
   .edu-item,
   .pub-item {
-    padding: 0.8rem 0;
+    padding: 0.95rem 0.4rem 0.95rem 1rem;
     margin: 0 !important;
+    border-left: 1px solid var(--site-border);
     border-bottom: 1px solid var(--site-border);
+  }
+  .edu-item .edu-degree { font-weight: 650; }
+  .edu-item .edu-meta {
+    margin-top: 0.15rem;
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+  }
+  .home-section > p {
+    margin: 0 !important;
+    padding: 0.7rem 0.4rem 0.7rem 1rem;
+    border-left: 1px solid var(--site-border);
   }
   .edu-item:last-child,
   .pub-item:last-of-type { border-bottom: 0; }
+  .home-section .pub-item > a {
+    color: #244f69;
+    font-weight: 650;
+    line-height: 1.45;
+  }
+  .home-section .pub-item > a:hover { color: var(--global-hover-color); }
+  .home-section .pub-venue {
+    margin-top: 0.2rem;
+    color: #61717c !important;
+  }
   .social { margin-top: 2.5rem; }
   .social .contact-icons {
     display: flex;
@@ -296,40 +343,46 @@
   }
 
   .cv-nav {
-    position: sticky;
-    top: 62px;
-    z-index: 8;
+    position: static;
     display: flex;
-    flex-wrap: nowrap !important;
-    gap: 0.4rem !important;
-    margin: 0 -0.3rem 1.5rem !important;
-    padding: 0.7rem 0.3rem !important;
-    overflow-x: auto;
+    flex-wrap: wrap !important;
+    gap: 0.45rem 1.1rem !important;
+    margin: 0 0 2.4rem !important;
+    padding: 0 0 1rem !important;
+    overflow: visible;
     border-bottom: 1px solid var(--site-border) !important;
-    background: color-mix(in srgb, var(--global-bg-color) 94%, transparent);
-    backdrop-filter: blur(12px);
-    scrollbar-width: thin;
+    background: transparent;
   }
   .cv-nav a {
-    flex: 0 0 auto;
-    padding: 0.38rem 0.68rem;
-    border-radius: 999px;
-    background: var(--site-surface);
-    color: var(--global-text-color-light);
-    font-size: 0.78rem;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--global-theme-color);
+    font-size: 0.84rem;
     font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--global-theme-color) 32%, transparent);
+    text-underline-offset: 0.22em;
   }
   .cv-nav a:hover {
-    color: var(--global-theme-color);
-    text-decoration: none;
+    color: var(--global-hover-color);
+    text-decoration-color: currentColor;
   }
   h2.cv-heading {
-    margin-top: 3rem !important;
-    padding-bottom: 0.7rem !important;
-    border-bottom: 1px solid var(--site-border) !important;
-    font-size: 1.45rem !important;
+    margin: 3.4rem 0 1rem !important;
+    padding: 0.72rem 1rem !important;
+    border-bottom: 0 !important;
+    border-left: 4px solid var(--global-theme-color);
+    background: linear-gradient(90deg, var(--site-accent-soft), transparent 82%);
+    color: var(--global-theme-color);
+    font-size: 1.5rem !important;
   }
-  .cv-section { margin-bottom: 2.8rem !important; }
+  .cv-section {
+    margin: 0 0 3.2rem 0.25rem !important;
+    padding-left: 1rem;
+    border-left: 1px solid var(--site-border);
+  }
   .cv-entry {
     padding: 0.9rem 0 !important;
     border-bottom-color: var(--site-border) !important;
@@ -359,10 +412,9 @@
     .post-header .post-title { font-size: 2.5rem; }
     .profile {
       float: none !important;
-      width: min(56%, 220px) !important;
-      margin: 0 0 1.6rem !important;
+      width: min(48%, 190px) !important;
+      margin: -0.75rem 0 1.6rem !important;
     }
-    .home-stats { grid-template-columns: 1fr; }
     .publications ol.bibliography li .row {
       grid-template-columns: 92px minmax(0, 1fr);
       gap: 1rem;
@@ -386,6 +438,7 @@
   (function () {
     var copy = {
       en: {
+        name: "Yongxue Chen",
         about: "About",
         homeDescription: "PhD Candidate in Production and Manufacturing Engineering · The University of Manchester",
         publications: "Publications",
@@ -395,6 +448,7 @@
         footer: "© 2026 Yongxue Chen · Built with Jekyll · Hosted on GitHub Pages",
       },
       zh: {
+        name: "陈永学",
         about: "关于我",
         homeDescription: "生产与制造工程博士研究生 · 英国曼彻斯特大学",
         publications: "论文",
@@ -420,19 +474,22 @@
       });
 
       var path = window.location.pathname;
+      var brand = document.querySelector(".site-brand");
       var heading = document.querySelector(".post-header .post-title");
       var description = document.querySelector(".post-header .desc");
+      if (brand) brand.textContent = labels.name;
       if (path === "\/") {
+        if (heading) heading.textContent = labels.name;
         if (description) description.textContent = labels.homeDescription;
-        document.title = "Yongxue Chen";
+        document.title = labels.name;
       } else if (path === "\/publications\/") {
         if (heading) heading.textContent = labels.publications;
         if (description) description.textContent = labels.publicationsDescription;
-        document.title = labels.publications + " | Yongxue Chen";
+        document.title = labels.publications + " | " + labels.name;
       } else if (path === "/cv/") {
         if (heading) heading.textContent = labels.cv;
         if (description) description.textContent = labels.cvDescription;
-        document.title = labels.cv + " | Yongxue Chen";
+        document.title = labels.cv + " | " + labels.name;
       }
 
       var footer = document.querySelector("footer .container");
