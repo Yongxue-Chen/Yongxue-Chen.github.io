@@ -34,7 +34,7 @@ sections:
       - title: "Co-Optimization of Tool Orientations, Kinematic Redundancy, and Waypoint Timing for Robot-Assisted Manufacturing"
         subtitle: "<strong>Y. Chen</strong>, T. Zhang, Y. Huang, T. Liu, and C. C. L. Wang. <em>IEEE Transactions on Automation Science and Engineering</em>."
         date: "2025"
-        url: https://ieeexplore.ieee.org/document/10891882
+        url: https://doi.org/10.1109/TASE.2025.3542218
 
       - title: "Toolpath Generation for Robotic Flank Milling via Smoothness and Stiffness Optimization"
         subtitle: "<strong>Y. Chen</strong>, Y. Lu, and Y. Ding. <em>Robotics and Computer-Integrated Manufacturing</em>."
@@ -66,12 +66,12 @@ sections:
       - title: "Implicit Neural Field-Based Process Planning for Multi-Axis Manufacturing: Direct Control over Collision Avoidance and Toolpath Geometry"
         subtitle: "N. Dutta, T. Zhang, T. Liu, <strong>Y. Chen</strong>, and C. C. L. Wang. <em>Computer-Aided Design</em>."
         date: "2026"
-        url: https://www.sciencedirect.com/science/article/pii/S0010448526000564
+        url: https://doi.org/10.1016/j.cad.2026.104086
 
       - title: "Force-Based Adaptive Deposition in Multi-Axis Additive Manufacturing: Low Porosity for Enhanced Strength"
         subtitle: "Y. Huang, R. Su, K. Qian, T. Zhang, <strong>Y. Chen</strong>, T. Liu, G. Fang, W. Wang, and C. C. L. Wang. <em>Robotics and Computer-Integrated Manufacturing</em>."
         date: "2026"
-        url: https://www.sciencedirect.com/science/article/pii/S0736584525001772
+        url: https://doi.org/10.1016/j.rcim.2025.103123
 
       - title: "Neural Co-Optimization of Structural Topology, Manufacturable Layers, and Path Orientations for Fiber-Reinforced Composites"
         subtitle: "T. Liu, T. Zhang, <strong>Y. Chen</strong>, W. Wang, Y. Jiang, Y. Huang, and C. C. L. Wang. <em>ACM Transactions on Graphics</em>."
