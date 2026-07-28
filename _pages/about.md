@@ -129,7 +129,7 @@ I have published **13 peer-reviewed journal articles** and hold **5 granted Chin
 
 <h3><span class="lang-en">Awards</span><span class="lang-zh">荣誉奖励</span></h3>
 
-<div class="edu-item">
+<div class="edu-item award-item">
   <div class="edu-degree"><span class="lang-en">Departmental Doctoral Scholarship</span><span class="lang-zh">曼彻斯特大学博士奖学金</span></div>
   <div class="edu-meta">
     <span class="lang-en">The University of Manchester &middot; 2023</span>
@@ -137,7 +137,7 @@ I have published **13 peer-reviewed journal articles** and hold **5 granted Chin
   </div>
 </div>
 
-<div class="edu-item">
+<div class="edu-item award-item">
   <div class="edu-degree"><span class="lang-en">Shanghai Municipal Outstanding Graduate</span><span class="lang-zh">上海市优秀毕业生</span></div>
   <div class="edu-meta">
     <span class="lang-en">Shanghai Municipal Education Commission &middot; 2023</span>
@@ -145,7 +145,7 @@ I have published **13 peer-reviewed journal articles** and hold **5 granted Chin
   </div>
 </div>
 
-<div class="edu-item">
+<div class="edu-item award-item">
   <div class="edu-degree"><span class="lang-en">Outstanding Student Award</span><span class="lang-zh">上海交通大学三好学生</span></div>
   <div class="edu-meta">
     <span class="lang-en">Shanghai Jiao Tong University &middot; 2022</span>
@@ -153,7 +153,7 @@ I have published **13 peer-reviewed journal articles** and hold **5 granted Chin
   </div>
 </div>
 
-<div class="edu-item">
+<div class="edu-item award-item">
   <div class="edu-degree"><span class="lang-en">National Scholarship for Postgraduate Students</span><span class="lang-zh">研究生国家奖学金</span></div>
   <div class="edu-meta">
     <span class="lang-en">Ministry of Education, China &middot; 2021</span>
@@ -161,7 +161,7 @@ I have published **13 peer-reviewed journal articles** and hold **5 granted Chin
   </div>
 </div>
 
-<div class="edu-item">
+<div class="edu-item award-item">
   <div class="edu-degree"><span class="lang-en">Outstanding Graduate</span><span class="lang-zh">上海交通大学优秀毕业生</span></div>
   <div class="edu-meta">
     <span class="lang-en">Shanghai Jiao Tong University &middot; 2020</span>

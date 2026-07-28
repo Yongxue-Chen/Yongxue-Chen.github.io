@@ -27,29 +27,34 @@ description: Education, publications, patents, teaching, awards, and research ex
     padding-bottom: 0.25rem;
     border-bottom: 2px solid var(--global-theme-color);
   }
-  /* Lighter than a section heading: separates groups inside one section. */
+  /* Distinct from the h2 (which carries a bottom rule) but clearly a heading. */
   h3.cv-subheading {
-    font-size: 0.92rem;
-    font-weight: 650;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--global-text-color-light);
-    margin: 1.1rem 0 0.1rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--global-theme-color);
+    margin: 1.5rem 0 0.4rem;
+    padding-left: 0.6rem;
+    border-left: 3px solid var(--global-theme-color);
+    line-height: 1.3;
   }
-  h3.cv-subheading:first-child { margin-top: 0.2rem; }
+  h3.cv-subheading:first-child { margin-top: 0.35rem; }
   .cv-entry {
     padding: 0.55rem 0;
     border-bottom: 1px solid var(--global-divider-color);
   }
   .cv-entry:last-child,
   .cv-entry:has(+ h3.cv-subheading) { border-bottom: none; }
+  /* No wrapping: a title long enough to fill the row was pushing its year onto the
+     next line, unlike every other entry. The title shrinks, the year never does. */
   .cv-entry-head {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     gap: 1rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
+  .cv-entry-title { flex: 1 1 auto; min-width: 0; }
+  .cv-entry-date { flex: 0 0 auto; white-space: nowrap; }
   .cv-entry-title { font-weight: 600; }
   .cv-entry-title a { color: var(--global-text-color); }
   .cv-entry-title a:hover { color: var(--global-theme-color); text-decoration: none; }
