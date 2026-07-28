@@ -9,11 +9,14 @@ last_name: Chen
 contact_note: >
   Feel free to reach out by email.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Personal academic homepage of Yongxue Chen.
+  Yongxue Chen is a PhD candidate in Production and Manufacturing Engineering at The University of
+  Manchester, working on robotics and advanced manufacturing: motion planning, trajectory
+  optimization, and computational process planning for multi-axis robotic and hybrid
+  additive-subtractive manufacturing.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: academic-website, personal-website, Yongxue Chen # add your own keywords or leave empty
+keywords: Yongxue Chen, robotics, advanced manufacturing, motion planning, trajectory optimization, process planning, hybrid additive-subtractive manufacturing, multi-axis machining, University of Manchester # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🎓 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -114,7 +117,7 @@ analytics:
   openpanel: # your Openpanel analytics client ID (format: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX)
 
 # For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
-google_site_verification: # your google-site-verification ID (Google Search Console)
+google_site_verification: kZpQp5gcPFkGJbqYFFvZ9LJw2ZKrxf22YS28zc9Zqjk # your google-site-verification ID (Google Search Console)
 bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
 # -----------------------------------------------------------------------------
@@ -448,14 +451,14 @@ lazy_loading_images: true # enables lazy loading of images (recommended)
 # Optional Features
 # -----------------------------------------------------------------------------
 
-enable_google_verification: false # enables google site verification
+enable_google_verification: true # enables google site verification
 enable_bing_verification: false # enables bing site verification
 enable_cookie_consent: false # enables GDPR-compliant cookie consent dialog (https://github.com/orestbida/cookieconsent)
 enable_masonry: false # no masonry layouts are used on this site
 enable_math: false # no mathematical typesetting is used on the current pages
 enable_tooltips: false # enables automatic tooltip links generated for each section titles on pages and posts
 enable_darkmode: false # keep the public presentation consistently light and warm
-enable_navbar_social: false # enables displaying social links in the navbar on the about page
+enable_navbar_social: true # enables displaying social links in the navbar on the about page
 enable_project_categories: false
 enable_medium_zoom: false
 enable_progressbar: false
