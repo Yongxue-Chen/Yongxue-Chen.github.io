@@ -78,7 +78,7 @@ I have published **13 peer-reviewed journal articles** and hold **5 granted Chin
 
 <div class="home-section">
 
-<h3><span class="lang-en">Selected Publications</span><span class="lang-zh">代表性论文</span></h3>
+<h3><span class="lang-en">First-Author Publications</span><span class="lang-zh">第一作者论文</span></h3>
 
 <div class="pub-item">
   <a href="https://doi.org/10.1145/3763355">Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive-Subtractive Manufacturing</a>
@@ -127,10 +127,47 @@ I have published **13 peer-reviewed journal articles** and hold **5 granted Chin
 
 <div class="home-section">
 
-<h3><span class="lang-en">Patents</span><span class="lang-zh">授权发明专利</span></h3>
+<h3><span class="lang-en">Awards</span><span class="lang-zh">荣誉奖励</span></h3>
 
-<p class="lang-en">Five granted Chinese invention patents on UAV trajectory planning, robotic milling posture optimization, robotic arm trajectory smoothing, and analytical cutter envelope computation.</p>
-<p class="lang-zh">已授权中国发明专利五项，涵盖无人机轨迹规划、机器人铣削姿态优化、机械臂轨迹光顺以及刀具包络面解析计算。</p>
+<div class="edu-item">
+  <div class="edu-degree"><span class="lang-en">Departmental Doctoral Scholarship</span><span class="lang-zh">曼彻斯特大学博士奖学金</span></div>
+  <div class="edu-meta">
+    <span class="lang-en">The University of Manchester &middot; 2023</span>
+    <span class="lang-zh">曼彻斯特大学 &middot; 2023</span>
+  </div>
+</div>
+
+<div class="edu-item">
+  <div class="edu-degree"><span class="lang-en">Shanghai Municipal Outstanding Graduate</span><span class="lang-zh">上海市优秀毕业生</span></div>
+  <div class="edu-meta">
+    <span class="lang-en">Shanghai Municipal Education Commission &middot; 2023</span>
+    <span class="lang-zh">上海市教育委员会 &middot; 2023</span>
+  </div>
+</div>
+
+<div class="edu-item">
+  <div class="edu-degree"><span class="lang-en">Outstanding Student Award</span><span class="lang-zh">上海交通大学三好学生</span></div>
+  <div class="edu-meta">
+    <span class="lang-en">Shanghai Jiao Tong University &middot; 2022</span>
+    <span class="lang-zh">上海交通大学 &middot; 2022</span>
+  </div>
+</div>
+
+<div class="edu-item">
+  <div class="edu-degree"><span class="lang-en">National Scholarship for Postgraduate Students</span><span class="lang-zh">研究生国家奖学金</span></div>
+  <div class="edu-meta">
+    <span class="lang-en">Ministry of Education, China &middot; 2021</span>
+    <span class="lang-zh">中华人民共和国教育部 &middot; 2021</span>
+  </div>
+</div>
+
+<div class="edu-item">
+  <div class="edu-degree"><span class="lang-en">Outstanding Graduate</span><span class="lang-zh">上海交通大学优秀毕业生</span></div>
+  <div class="edu-meta">
+    <span class="lang-en">Shanghai Jiao Tong University &middot; 2020</span>
+    <span class="lang-zh">上海交通大学 &middot; 2020</span>
+  </div>
+</div>
 
 <p>
   <a href="/cv/"><span class="lang-en">See full CV &rarr;</span><span class="lang-zh">查看完整简历 &rarr;</span></a>
