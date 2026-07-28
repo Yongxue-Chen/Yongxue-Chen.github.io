@@ -1,8 +1,8 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: "PhD Candidate in Production and Manufacturing Engineering, The University of Manchester"
+subtitle: "PhD Candidate in Production and Manufacturing Engineering · The University of Manchester"
 
 profile:
   align: right
