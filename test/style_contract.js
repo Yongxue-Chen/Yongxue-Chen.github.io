@@ -21,6 +21,7 @@ requireMatch(config, /^search_enabled: false$/m, "Global search should stay disa
 requireMatch(config, /^footer_fixed: false$/m, "The footer must not obscure page content.");
 requireMatch(config, /^serve_og_meta: true\b/m, "Open Graph metadata must stay enabled.");
 requireMatch(config, /^serve_schema_org: true\b/m, "Schema.org metadata must stay enabled.");
+requireMatch(config, /fonts: "\/assets\/css\/system-fonts\.css"/, "The site must not load unused render-blocking web fonts.");
 requireMatch(home, /13 peer-reviewed journal articles/, "The homepage publication count is missing from the prose.");
 requireMatch(home, /5 granted Chinese invention patents/, "The homepage patent count is missing from the prose.");
 if (/class="home-stat/.test(home)) throw new Error("Homepage metrics must remain in prose, not cards.");
