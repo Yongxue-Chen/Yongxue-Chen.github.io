@@ -43,6 +43,14 @@ nav_order: 2
     font-style: normal;
     border-bottom: none;
   }
+  /* Titles link to the official paper page; keep them looking like titles. */
+  .publications ol.bibliography li .title a {
+    color: var(--global-text-color);
+  }
+  .publications ol.bibliography li .title a:hover {
+    color: var(--global-theme-color);
+    text-decoration: none;
+  }
 </style>
 
 {% include bib_search.liquid %}
@@ -60,3 +68,35 @@ nav_order: 2
 {% bibliography --query @*[author_type=co] %}
 
 </div>
+
+<script>
+  // Make each publication title link to its official paper page, reusing the
+  // URL from the "HTML" button that jekyll-scholar renders from the bib `html` field.
+  (function () {
+    function linkTitles() {
+      document.querySelectorAll(".publications ol.bibliography li").forEach(function (li) {
+        var titleEl = li.querySelector(".title");
+        if (!titleEl || titleEl.querySelector("a")) return;
+        var btn = Array.prototype.slice
+          .call(li.querySelectorAll(".links a.btn"))
+          .filter(function (a) {
+            return a.textContent.trim() === "HTML";
+          })[0];
+        if (!btn) return;
+        var link = document.createElement("a");
+        link.href = btn.href;
+        link.target = "_blank";
+        link.rel = "external nofollow noopener";
+        link.innerHTML = titleEl.innerHTML;
+        titleEl.innerHTML = "";
+        titleEl.appendChild(link);
+        btn.textContent = "Paper";
+      });
+    }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", linkTitles);
+    } else {
+      linkTitles();
+    }
+  })();
+</script>
