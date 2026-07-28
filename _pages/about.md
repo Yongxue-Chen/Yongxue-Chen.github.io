@@ -25,6 +25,10 @@ latest_posts:
 <div style="margin-bottom: 1em;">
   <button onclick="setSiteLang('en')" id="lang-btn-en" style="padding: 4px 12px; margin-right: 6px; cursor: pointer;">English</button>
   <button onclick="setSiteLang('zh')" id="lang-btn-zh" style="padding: 4px 12px; cursor: pointer;">中文</button>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="/assets/pdf/cv_en.pdf">English CV (PDF)</a>
+  &nbsp;/&nbsp;
+  <a href="/assets/pdf/cv_zh.pdf">中文简历 (PDF)</a>
 </div>
 
 <div class="lang-en" markdown="1">
