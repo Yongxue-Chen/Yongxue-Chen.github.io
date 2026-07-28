@@ -44,74 +44,97 @@ sections:
         details_zh:
           - "GPA：3.797/4.3，专业排名 6/146"
 
-  - name: First-Author Journal Articles
-    name_zh: 第一作者期刊论文
+  - name: Journal Articles
+    name_zh: 期刊论文
     items:
       - title: "Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive-Subtractive Manufacturing"
+        group: First-author
+        group_zh: 第一作者
         subtitle: "<strong>Y. Chen</strong>, T. Liu, Y. Huang, W. Wang, T. Zhang, K. Qian, Z. Shi, and C. C. L. Wang. <em>ACM Transactions on Graphics (SIGGRAPH Asia)</em>. Oral presentation."
         subtitle_zh: "<strong>Y. Chen</strong>, T. Liu, Y. Huang, W. Wang, T. Zhang, K. Qian, Z. Shi, and C. C. L. Wang. <em>ACM Transactions on Graphics (SIGGRAPH Asia)</em>，口头报告。"
         date: "2025"
         url: https://doi.org/10.1145/3763355
 
       - title: "Co-Optimization of Tool Orientations, Kinematic Redundancy, and Waypoint Timing for Robot-Assisted Manufacturing"
+        group: First-author
+        group_zh: 第一作者
         subtitle: "<strong>Y. Chen</strong>, T. Zhang, Y. Huang, T. Liu, and C. C. L. Wang. <em>IEEE Transactions on Automation Science and Engineering</em>."
         date: "2025"
         url: https://doi.org/10.1109/TASE.2025.3542218
 
       - title: "Toolpath Generation for Robotic Flank Milling via Smoothness and Stiffness Optimization"
+        group: First-author
+        group_zh: 第一作者
         subtitle: "<strong>Y. Chen</strong>, Y. Lu, and Y. Ding. <em>Robotics and Computer-Integrated Manufacturing</em>."
         date: "2023"
         url: https://doi.org/10.1016/j.rcim.2023.102640
 
       - title: "Posture Optimization in Robotic Flat-End Milling Based on Sequential Quadratic Programming"
+        group: First-author
+        group_zh: 第一作者
         subtitle: "<strong>Y. Chen</strong> and Y. Ding. <em>ASME Journal of Manufacturing Science and Engineering</em>."
         date: "2023"
         url: https://doi.org/10.1115/1.4056707
 
       - title: "An Analytical Method for Corner Smoothing of Five-Axis Linear Paths Using Conformal Geometric Algebra"
+        group: First-author
+        group_zh: 第一作者
         subtitle: "<strong>Y. Chen</strong>, P. Huang, and Y. Ding. <em>Computer-Aided Design</em>."
         date: "2022"
         url: https://doi.org/10.1016/j.cad.2022.103408
 
       - title: "An Efficient Method for Collision-Free and Jerk-Constrained Trajectory Generation with Sparse Way-Points for a Flying Robot"
+        group: First-author
+        group_zh: 第一作者
         subtitle: "<strong>Y. Chen</strong>, W. Dong, and Y. Ding. <em>Science China Technological Sciences</em>."
         date: "2021"
         url: https://doi.org/10.1007/s11431-021-1836-7
 
-  - name: Co-Authored Journal Articles
-    name_zh: 合作作者期刊论文
-    items:
       - title: "Co-Optimization of Structure and Manufacturable Semi-Continuous Layers for Laminated Composites"
+        group: Co-authored
+        group_zh: 合作作者
         subtitle: "T. Liu, A. Lyu, <strong>Y. Chen</strong>, Y. Jiang, M. J. Petty, and C. C. L. Wang. <em>ACM Transactions on Graphics</em>."
         date: "2026"
         url: https://dl.acm.org/doi/10.1145/3811393
 
       - title: "Implicit Neural Field-Based Process Planning for Multi-Axis Manufacturing: Direct Control over Collision Avoidance and Toolpath Geometry"
+        group: Co-authored
+        group_zh: 合作作者
         subtitle: "N. Dutta, T. Zhang, T. Liu, <strong>Y. Chen</strong>, and C. C. L. Wang. <em>Computer-Aided Design</em>."
         date: "2026"
         url: https://doi.org/10.1016/j.cad.2026.104086
 
       - title: "Force-Based Adaptive Deposition in Multi-Axis Additive Manufacturing: Low Porosity for Enhanced Strength"
+        group: Co-authored
+        group_zh: 合作作者
         subtitle: "Y. Huang, R. Su, K. Qian, T. Zhang, <strong>Y. Chen</strong>, T. Liu, G. Fang, W. Wang, and C. C. L. Wang. <em>Robotics and Computer-Integrated Manufacturing</em>."
         date: "2026"
         url: https://doi.org/10.1016/j.rcim.2025.103123
 
       - title: "Neural Co-Optimization of Structural Topology, Manufacturable Layers, and Path Orientations for Fiber-Reinforced Composites"
+        group: Co-authored
+        group_zh: 合作作者
         subtitle: "T. Liu, T. Zhang, <strong>Y. Chen</strong>, W. Wang, Y. Jiang, Y. Huang, and C. C. L. Wang. <em>ACM Transactions on Graphics</em>."
         date: "2025"
         url: https://doi.org/10.1145/3730922
 
       - title: "Toolpath Generation for High Density Spatial Fiber Printing Guided by Principal Stresses"
+        group: Co-authored
+        group_zh: 合作作者
         subtitle: "T. Zhang, T. Liu, N. Dutta, <strong>Y. Chen</strong>, R. Su, Z. Zhang, W. Wang, and C. C. L. Wang. <em>Composites Part B</em>."
         date: "2025"
         url: https://doi.org/10.1016/j.compositesb.2025.112154
 
       - title: "Neural Slicer for Multi-Axis 3D Printing"
+        group: Co-authored
+        group_zh: 合作作者
         subtitle: "T. Liu, T. Zhang, <strong>Y. Chen</strong>, Y. Huang, and C. C. L. Wang. <em>ACM Transactions on Graphics</em>."
         date: "2024"
         url: https://doi.org/10.1145/3658212
 
       - title: "Point Pair-Based Expression of Cutter Swept Envelopes in Five-Axis Milling"
+        group: Co-authored
+        group_zh: 合作作者
         subtitle: "Y. Ding and <strong>Y. Chen</strong>. <em>Computer-Aided Design</em>."
         date: "2023"
         url: https://doi.org/10.1016/j.cad.2023.103588
