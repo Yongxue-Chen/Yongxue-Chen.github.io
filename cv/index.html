@@ -322,6 +322,22 @@
     color: var(--global-text-color-light);
     font-size: 0.9rem;
   }
+  /* Awards are short enough to sit one per line with the issuer and year pushed right.
+     Phones keep the stacked layout — see the 575.98px block. */
+  @media (min-width: 576px) {
+    .home-section .award-item {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+    .home-section .award-item .edu-meta {
+      margin-top: 0;
+      text-align: right;
+      white-space: nowrap;
+      flex: 0 0 auto;
+    }
+  }
   .home-section > p {
     margin: 0 !important;
     padding: 0.7rem 0.4rem 0.7rem 1rem;
@@ -350,6 +366,8 @@
     color: #61717c !important;
   }
   .social { margin-top: 2.5rem; }
+  /* Phones-only duplicate of the navbar icons; shown in the 575.98px block. */
+  .home-socials { display: none; }
   .social .contact-icons {
     display: flex;
     justify-content: center;
@@ -556,6 +574,7 @@
     .navbar .navbar-collapse-main { order: 4; flex-basis: 100%; }
     .navbar .navbar-menu-list { align-items: flex-start; gap: 0.35rem; padding: 0.7rem 0 0.9rem; }
     .lang-switch-item { margin-top: 0.2rem; }
+    .post-header { margin-bottom: 0.8rem; }
     .post-header .post-title { font-size: 2.5rem; }
     .profile {
       float: none !important;
@@ -614,12 +633,16 @@
     .navbar.navbar-light .navbar-nav .nav-item .nav-link { padding: 0.35rem 0.55rem; }
     .lang-switch-item { margin-top: 0; margin-left: 0.1rem; }
 
-    /* Reorder the about page to photo → social icons → copy. The theme renders the
-       social block last, after all the page content. */
-    .post > article { display: flex; flex-direction: column; }
-    .post > article > .profile { order: 1; }
-    .post > article > .social { order: 2; }
-    .post > article > .clearfix { order: 3; }
+    /* A copy of the navbar icons under the name; the theme's own social block stays
+       where it is, centred at the foot of the page. */
+    .home-socials {
+      display: flex;
+      justify-content: flex-start;
+      gap: 1.1rem;
+      font-size: 1.25rem;
+      margin: 0.1rem 0 1.1rem;
+    }
+    .home-socials a { color: var(--global-text-color-light); }
     /* Let the contact lines use the full column width so the email stays on one line;
        only the picture keeps the narrow width. */
     .profile {
@@ -632,12 +655,6 @@
       margin-top: 0.55rem;
       font-size: 0.85rem;
       white-space: nowrap;
-    }
-    .post > article > .social { margin: 0 0 1.5rem; }
-    .post > article > .social .contact-icons {
-      justify-content: flex-start;
-      gap: 1.1rem;
-      font-size: 1.3rem;
     }
   }
 </style> <script>
@@ -725,6 +742,17 @@
         }
       }
 
+      // The navbar brand is hidden on phones, so mirror its icons under the name. The
+      // clone is always in the DOM; CSS decides which breakpoint shows it.
+      var brandSocial = document.querySelector(".navbar .navbar-brand.social");
+      var header = document.querySelector(".post-header");
+      if (brandSocial && header && !document.querySelector(".home-socials")) {
+        var copy = document.createElement("div");
+        copy.className = "home-socials";
+        copy.innerHTML = brandSocial.innerHTML;
+        header.insertAdjacentElement("afterend", copy);
+      }
+
       var switcher = document.querySelector(".lang-switch");
       var menu = document.querySelector(".navbar-menu-list");
       if (switcher && menu && !menu.querySelector(".lang-switch")) {
@@ -793,29 +821,34 @@
     padding-bottom: 0.25rem;
     border-bottom: 2px solid var(--global-theme-color);
   }
-  /* Lighter than a section heading: separates groups inside one section. */
+  /* Distinct from the h2 (which carries a bottom rule) but clearly a heading. */
   h3.cv-subheading {
-    font-size: 0.92rem;
-    font-weight: 650;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--global-text-color-light);
-    margin: 1.1rem 0 0.1rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--global-theme-color);
+    margin: 1.5rem 0 0.4rem;
+    padding-left: 0.6rem;
+    border-left: 3px solid var(--global-theme-color);
+    line-height: 1.3;
   }
-  h3.cv-subheading:first-child { margin-top: 0.2rem; }
+  h3.cv-subheading:first-child { margin-top: 0.35rem; }
   .cv-entry {
     padding: 0.55rem 0;
     border-bottom: 1px solid var(--global-divider-color);
   }
   .cv-entry:last-child,
   .cv-entry:has(+ h3.cv-subheading) { border-bottom: none; }
+  /* No wrapping: a title long enough to fill the row was pushing its year onto the
+     next line, unlike every other entry. The title shrinks, the year never does. */
   .cv-entry-head {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     gap: 1rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
+  .cv-entry-title { flex: 1 1 auto; min-width: 0; }
+  .cv-entry-date { flex: 0 0 auto; white-space: nowrap; }
   .cv-entry-title { font-weight: 600; }
   .cv-entry-title a { color: var(--global-text-color); }
   .cv-entry-title a:hover { color: var(--global-theme-color); text-decoration: none; }

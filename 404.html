@@ -248,6 +248,22 @@
     color: var(--global-text-color-light);
     font-size: 0.9rem;
   }
+  /* Awards are short enough to sit one per line with the issuer and year pushed right.
+     Phones keep the stacked layout — see the 575.98px block. */
+  @media (min-width: 576px) {
+    .home-section .award-item {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+    .home-section .award-item .edu-meta {
+      margin-top: 0;
+      text-align: right;
+      white-space: nowrap;
+      flex: 0 0 auto;
+    }
+  }
   .home-section > p {
     margin: 0 !important;
     padding: 0.7rem 0.4rem 0.7rem 1rem;
@@ -276,6 +292,8 @@
     color: #61717c !important;
   }
   .social { margin-top: 2.5rem; }
+  /* Phones-only duplicate of the navbar icons; shown in the 575.98px block. */
+  .home-socials { display: none; }
   .social .contact-icons {
     display: flex;
     justify-content: center;
@@ -482,6 +500,7 @@
     .navbar .navbar-collapse-main { order: 4; flex-basis: 100%; }
     .navbar .navbar-menu-list { align-items: flex-start; gap: 0.35rem; padding: 0.7rem 0 0.9rem; }
     .lang-switch-item { margin-top: 0.2rem; }
+    .post-header { margin-bottom: 0.8rem; }
     .post-header .post-title { font-size: 2.5rem; }
     .profile {
       float: none !important;
@@ -540,12 +559,16 @@
     .navbar.navbar-light .navbar-nav .nav-item .nav-link { padding: 0.35rem 0.55rem; }
     .lang-switch-item { margin-top: 0; margin-left: 0.1rem; }
 
-    /* Reorder the about page to photo → social icons → copy. The theme renders the
-       social block last, after all the page content. */
-    .post > article { display: flex; flex-direction: column; }
-    .post > article > .profile { order: 1; }
-    .post > article > .social { order: 2; }
-    .post > article > .clearfix { order: 3; }
+    /* A copy of the navbar icons under the name; the theme's own social block stays
+       where it is, centred at the foot of the page. */
+    .home-socials {
+      display: flex;
+      justify-content: flex-start;
+      gap: 1.1rem;
+      font-size: 1.25rem;
+      margin: 0.1rem 0 1.1rem;
+    }
+    .home-socials a { color: var(--global-text-color-light); }
     /* Let the contact lines use the full column width so the email stays on one line;
        only the picture keeps the narrow width. */
     .profile {
@@ -558,12 +581,6 @@
       margin-top: 0.55rem;
       font-size: 0.85rem;
       white-space: nowrap;
-    }
-    .post > article > .social { margin: 0 0 1.5rem; }
-    .post > article > .social .contact-icons {
-      justify-content: flex-start;
-      gap: 1.1rem;
-      font-size: 1.3rem;
     }
   }
 </style> <script>
@@ -649,6 +666,17 @@
           // applyLabels() overwrite its children with the plain-text name.
           existing.classList.add("site-brand");
         }
+      }
+
+      // The navbar brand is hidden on phones, so mirror its icons under the name. The
+      // clone is always in the DOM; CSS decides which breakpoint shows it.
+      var brandSocial = document.querySelector(".navbar .navbar-brand.social");
+      var header = document.querySelector(".post-header");
+      if (brandSocial && header && !document.querySelector(".home-socials")) {
+        var copy = document.createElement("div");
+        copy.className = "home-socials";
+        copy.innerHTML = brandSocial.innerHTML;
+        header.insertAdjacentElement("afterend", copy);
       }
 
       var switcher = document.querySelector(".lang-switch");
