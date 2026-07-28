@@ -1,0 +1,35 @@
+cv:
+  name: Yongxue Chen
+  label: # TODO: 填写头衔，例如 PhD Student / Researcher
+  email: your.email@example.com # TODO
+  location: # TODO: 城市, 国家
+  image: ""
+  summary: # TODO: 一句话学术简介
+
+  social_networks:
+    - network: GitHub
+      username: Yongxue-Chen
+    # - network: LinkedIn
+    #   username: your-linkedin
+
+  sections:
+    Education:
+      # TODO: 根据简历填写，示例格式如下：
+      - institution: "TODO: 学校名称"
+        location: "TODO: 城市, 国家"
+        url:
+        area: "TODO: 专业"
+        studyType: "TODO: 学位 (如 PhD / MSc / BSc)"
+        start_date: "TODO"
+        end_date: "TODO"
+        highlights: []
+
+    Experience:
+      # TODO: 根据简历填写，示例格式如下：
+      - company: "TODO: 单位/公司名称"
+        position: "TODO: 职位"
+        location: "TODO: 城市, 国家"
+        start_date: "TODO"
+        end_date: "TODO"
+        summary: ""
+        highlights: []
