@@ -395,11 +395,6 @@
     border-bottom: 1px solid var(--site-border) !important;
     font-size: 1.55rem;
   }
-  .pub-group-note {
-    margin: 0.65rem 0 1.6rem !important;
-    color: var(--global-text-color-light) !important;
-    font-size: 0.9rem !important;
-  }
   .publications h2.bibliography {
     margin: 2.4rem 0 0 !important;
     padding: 0 0 0.55rem !important;
@@ -585,7 +580,8 @@
     .post-header .desc { margin-bottom: 0; }
     .post > article > .cv-nav,
     .post > article > .publications { margin-top: 0; }
-    .publications .pub-group-title:first-of-type { margin-top: 0.2rem; }
+    /* The base rule above is !important, so this has to be too. */
+    .publications .pub-group-title:first-of-type { margin-top: 0.2rem !important; }
     h2.cv-heading:first-of-type { margin-top: 0.4rem; }
     .post-header .post-title { font-size: 2.5rem; }
     .profile {
