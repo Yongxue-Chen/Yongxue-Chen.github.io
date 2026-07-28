@@ -17,7 +17,7 @@ nav_order: 2
     overflow: visible !important;
     border: none !important;
     font-size: 0.9rem;
-    text-align: justify;
+    text-align: left;
     margin-top: 0.35rem;
   }
   .publications ol.bibliography li .abstract.hidden p {
