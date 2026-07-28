@@ -4,28 +4,39 @@
   html:not([data-lang="zh"]) .lang-zh,
   html[data-lang="zh"] .lang-en { display: none !important; }
   :root {
-    --global-theme-color: #b55432 !important;
-    --global-hover-color: #8c3d25 !important;
-    --global-text-color-light: #75645c !important;
-    --site-surface: #fff4e6;
-    --site-border: #ead3c0;
-    --site-accent-soft: #f8dfcb;
-    --site-gold: #c8893f;
+    --global-theme-color: #3f7191 !important;
+    --global-hover-color: #285873 !important;
+    --global-text-color-light: #62717c !important;
+    --site-surface: #f5f9fc;
+    --site-border: #d7e3ec;
+    --site-accent-soft: #e8f1f7;
+    --site-accent-strong: #78a4bf;
     --site-radius: 14px;
   }
   html[data-theme="dark"] {
-    --global-theme-color: #e6a16d !important;
-    --global-hover-color: #f2bf92 !important;
-    --global-text-color-light: #cbb8ac !important;
-    --site-surface: #392c27;
-    --site-border: #59433a;
-    --site-accent-soft: #49342c;
-    --site-gold: #d9a15e;
+    --global-theme-color: #8fc1df !important;
+    --global-hover-color: #b6d9ed !important;
+    --global-text-color-light: #aebec9 !important;
+    --site-surface: #1b2a34;
+    --site-border: #334955;
+    --site-accent-soft: #233945;
+    --site-accent-strong: #6ca3c1;
   }
   body {
-    background-image: linear-gradient(180deg, color-mix(in srgb, var(--site-accent-soft) 34%, transparent), transparent 24rem);
+    background-image: linear-gradient(180deg, color-mix(in srgb, var(--site-accent-soft) 62%, transparent), transparent 30rem);
     background-repeat: no-repeat;
-    font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family:
+      Inter,
+      "SF Pro Text",
+      ui-sans-serif,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      "PingFang SC",
+      "Microsoft YaHei",
+      "Noto Sans CJK SC",
+      "Source Han Sans SC",
+      sans-serif;
     font-size: 1rem;
     line-height: 1.65;
     letter-spacing: -0.006em;
@@ -109,38 +120,92 @@
   }
 
   .profile {
-    max-width: 230px !important;
+    width: 190px !important;
+    max-width: 190px !important;
+    margin-top: -7.8rem !important;
     margin-left: 2.4rem !important;
   }
-  .profile figure { margin-bottom: 0.85rem; }
+  .profile figure {
+    width: 100%;
+    margin: 0 0 0.85rem;
+  }
   .profile img {
     border: 1px solid var(--site-border);
     border-radius: var(--site-radius) !important;
-    box-shadow: 0 18px 44px rgba(122, 67, 39, 0.16);
+    box-shadow: 0 18px 44px rgba(47, 91, 118, 0.15);
   }
   .profile .more-info {
+    width: 100%;
+    margin: 0;
     font-family: inherit;
     color: var(--global-text-color-light);
     font-size: 0.84rem;
     line-height: 1.55;
+    text-align: left;
+    overflow-wrap: anywhere;
   }
-  .profile .more-info p { display: block; }
-  .home-section { margin-top: 2.8rem !important; }
+  .profile .more-info p {
+    display: block;
+    margin: 0.15rem 0;
+  }
+  .home-intro {
+    max-width: 47rem;
+  }
+  .home-intro .home-eyebrow {
+    margin: 0 0 0.75rem;
+    color: var(--global-theme-color);
+    font-size: 0.76rem;
+    font-weight: 760;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+  .home-intro > p:not(.home-eyebrow) {
+    margin-bottom: 1rem;
+  }
+  .home-section {
+    clear: both;
+    margin-top: 3.5rem !important;
+    padding-top: 0.15rem;
+  }
   .home-section h3 {
-    margin-bottom: 1.1rem !important;
-    padding-bottom: 0.65rem !important;
-    border-bottom: 2px solid color-mix(in srgb, var(--global-theme-color) 45%, var(--site-gold)) !important;
-    color: color-mix(in srgb, var(--global-theme-color) 82%, var(--global-text-color));
-    font-size: 1.35rem !important;
+    margin: 0 0 0.8rem !important;
+    padding: 0.68rem 0.9rem !important;
+    border-bottom: 0 !important;
+    border-left: 4px solid var(--global-theme-color);
+    background: linear-gradient(90deg, var(--site-accent-soft), transparent 88%);
+    color: color-mix(in srgb, var(--global-theme-color) 88%, var(--global-text-color));
+    font-size: 1.32rem !important;
   }
   .edu-item,
   .pub-item {
-    padding: 0.8rem 0;
+    padding: 0.95rem 0.4rem 0.95rem 1rem;
     margin: 0 !important;
+    border-left: 1px solid var(--site-border);
     border-bottom: 1px solid var(--site-border);
+  }
+  .edu-item .edu-degree { font-weight: 650; }
+  .edu-item .edu-meta {
+    margin-top: 0.15rem;
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+  }
+  .home-section > p {
+    margin: 0 !important;
+    padding: 0.7rem 0.4rem 0.7rem 1rem;
+    border-left: 1px solid var(--site-border);
   }
   .edu-item:last-child,
   .pub-item:last-of-type { border-bottom: 0; }
+  .home-section .pub-item > a {
+    color: #244f69;
+    font-weight: 650;
+    line-height: 1.45;
+  }
+  .home-section .pub-item > a:hover { color: var(--global-hover-color); }
+  .home-section .pub-venue {
+    margin-top: 0.2rem;
+    color: #61717c !important;
+  }
   .social { margin-top: 2.5rem; }
   .social .contact-icons {
     display: flex;
@@ -347,8 +412,8 @@
     .post-header .post-title { font-size: 2.5rem; }
     .profile {
       float: none !important;
-      width: min(56%, 220px) !important;
-      margin: 0 0 1.6rem !important;
+      width: min(48%, 190px) !important;
+      margin: -0.75rem 0 1.6rem !important;
     }
     .publications ol.bibliography li .row {
       grid-template-columns: 92px minmax(0, 1fr);
@@ -373,6 +438,7 @@
   (function () {
     var copy = {
       en: {
+        name: "Yongxue Chen",
         about: "About",
         homeDescription: "PhD Candidate in Production and Manufacturing Engineering · The University of Manchester",
         publications: "Publications",
@@ -382,6 +448,7 @@
         footer: "© 2026 Yongxue Chen · Built with Jekyll · Hosted on GitHub Pages",
       },
       zh: {
+        name: "陈永学",
         about: "关于我",
         homeDescription: "生产与制造工程博士研究生 · 英国曼彻斯特大学",
         publications: "论文",
@@ -407,19 +474,22 @@
       });
 
       var path = window.location.pathname;
+      var brand = document.querySelector(".site-brand");
       var heading = document.querySelector(".post-header .post-title");
       var description = document.querySelector(".post-header .desc");
+      if (brand) brand.textContent = labels.name;
       if (path === "\/") {
+        if (heading) heading.textContent = labels.name;
         if (description) description.textContent = labels.homeDescription;
-        document.title = "Yongxue Chen";
+        document.title = labels.name;
       } else if (path === "\/publications\/") {
         if (heading) heading.textContent = labels.publications;
         if (description) description.textContent = labels.publicationsDescription;
-        document.title = labels.publications + " | Yongxue Chen";
+        document.title = labels.publications + " | " + labels.name;
       } else if (path === "/cv/") {
         if (heading) heading.textContent = labels.cv;
         if (description) description.textContent = labels.cvDescription;
-        document.title = labels.cv + " | Yongxue Chen";
+        document.title = labels.cv + " | " + labels.name;
       }
 
       var footer = document.querySelector("footer .container");
