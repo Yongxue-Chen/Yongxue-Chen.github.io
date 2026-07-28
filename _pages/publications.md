@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /publications/
-title: publications
+title: Publications
 description: Peer-reviewed journal articles, grouped by authorship and listed in reverse chronological order.
 nav: true
 nav_order: 2
