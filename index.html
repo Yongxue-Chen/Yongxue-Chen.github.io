@@ -184,6 +184,17 @@
     font-weight: 720;
     letter-spacing: -0.02em;
   }
+  .navbar .navbar-brand.social {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.02rem;
+  }
+  .navbar .navbar-brand.social a {
+    color: var(--global-text-color-light);
+    transition: color 0.15s ease;
+  }
+  .navbar .navbar-brand.social a:hover { color: var(--global-theme-color); }
   .navbar .navbar-nav { align-items: center; gap: 0.15rem; }
   .navbar.navbar-light .navbar-nav .nav-item .nav-link {
     padding: 0.45rem 0.7rem;
@@ -614,7 +625,9 @@
           brand.href = "/";
           brand.textContent = "Yongxue Chen";
           navbar.insertBefore(brand, navbar.firstChild);
-        } else {
+        } else if (!existing.classList.contains("social")) {
+          // The social variant holds icon links; tagging it as .site-brand would let
+          // applyLabels() overwrite its children with the plain-text name.
           existing.classList.add("site-brand");
         }
       }
