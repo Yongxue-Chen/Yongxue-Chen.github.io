@@ -1,35 +1,150 @@
 cv:
   name: Yongxue Chen
-  label: # TODO: 填写头衔，例如 PhD Student / Researcher
-  email: your.email@example.com # TODO
-  location: # TODO: 城市, 国家
+  label: PhD Candidate in Production and Manufacturing Engineering
+  email: chandler.yx.chen@gmail.com
+  location: Manchester, UK
   image: ""
-  summary: # TODO: 一句话学术简介
+  summary: PhD candidate specializing in robotics and advanced manufacturing, with a focus on motion planning, trajectory optimization, and process planning for hybrid additive-subtractive manufacturing.
 
   social_networks:
     - network: GitHub
       username: Yongxue-Chen
-    # - network: LinkedIn
-    #   username: your-linkedin
 
   sections:
     Education:
-      # TODO: 根据简历填写，示例格式如下：
-      - institution: "TODO: 学校名称"
-        location: "TODO: 城市, 国家"
+      - institution: "The University of Manchester (UoM)"
+        location: "Manchester, UK"
         url:
-        area: "TODO: 专业"
-        studyType: "TODO: 学位 (如 PhD / MSc / BSc)"
-        start_date: "TODO"
-        end_date: "TODO"
-        highlights: []
+        area: "Production and Manufacturing Engineering"
+        studyType: "PhD"
+        start_date: "2023-09"
+        end_date: "2027-02"
+        highlights:
+          - "Supervisor: Prof. Charlie C. L. Wang"
+          - "Research focus: Robot-assisted manufacturing, hybrid additive-subtractive manufacturing, multi-axis 3D printing, carbon-fiber printing, and process planning"
+
+      - institution: "Shanghai Jiao Tong University (SJTU)"
+        location: "Shanghai, China"
+        url:
+        area: "Mechanical Engineering"
+        studyType: "MEng"
+        start_date: "2020-09"
+        end_date: "2023-03"
+        highlights:
+          - "Supervisor: Prof. Ye Ding"
+          - "Research focus: Robot-assisted milling, motion and trajectory planning, and geometric modeling"
+
+      - institution: "Shanghai Jiao Tong University (SJTU)"
+        location: "Shanghai, China"
+        url:
+        area: "Mechanical Engineering"
+        studyType: "BEng"
+        start_date: "2016-09"
+        end_date: "2020-06"
+        highlights:
+          - "GPA: 3.797/4.3 (Ranked 6/146)"
 
     Experience:
-      # TODO: 根据简历填写，示例格式如下：
-      - company: "TODO: 单位/公司名称"
-        position: "TODO: 职位"
-        location: "TODO: 城市, 国家"
-        start_date: "TODO"
-        end_date: "TODO"
-        summary: ""
-        highlights: []
+      - company: "The University of Manchester"
+        position: "PhD Researcher — Neural Field Optimization for Hybrid Manufacturing"
+        location: "Manchester, UK"
+        start_date: "2025-05"
+        end_date: "2026-05"
+        highlights:
+          - "Developed a neural field-based optimization framework for hybrid additive-subtractive manufacturing, jointly optimizing fabrication sequences and tool orientations for complex geometries."
+          - "Formulated an FEA-guided, distortion-aware optimization strategy to improve the mechanical stability of intermediate structures while considering manufacturability constraints."
+          - "Improved efficiency on large-scale models and manufacturing accuracy; first-author journal manuscript currently under review."
+
+      - company: "The University of Manchester"
+        position: "PhD Researcher — Inverse Operation-Based Planning for Hybrid Manufacturing"
+        location: "Manchester, UK"
+        start_date: "2024-05"
+        end_date: "2025-05"
+        highlights:
+          - "Developed an inverse-operation-based planning framework for hybrid additive-subtractive manufacturing, formulating fabrication as a reverse process from the target geometry to an initial state."
+          - "Enabled the fabrication of complex geometries without restrictive manufacturability constraints; published in ACM Transactions on Graphics (SIGGRAPH Asia 2025), with oral presentation."
+
+      - company: "The University of Manchester"
+        position: "PhD Researcher — Trajectory Co-Optimization for Robot-Assisted Manufacturing"
+        location: "Manchester, UK"
+        start_date: "2023-09"
+        end_date: "2024-05"
+        highlights:
+          - "Developed a unified framework jointly optimizing tool orientations, kinematic redundancy, and waypoint timing for multi-axis robot-assisted manufacturing."
+          - "Achieved smooth and efficient robot motions across complex, large-scale toolpaths; results published in IEEE Transactions on Automation Science and Engineering, 2025."
+
+      - company: "Shanghai Jiao Tong University"
+        position: "Research Assistant — 6-DoF Path Optimization in Robotic Flank Milling"
+        location: "Shanghai, China"
+        start_date: "2022-10"
+        end_date: "2023-03"
+        highlights:
+          - "Developed a unified optimization framework for 6-DoF toolpath planning in robotic flank milling, jointly considering machining accuracy, kinematic smoothness, and robot stiffness."
+          - "Results published in Robotics and Computer-Integrated Manufacturing, 2023."
+
+      - company: "Shanghai Jiao Tong University"
+        position: "Research Assistant — Posture Optimization in Robotic Flat-End Milling"
+        location: "Shanghai, China"
+        start_date: "2021-10"
+        end_date: "2022-10"
+        highlights:
+          - "Developed a sequential quadratic programming-based optimization framework for jointly optimizing tool orientation and kinematic redundancy under geometric and kinematic constraints."
+          - "Results published in ASME Journal of Manufacturing Science and Engineering, 2023."
+
+      - company: "Shanghai Jiao Tong University"
+        position: "Research Assistant — Corner Smoothing of Five-Axis Toolpaths"
+        location: "Shanghai, China"
+        start_date: "2021-03"
+        end_date: "2021-10"
+        highlights:
+          - "Built a unified analytical conformal-geometric-algebra framework for five-axis toolpath smoothing; published in Computer-Aided Design, 2022."
+
+      - company: "Shanghai Jiao Tong University"
+        position: "Research Assistant — Trajectory Planning for Quadrotors"
+        location: "Shanghai, China"
+        start_date: "2019-07"
+        end_date: "2020-09"
+        highlights:
+          - "Generated smooth, collision-free, jerk-constrained trajectories via sequential convex programming; published in Science China Technological Sciences, 2021."
+
+    Teaching:
+      - company: "The University of Manchester"
+        position: "Teaching Assistant — Additive Manufacturing & 3D Product Modelling"
+        location: "Manchester, UK"
+        start_date: "2026"
+        end_date: "2026"
+        highlights:
+          - "Taught 3D scanning/printing labs and assessed reports with design/manufacturing feedback."
+
+      - company: "Shanghai Jiao Tong University"
+        position: "Teaching Assistant — MATLAB and Its Applications in Engineering"
+        location: "Shanghai, China"
+        start_date: "2021"
+        end_date: "2021"
+        highlights:
+          - "Designed and graded coursework assignments, and supported students through Q&A."
+
+    Awards:
+      - title: "Departmental Doctoral Scholarship"
+        awarder: "The University of Manchester"
+        date: "2023"
+      - title: "Shanghai Municipal Outstanding Graduate"
+        awarder: "Shanghai Municipal Education Commission"
+        date: "2023"
+      - title: "Outstanding Student Award"
+        awarder: "Shanghai Jiao Tong University"
+        date: "2022"
+      - title: "National Scholarship for Postgraduate Students (China)"
+        awarder: "Ministry of Education, China"
+        date: "2021"
+      - title: "Outstanding Graduate"
+        awarder: "Shanghai Jiao Tong University"
+        date: "2020"
+
+    Skills:
+      - name: "Research Areas"
+        keywords: "Robotics, advanced manufacturing, computational process planning"
+      - name: "Methods"
+        keywords: "Learning-based methods, geometric modeling, numerical optimization, geometric algebra"
+      - name: "Programming"
+        keywords: "C++, Python, MATLAB"

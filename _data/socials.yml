@@ -1,7 +1,6 @@
 # this file contains the social media links and usernames of the author
 # the socials will be displayed in the order they are defined here
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
-# cv_pdf: /assets/pdf/cv.pdf # TODO: 放入简历 PDF 后取消注释并填写路径
-email: your.email@example.com # TODO: 填写你的邮箱
-# scholar_userid: # TODO: 你的 Google Scholar ID（可选）
-# orcid_id: # TODO: 你的 ORCID（可选）
+cv_pdf: /assets/pdf/cv_en.pdf
+email: chandler.yx.chen@gmail.com
+scholar_userid: G7jjST0AAAAJ
