@@ -82,6 +82,7 @@ I have published **13 peer-reviewed journal articles** and hold **5 granted Chin
 
 <div class="pub-item">
   <a href="https://doi.org/10.1145/3763355">Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive-Subtractive Manufacturing</a>
+  <div class="pub-authors"><strong>Yongxue Chen</strong>, Tao Liu, Yuming Huang, Weiming Wang, Tianyu Zhang, Kun Qian, Zikang Shi, Charlie C. L. Wang</div>
   <div class="pub-venue">
     <span class="lang-en"><em>ACM Transactions on Graphics (SIGGRAPH Asia)</em>, 2025 &middot; Oral presentation</span>
     <span class="lang-zh"><em>ACM Transactions on Graphics (SIGGRAPH Asia)</em>, 2025 &middot; 口头报告</span>
@@ -90,12 +91,32 @@ I have published **13 peer-reviewed journal articles** and hold **5 granted Chin
 
 <div class="pub-item">
   <a href="https://doi.org/10.1109/TASE.2025.3542218">Co-Optimization of Tool Orientations, Kinematic Redundancy, and Waypoint Timing for Robot-Assisted Manufacturing</a>
+  <div class="pub-authors"><strong>Yongxue Chen</strong>, Tianyu Zhang, Yuming Huang, Tao Liu, Charlie C. L. Wang</div>
   <div class="pub-venue"><em>IEEE Transactions on Automation Science and Engineering</em>, 2025</div>
 </div>
 
 <div class="pub-item">
   <a href="https://doi.org/10.1016/j.rcim.2023.102640">Toolpath Generation for Robotic Flank Milling via Smoothness and Stiffness Optimization</a>
+  <div class="pub-authors"><strong>Yongxue Chen</strong>, Yaoan Lu, Ye Ding</div>
   <div class="pub-venue"><em>Robotics and Computer-Integrated Manufacturing</em>, 2023</div>
+</div>
+
+<div class="pub-item">
+  <a href="https://doi.org/10.1115/1.4056707">Posture Optimization in Robotic Flat-End Milling Based on Sequential Quadratic Programming</a>
+  <div class="pub-authors"><strong>Yongxue Chen</strong>, Ye Ding</div>
+  <div class="pub-venue"><em>ASME Journal of Manufacturing Science and Engineering</em>, 2023</div>
+</div>
+
+<div class="pub-item">
+  <a href="https://doi.org/10.1016/j.cad.2022.103408">An Analytical Method for Corner Smoothing of Five-Axis Linear Paths Using Conformal Geometric Algebra</a>
+  <div class="pub-authors"><strong>Yongxue Chen</strong>, Pengsheng Huang, Ye Ding</div>
+  <div class="pub-venue"><em>Computer-Aided Design</em>, 2022</div>
+</div>
+
+<div class="pub-item">
+  <a href="https://doi.org/10.1007/s11431-021-1836-7">An Efficient Method for Collision-Free and Jerk-Constrained Trajectory Generation with Sparse Way-Points for a Flying Robot</a>
+  <div class="pub-authors"><strong>Yongxue Chen</strong>, Wei Dong, Ye Ding</div>
+  <div class="pub-venue"><em>Science China Technological Sciences</em>, 2021</div>
 </div>
 
 <p style="margin-top: 1rem;">
