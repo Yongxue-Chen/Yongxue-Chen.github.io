@@ -469,15 +469,19 @@
     color: var(--global-theme-color) !important;
     text-decoration: none;
   }
+  /* Typography only — the theme's `max-height: 0` keeps these collapsed until the
+     "Abs" button adds `.open`, so nothing here may reintroduce a height. */
   .publications ol.bibliography li .abstract.hidden,
   .publications ol.bibliography li div.abstract.hidden {
-    max-height: none !important;
-    margin-top: 1rem !important;
     border: 0 !important;
     color: var(--global-text-color-light);
     font-size: 0.89rem !important;
     line-height: 1.62;
     text-align: left !important;
+  }
+  .publications ol.bibliography li .abstract.hidden.open,
+  .publications ol.bibliography li div.abstract.hidden.open {
+    margin-top: 1rem !important;
   }
   .publications ol.bibliography li .abstract.hidden p {
     margin: 0 !important;
@@ -772,17 +776,7 @@
     }
   })();
 </script> <style>
-  /* Abstracts stay collapsed until the "Abs" button is pressed; the theme handles the
-     toggle, so only the opened state needs styling here. */
-  .publications ol.bibliography li div.abstract.hidden.open {
-    font-size: 0.9rem;
-    text-align: left;
-    margin-top: 0.35rem;
-  }
-  .publications ol.bibliography li div.abstract.hidden p {
-    margin: 0;
-    line-height: 1.5em;
-  }
+  /* Abstract styling lives in site_enhancements.liquid so both places cannot drift. */
   .pub-group-title {
     border-bottom: 2px solid var(--global-theme-color);
     padding-bottom: 0.3rem;

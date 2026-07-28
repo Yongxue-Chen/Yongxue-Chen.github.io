@@ -470,15 +470,19 @@
     color: var(--global-theme-color) !important;
     text-decoration: none;
   }
+  /* Typography only — the theme's `max-height: 0` keeps these collapsed until the
+     "Abs" button adds `.open`, so nothing here may reintroduce a height. */
   .publications ol.bibliography li .abstract.hidden,
   .publications ol.bibliography li div.abstract.hidden {
-    max-height: none !important;
-    margin-top: 1rem !important;
     border: 0 !important;
     color: var(--global-text-color-light);
     font-size: 0.89rem !important;
     line-height: 1.62;
     text-align: left !important;
+  }
+  .publications ol.bibliography li .abstract.hidden.open,
+  .publications ol.bibliography li div.abstract.hidden.open {
+    margin-top: 1rem !important;
   }
   .publications ol.bibliography li .abstract.hidden p {
     margin: 0 !important;
