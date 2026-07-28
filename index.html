@@ -575,7 +575,18 @@
     .navbar .navbar-collapse-main { order: 4; flex-basis: 100%; }
     .navbar .navbar-menu-list { align-items: flex-start; gap: 0.35rem; padding: 0.7rem 0 0.9rem; }
     .lang-switch-item { margin-top: 0.2rem; }
-    .post-header { margin-bottom: 0.8rem; }
+    /* The gap under the page title was set by margins collapsing out of both the header
+       and the first content block, so it ignored `margin-bottom` alone. Padding stops
+       the collapse and the leading margins are zeroed, making the gap explicit. */
+    .post-header {
+      margin-bottom: 0;
+      padding-bottom: 0.7rem;
+    }
+    .post-header .desc { margin-bottom: 0; }
+    .post > article > .cv-nav,
+    .post > article > .publications { margin-top: 0; }
+    .publications .pub-group-title:first-of-type { margin-top: 0.2rem; }
+    h2.cv-heading:first-of-type { margin-top: 0.4rem; }
     .post-header .post-title { font-size: 2.5rem; }
     .profile {
       float: none !important;
