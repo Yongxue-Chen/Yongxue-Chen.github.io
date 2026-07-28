@@ -141,6 +141,12 @@
     font-family: inherit;
     letter-spacing: -0.035em;
   }
+  html[data-lang="zh"] body h1,
+  html[data-lang="zh"] body h2,
+  html[data-lang="zh"] body h3,
+  html[data-lang="zh"] body h4 {
+    letter-spacing: 0.045em;
+  }
   body h1 { font-weight: 720; }
   body h2,
   body h3 { font-weight: 680; }
@@ -183,6 +189,10 @@
     border-radius: 999px;
     font-size: 0.93rem;
     font-weight: 560;
+  }
+  html[data-lang="zh"] .navbar .site-brand,
+  html[data-lang="zh"] .navbar .nav-link {
+    letter-spacing: 0.025em;
   }
   .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
     background: color-mix(in srgb, var(--global-theme-color) 10%, transparent);
