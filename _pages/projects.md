@@ -80,6 +80,7 @@ nav_order: 2
   .project-summary {
     margin: 0 0 1rem; color: var(--global-text-color-light);
     font-size: 0.88rem; line-height: 1.58;
+    text-align: justify; text-justify: inter-word;
   }
   .project-links { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: auto; }
   .project-links a {
