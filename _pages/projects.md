@@ -44,7 +44,7 @@ nav_order: 2
     box-shadow: 0 16px 36px rgba(47, 91, 118, 0.13);
   }
   .project-media {
-    position: relative; aspect-ratio: 16 / 9; overflow: hidden;
+    position: relative; aspect-ratio: 4 / 3; overflow: hidden;
     border-bottom: 1px solid var(--site-border); background: var(--site-accent-soft);
   }
   .project-media img, .project-media iframe { display: block; width: 100%; height: 100%; border: 0; }

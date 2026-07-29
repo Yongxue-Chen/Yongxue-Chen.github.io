@@ -26,6 +26,11 @@ test("publications use one consistent collapsible layout", async ({ page }) => {
   for (const abstract of await abstracts.all()) await expect(abstract).toBeHidden();
   await expect(page.locator(".links a.abstract.btn")).toHaveCount(13);
   await expect(page.locator(".links a.abstract.btn .lang-en").first()).toHaveText("Abstract");
+  const publicationPreviewRatio = await page.locator(".publications img.preview").first().evaluate((image) => {
+    const box = image.getBoundingClientRect();
+    return box.width / box.height;
+  });
+  expect(publicationPreviewRatio).toBeCloseTo(4 / 3, 2);
 
   const styles = await entries.evaluateAll((nodes) =>
     nodes.map((node) => {
@@ -47,6 +52,11 @@ test("projects use the requested card rows and a single embedded video", async (
   await expect(page.locator(".project-media iframe")).toHaveCount(1);
   await expect(page.locator(".project-meta")).toHaveCount(8);
   await expect(page.locator(".project-card").first().locator(".project-meta .lang-en")).toHaveText("Under Review");
+  const projectMediaRatio = await page.locator(".project-media").first().evaluate((media) => {
+    const box = media.getBoundingClientRect();
+    return box.width / box.height;
+  });
+  expect(projectMediaRatio).toBeCloseTo(4 / 3, 2);
   const projectHeaderMargin = await page.locator(".post-header").evaluate((node) => getComputedStyle(node).marginBottom);
   expect(projectHeaderMargin).toBe("48px");
   const columns = await page

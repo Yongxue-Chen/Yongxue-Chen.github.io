@@ -25,9 +25,9 @@ Project sections, cards, text, media, and links are maintained in `_data/project
 - Use `layout: two`, `three`, or `single` to control the desktop columns for a section.
 - Edit `title_en` / `title_zh` and `summary_en` / `summary_zh` for bilingual card copy. For published work, format `meta_en` / `meta_zh` as the full journal name and year. For unpublished work, use a short status such as `Under Review` / `审稿中`.
 - Edit entries under `links` to change Project, Paper, Code, or Video destinations.
-- For an image card, use `media_type: "image"` and set `media` to an image under `assets/img/project_preview/` or `assets/img/publication_preview/`. Landscape images near 16:9 work best. Add `media_class: "project-media-contain"` when the full image should remain visible rather than be cropped.
+- For an image card, use `media_type: "image"` and set `media` to an image under `assets/img/project_preview/` or `assets/img/publication_preview/`. Prepare both Project and Publication preview images at a consistent 4:3 ratio; 1200 × 900 px is recommended and 800 × 600 px is the practical minimum. Add `media_class: "project-media-contain"` when the full image should remain visible rather than be cropped.
 - To replace an image, copy the new file into one of those folders and update the `media` path. Reusing the same filename also works, but a hard refresh may be needed to clear the browser cache.
-- For the video card, use `media_type: "video"`, set `video_id` to the YouTube ID only, and set `poster` to the clean preview image shown before playback.
+- For the video card, use `media_type: "video"`, set `video_id` to the YouTube ID only, and set `poster` to a clean 4:3 preview image shown before playback.
 
 Example image card:
 
