@@ -2,9 +2,8 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: Peer-reviewed journal articles, grouped by authorship and listed in reverse chronological order.
 nav: true
-nav_order: 2
+nav_order: 3
 ---
 
 {% include lang_toggle.liquid %}
@@ -51,6 +50,8 @@ nav_order: 2
   (function () {
     function linkTitles() {
       document.querySelectorAll(".publications ol.bibliography li").forEach(function (li) {
+        var abstractBtn = li.querySelector("a.abstract.btn");
+        if (abstractBtn) abstractBtn.innerHTML = "<span class=\"lang-en\">Abstract</span><span class=\"lang-zh\">摘要</span>";
         var titleEl = li.querySelector(".title");
         if (!titleEl || titleEl.querySelector("a")) return;
         var btn = Array.prototype.slice
