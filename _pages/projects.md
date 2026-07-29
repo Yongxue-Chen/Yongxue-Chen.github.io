@@ -9,6 +9,7 @@ nav_order: 2
 {% include lang_toggle.liquid %}
 
 <style>
+  .post-header { margin-bottom: 3rem !important; }
   .projects-page { --project-gap: 1.15rem; margin-top: 0.2rem; }
   .project-section { margin-top: 4rem; }
   .project-section:first-child { margin-top: 0.4rem; }
@@ -99,6 +100,7 @@ nav_order: 2
     .project-grid--single { grid-template-columns: minmax(0, calc((100% - var(--project-gap)) / 2)); }
   }
   @media (max-width: 640px) {
+    .post-header { margin-bottom: 2.2rem !important; }
     .project-section { margin-top: 2.8rem; }
     .project-grid--two, .project-grid--three, .project-grid--single { grid-template-columns: minmax(0, 1fr); }
     .project-section-heading { align-items: flex-start; }

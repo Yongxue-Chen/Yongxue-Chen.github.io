@@ -31,6 +31,9 @@ if (/class="home-stat/.test(home)) throw new Error("Homepage metrics must remain
 requireMatch(home, /Selected Publications/, "The homepage selected-publications heading is missing.");
 requireMatch(home, /Selected Awards/, "The homepage selected-awards heading is missing.");
 requireMatch(home, /class="edu-school"/, "Homepage institutions are not emphasized.");
+requireMatch(home, /\*\*robotics\*\*/, "Robotics emphasis is missing from the homepage profile.");
+requireMatch(home, /\*\*advanced manufacturing\*\*/, "Advanced-manufacturing emphasis is missing from the homepage profile.");
+requireMatch(home, /\*\*hybrid additive-subtractive manufacturing\*\*/, "Hybrid-manufacturing emphasis is missing from the homepage profile.");
 for (const page of [projectsPage, publications, cvPage]) {
   if (/^description:/m.test(page)) throw new Error("Primary subpages must not show a description below the title.");
 }
@@ -56,10 +59,13 @@ requireMatch(projectsData, /poster: "\/assets\/img\/publication_preview\/SIGAsia
 requireMatch(projectsPage, /project-video-trigger/, "The clean click-to-play video cover is missing.");
 requireMatch(projectsData, /IEEE Transactions on Automation Science and Engineering · 2025/, "Project metadata must use full journal names and years.");
 requireMatch(projectsData, /HybridFieldOpt\.png/, "The field-optimization project image is missing.");
+requireMatch(projectsData, /meta_en: "Under Review"/, "The first project review status is missing.");
+requireMatch(projectsPage, /post-header \{ margin-bottom: 3rem !important; \}/, "The Projects title needs more space below it.");
 if ((projectsData.match(/media_type:/g) || []).length !== 8) throw new Error("The Project page must contain exactly eight cards.");
 if ((projectsData.match(/video_id:/g) || []).length !== 1) throw new Error("Only the inverse-planning project should embed a video.");
 requireMatch(publications, /bibliography --query @\*\[author_type=first\]/, "First-author publications are missing.");
 requireMatch(publications, /bibliography --query @\*\[author_type=co\]/, "Co-authored publications are missing.");
+requireMatch(publications, />Abstract<\/span>/, "Publication abstract buttons must use the full label.");
 requireMatch(cv, /date_zh: "2025\.10"/, "Quoted Chinese October date regressed.");
 requireMatch(cv, /name: Selected Awards/, "CV awards must be labeled as selected.");
 requireMatch(cv, /summary: Selected research themes\./, "The concise Projects description is missing from the CV.");

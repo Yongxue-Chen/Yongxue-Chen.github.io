@@ -11,6 +11,9 @@ test("homepage has clear identity and prose research summary", async ({ page }) 
   await expect(page.locator(".home-education .edu-school")).toHaveCount(6);
   await expect(page.locator(".home-section h3 .lang-en").nth(1)).toHaveText("Selected Publications");
   await expect(page.locator(".home-section h3 .lang-en").nth(2)).toHaveText("Selected Awards");
+  await expect(page.locator(".home-intro.lang-en")).toContainText("robotics");
+  await expect(page.locator(".home-intro.lang-en")).toContainText("advanced manufacturing");
+  await expect(page.locator(".home-intro.lang-en")).toContainText("hybrid additive-subtractive manufacturing");
 });
 
 test("publications use one consistent collapsible layout", async ({ page }) => {
@@ -21,6 +24,8 @@ test("publications use one consistent collapsible layout", async ({ page }) => {
   const abstracts = page.locator(".publications .abstract.hidden");
   await expect(abstracts).toHaveCount(13);
   for (const abstract of await abstracts.all()) await expect(abstract).toBeHidden();
+  await expect(page.locator(".links a.abstract.btn")).toHaveCount(13);
+  await expect(page.locator(".links a.abstract.btn .lang-en").first()).toHaveText("Abstract");
 
   const styles = await entries.evaluateAll((nodes) =>
     nodes.map((node) => {
@@ -40,7 +45,10 @@ test("projects use the requested card rows and a single embedded video", async (
   await expect(page.locator(".project-media iframe")).toHaveCount(0);
   await page.locator(".project-video-trigger").click();
   await expect(page.locator(".project-media iframe")).toHaveCount(1);
-  await expect(page.locator(".project-meta")).toHaveCount(7);
+  await expect(page.locator(".project-meta")).toHaveCount(8);
+  await expect(page.locator(".project-card").first().locator(".project-meta .lang-en")).toHaveText("Under Review");
+  const projectHeaderMargin = await page.locator(".post-header").evaluate((node) => getComputedStyle(node).marginBottom);
+  expect(projectHeaderMargin).toBe("48px");
   const columns = await page
     .locator(".project-grid")
     .evaluateAll((nodes) => nodes.map((node) => getComputedStyle(node).gridTemplateColumns.split(" ").length));
@@ -98,6 +106,7 @@ test("language selection updates document semantics and navigation", async ({ pa
   await page.getByRole("button", { name: "中文" }).click();
   await expect(page.locator("html")).toHaveAttribute("lang", "zh-CN");
   await expect(page.locator(".post-title")).toHaveText("论文");
+  await expect(page.locator(".links a.abstract.btn .lang-zh").first()).toHaveText("摘要");
   await expect(page.locator('a.nav-link[href="/projects/"]')).toContainText("项目");
   await expect(page.locator('a.nav-link[href="/cv/"]')).toContainText("简历");
 });

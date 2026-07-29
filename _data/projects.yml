@@ -8,6 +8,8 @@ sections:
         media: "/assets/img/project_preview/HybridFieldOpt.png"
         media_class: "project-media-contain"
         alt: "Continuous field optimization pipeline for hybrid manufacturing"
+        meta_en: "Under Review"
+        meta_zh: "审稿中"
         title_en: "Scalable and Distortion-Aware Field Optimization"
         title_zh: "可扩展且考虑变形的连续场优化"
         summary_en: "A continuous neural-field formulation for optimizing hybrid manufacturing states, fabrication time, structural strength, support usage, and tool accessibility on complex geometries."

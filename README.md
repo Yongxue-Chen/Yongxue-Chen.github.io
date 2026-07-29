@@ -23,7 +23,7 @@ Project sections, cards, text, media, and links are maintained in `_data/project
 
 - Reorder cards by moving their YAML blocks within a section.
 - Use `layout: two`, `three`, or `single` to control the desktop columns for a section.
-- Edit `title_en` / `title_zh` and `summary_en` / `summary_zh` for bilingual card copy. Use `meta_en` / `meta_zh` only for a published item, formatted as the full journal name and year; omit both fields for unpublished work.
+- Edit `title_en` / `title_zh` and `summary_en` / `summary_zh` for bilingual card copy. For published work, format `meta_en` / `meta_zh` as the full journal name and year. For unpublished work, use a short status such as `Under Review` / `审稿中`.
 - Edit entries under `links` to change Project, Paper, Code, or Video destinations.
 - For an image card, use `media_type: "image"` and set `media` to an image under `assets/img/project_preview/` or `assets/img/publication_preview/`. Landscape images near 16:9 work best. Add `media_class: "project-media-contain"` when the full image should remain visible rather than be cropped.
 - To replace an image, copy the new file into one of those folders and update the `media` path. Reusing the same filename also works, but a hard refresh may be needed to clear the browser cache.

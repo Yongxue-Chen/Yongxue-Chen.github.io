@@ -50,6 +50,8 @@ nav_order: 3
   (function () {
     function linkTitles() {
       document.querySelectorAll(".publications ol.bibliography li").forEach(function (li) {
+        var abstractBtn = li.querySelector("a.abstract.btn");
+        if (abstractBtn) abstractBtn.innerHTML = "<span class=\"lang-en\">Abstract</span><span class=\"lang-zh\">摘要</span>";
         var titleEl = li.querySelector(".title");
         if (!titleEl || titleEl.querySelector("a")) return;
         var btn = Array.prototype.slice
