@@ -83,6 +83,12 @@ test("CV uses a sticky desktop index and places research experience after educat
   await expect(page.locator(".post-header .desc")).toHaveCount(0);
   const sidebarStyle = await page.locator(".cv-sidebar").evaluate((node) => getComputedStyle(node));
   expect(sidebarStyle.position).toBe("sticky");
+  await expect(page.locator(".cv-contact-links a")).toHaveCount(3);
+  await expect(page.locator(".cv-contact-links a").nth(0)).toHaveAttribute("href", "mailto:chandler.yx.chen@gmail.com");
+  await expect(page.locator(".cv-contact-links a").nth(1)).toHaveAttribute("href", /scholar\.google\.com/);
+  await expect(page.locator(".cv-contact-links a").nth(2)).toHaveAttribute("href", /linkedin\.com/);
+  expect(await page.locator(".cv-contact").evaluate((node) => getComputedStyle(node).display)).toBe("block");
+  expect(await page.locator(".cv-nav-title").evaluate((node) => getComputedStyle(node).display)).toBe("block");
   const navStyle = await page.locator(".cv-nav").evaluate((node) => getComputedStyle(node));
   expect(navStyle.flexDirection).toBe("column");
   expect(navStyle.flexWrap).toBe("nowrap");
@@ -117,6 +123,8 @@ test("CV uses a sticky desktop index and places research experience after educat
   await expect(page.locator(".cv-nav a.active")).toHaveAttribute("href", "#research-experience");
 
   await page.setViewportSize({ width: 390, height: 844 });
+  expect(await page.locator(".cv-contact").evaluate((node) => getComputedStyle(node).display)).toBe("none");
+  expect(await page.locator(".cv-nav-title").evaluate((node) => getComputedStyle(node).display)).toBe("none");
   const mobileSidebarStyle = await page.locator(".cv-sidebar").evaluate((node) => getComputedStyle(node));
   const mobileNavStyle = await page.locator(".cv-nav").evaluate((node) => getComputedStyle(node));
   expect(mobileSidebarStyle.position).toBe("static");
