@@ -46,8 +46,8 @@ sections:
 
   - name: Research Experience
     name_zh: 科研经历
-    summary: Selected research themes and contributions are summarized below. Visual demonstrations, related papers, and code are available on the Projects page.
-    summary_zh: 以下概述主要研究方向与个人贡献；可视化演示、相关论文及代码请见项目页面。
+    summary: Selected research themes.
+    summary_zh: 代表性研究方向。
     more_url: /projects/
     more_label: View Projects →
     more_label_zh: 查看项目页面 →
@@ -104,8 +104,8 @@ sections:
 
   - name: Journal Articles
     name_zh: 期刊论文
-    summary: 13 peer-reviewed journal articles are listed below. Abstracts, preview images, and supplementary links are available on the Publications page.
-    summary_zh: 以下列出 13 篇同行评审期刊论文；摘要、预览图片及补充链接请见论文页面。
+    summary: Complete publication list.
+    summary_zh: 完整论文列表。
     more_url: /publications/
     more_label: View Publications →
     more_label_zh: 查看论文页面 →
@@ -283,8 +283,8 @@ sections:
         details_zh:
           - 设计并批改课程作业，协助学生答疑。
 
-  - name: Awards
-    name_zh: 荣誉奖励
+  - name: Selected Awards
+    name_zh: 代表性荣誉
     items:
       - title: Departmental Doctoral Scholarship
         title_zh: 曼彻斯特大学博士奖学金

@@ -46,31 +46,31 @@ I have published **13 peer-reviewed journal articles** and hold **5 granted Chin
 
 </div>
 
-<div class="home-section">
+<div class="home-section home-education">
 
 <h3><span class="lang-en">Education</span><span class="lang-zh">教育背景</span></h3>
 
 <div class="edu-item">
   <div class="edu-degree"><span class="lang-en">PhD in Production and Manufacturing Engineering</span><span class="lang-zh">生产与制造工程，博士</span></div>
   <div class="edu-meta">
-    <span class="lang-en">The University of Manchester, UK &middot; Sept 2023 – Feb 2027 (expected)<br>Supervisor: Prof. Charlie C. L. Wang</span>
-    <span class="lang-zh">曼彻斯特大学，英国 &middot; 2023.09 – 2027.02（预计）<br>导师：Charlie C. L. Wang 教授</span>
+    <span class="lang-en"><strong class="edu-school">The University of Manchester, UK</strong> &middot; Sept 2023 – Feb 2027 (expected)<br>Supervisor: Prof. Charlie C. L. Wang</span>
+    <span class="lang-zh"><strong class="edu-school">曼彻斯特大学，英国</strong> &middot; 2023.09 – 2027.02（预计）<br>导师：Charlie C. L. Wang 教授</span>
   </div>
 </div>
 
 <div class="edu-item">
   <div class="edu-degree"><span class="lang-en">MEng in Mechanical Engineering</span><span class="lang-zh">机械工程，硕士</span></div>
   <div class="edu-meta">
-    <span class="lang-en">Shanghai Jiao Tong University, China &middot; Sept 2020 – Mar 2023<br>Supervisor: Prof. Ye Ding</span>
-    <span class="lang-zh">上海交通大学，中国 &middot; 2020.09 – 2023.03<br>导师：丁烨 教授</span>
+    <span class="lang-en"><strong class="edu-school">Shanghai Jiao Tong University, China</strong> &middot; Sept 2020 – Mar 2023<br>Supervisor: Prof. Ye Ding</span>
+    <span class="lang-zh"><strong class="edu-school">上海交通大学，中国</strong> &middot; 2020.09 – 2023.03<br>导师：丁烨 教授</span>
   </div>
 </div>
 
 <div class="edu-item">
   <div class="edu-degree"><span class="lang-en">BEng in Mechanical Engineering</span><span class="lang-zh">机械工程，本科</span></div>
   <div class="edu-meta">
-    <span class="lang-en">Shanghai Jiao Tong University, China &middot; Sept 2016 – Jun 2020</span>
-    <span class="lang-zh">上海交通大学，中国 &middot; 2016.09 – 2020.06</span>
+    <span class="lang-en"><strong class="edu-school">Shanghai Jiao Tong University, China</strong> &middot; Sept 2016 – Jun 2020</span>
+    <span class="lang-zh"><strong class="edu-school">上海交通大学，中国</strong> &middot; 2016.09 – 2020.06</span>
   </div>
 </div>
 
@@ -78,7 +78,7 @@ I have published **13 peer-reviewed journal articles** and hold **5 granted Chin
 
 <div class="home-section">
 
-<h3><span class="lang-en">First-Author Publications</span><span class="lang-zh">第一作者论文</span></h3>
+<h3><span class="lang-en">Selected Publications</span><span class="lang-zh">代表性论文</span></h3>
 
 <div class="pub-item">
   <a href="https://doi.org/10.1145/3763355">Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive-Subtractive Manufacturing</a>
@@ -127,7 +127,7 @@ I have published **13 peer-reviewed journal articles** and hold **5 granted Chin
 
 <div class="home-section">
 
-<h3><span class="lang-en">Awards</span><span class="lang-zh">荣誉奖励</span></h3>
+<h3><span class="lang-en">Selected Awards</span><span class="lang-zh">代表性荣誉</span></h3>
 
 <div class="edu-item award-item">
   <div class="edu-degree"><span class="lang-en">Departmental Doctoral Scholarship</span><span class="lang-zh">曼彻斯特大学博士奖学金</span></div>

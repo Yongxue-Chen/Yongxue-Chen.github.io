@@ -17,6 +17,36 @@ bundle exec jekyll serve
 
 Open `http://127.0.0.1:4000`.
 
+## Updating the Projects page
+
+Project sections, cards, text, media, and links are maintained in `_data/projects.yml`. Do not edit `_site/`; it is regenerated during every build.
+
+- Reorder cards by moving their YAML blocks within a section.
+- Use `layout: two`, `three`, or `single` to control the desktop columns for a section.
+- Edit `title_en` / `title_zh` and `summary_en` / `summary_zh` for bilingual card copy. Use `meta_en` / `meta_zh` only for a published item, formatted as the full journal name and year; omit both fields for unpublished work.
+- Edit entries under `links` to change Project, Paper, Code, or Video destinations.
+- For an image card, use `media_type: "image"` and set `media` to an image under `assets/img/project_preview/` or `assets/img/publication_preview/`. Landscape images near 16:9 work best. Add `media_class: "project-media-contain"` when the full image should remain visible rather than be cropped.
+- To replace an image, copy the new file into one of those folders and update the `media` path. Reusing the same filename also works, but a hard refresh may be needed to clear the browser cache.
+- For the video card, use `media_type: "video"`, set `video_id` to the YouTube ID only, and set `poster` to the clean preview image shown before playback.
+
+Example image card:
+
+```yaml
+- media_type: "image"
+  media: "/assets/img/project_preview/example.jpg"
+  alt: "Short accessible description"
+  meta_en: "Full Journal Name · 2026"
+  meta_zh: "Full Journal Name · 2026"
+  title_en: "English title"
+  title_zh: "中文标题"
+  summary_en: "Short English summary."
+  summary_zh: "简短中文介绍。"
+  links:
+    - label_en: "Paper"
+      label_zh: "文章"
+      url: "https://doi.org/..."
+```
+
 ## Validation
 
 ```bash

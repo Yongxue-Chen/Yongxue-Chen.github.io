@@ -16,6 +16,7 @@ const projectsPage = read("_pages/projects.md");
 const projectsData = read("_data/projects.yml");
 const publications = read("_pages/publications.md");
 const cv = read("_data/cv.yml");
+const cvPage = read("_pages/cv.md");
 const workflows = [".github/workflows/deploy.yml", ".github/workflows/quality.yml"].map(read);
 
 requireMatch(config, /^external_sources: \[\]$/m, "Template external posts must stay disabled.");
@@ -27,6 +28,12 @@ requireMatch(config, /fonts: "\/assets\/css\/system-fonts\.css"/, "The site must
 requireMatch(home, /13 peer-reviewed journal articles/, "The homepage publication count is missing from the prose.");
 requireMatch(home, /5 granted Chinese invention patents/, "The homepage patent count is missing from the prose.");
 if (/class="home-stat/.test(home)) throw new Error("Homepage metrics must remain in prose, not cards.");
+requireMatch(home, /Selected Publications/, "The homepage selected-publications heading is missing.");
+requireMatch(home, /Selected Awards/, "The homepage selected-awards heading is missing.");
+requireMatch(home, /class="edu-school"/, "Homepage institutions are not emphasized.");
+for (const page of [projectsPage, publications, cvPage]) {
+  if (/^description:/m.test(page)) throw new Error("Primary subpages must not show a description below the title.");
+}
 requireMatch(language, /include site_enhancements\.liquid/, "Shared site enhancements are not wired in.");
 requireMatch(enhancements, /theme's `max-height: 0`/, "Publication abstracts must remain collapsed by default.");
 requireMatch(enhancements, /text-align: left !important/, "Publication abstracts must remain left aligned.");
@@ -43,12 +50,18 @@ requireMatch(
 if (/\.cv-nav a \{[\s\S]*?background: var\(--site-surface\)/.test(enhancements)) throw new Error("CV navigation links must not look like cards.");
 requireMatch(projectsPage, /project-grid--{{ section\.layout }}/, "Project cards must use the requested row layouts.");
 requireMatch(projectsData, /video_id: "QE_5t5a_qDg"/, "The inverse-planning project video is missing.");
+requireMatch(projectsData, /poster: "\/assets\/img\/publication_preview\/SIGAsia2025HybridManu\.jpg"/, "The project video poster is missing.");
+requireMatch(projectsPage, /project-video-trigger/, "The clean click-to-play video cover is missing.");
+requireMatch(projectsData, /IEEE Transactions on Automation Science and Engineering · 2025/, "Project metadata must use full journal names and years.");
 requireMatch(projectsData, /HybridFieldOpt\.png/, "The field-optimization project image is missing.");
 if ((projectsData.match(/media_type:/g) || []).length !== 8) throw new Error("The Project page must contain exactly eight cards.");
 if ((projectsData.match(/video_id:/g) || []).length !== 1) throw new Error("Only the inverse-planning project should embed a video.");
 requireMatch(publications, /bibliography --query @\*\[author_type=first\]/, "First-author publications are missing.");
 requireMatch(publications, /bibliography --query @\*\[author_type=co\]/, "Co-authored publications are missing.");
 requireMatch(cv, /date_zh: "2025\.10"/, "Quoted Chinese October date regressed.");
+requireMatch(cv, /name: Selected Awards/, "CV awards must be labeled as selected.");
+requireMatch(cv, /summary: Selected research themes\./, "The concise Projects description is missing from the CV.");
+requireMatch(cv, /summary: Complete publication list\./, "The concise Publications description is missing from the CV.");
 
 for (const workflow of workflows) {
   for (const line of workflow.split("\n").filter((entry) => entry.trim().startsWith("uses:"))) {

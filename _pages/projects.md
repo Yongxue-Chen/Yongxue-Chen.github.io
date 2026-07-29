@@ -2,7 +2,6 @@
 layout: page
 permalink: /projects/
 title: Projects
-description: Selected research projects in hybrid manufacturing, robotic machining, geometric modeling, and trajectory planning.
 nav: true
 nav_order: 2
 ---
@@ -46,10 +45,27 @@ nav_order: 2
   .project-media img, .project-media iframe { display: block; width: 100%; height: 100%; border: 0; }
   .project-media img { object-fit: cover; }
   .project-media img.project-media-contain { padding: 0.6rem; object-fit: contain; }
+  .project-video-trigger {
+    position: absolute; inset: 0; display: block; width: 100%; height: 100%;
+    padding: 0; overflow: hidden; border: 0; background: #10202a; cursor: pointer;
+  }
+  .project-video-trigger img { transition: transform 0.22s ease, filter 0.22s ease; }
+  .project-video-trigger:hover img { transform: scale(1.015); filter: brightness(0.9); }
+  .project-video-play {
+    position: absolute; top: 50%; left: 50%; width: 3.55rem; height: 3.55rem;
+    transform: translate(-50%, -50%); border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 50%; background: rgba(20, 43, 57, 0.82);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.26);
+  }
+  .project-video-play::after {
+    content: ""; position: absolute; top: 50%; left: 52%; transform: translate(-42%, -50%);
+    width: 0; height: 0; border-top: 0.48rem solid transparent;
+    border-bottom: 0.48rem solid transparent; border-left: 0.75rem solid #fff;
+  }
   .project-body { display: flex; flex: 1; flex-direction: column; padding: 1rem 1.05rem 1.1rem; }
   .project-meta {
     margin-bottom: 0.45rem; color: var(--global-theme-color);
-    font-size: 0.7rem; font-weight: 740; letter-spacing: 0.075em; text-transform: uppercase;
+    font-size: 0.72rem; font-weight: 680; letter-spacing: 0.01em; line-height: 1.4;
   }
   .project-title {
     margin: 0 0 0.55rem; font-size: 1.03rem; font-weight: 690;
@@ -102,13 +118,17 @@ nav_order: 2
       <article class="project-card">
         <div class="project-media">
         {% if project.media_type == "video" %}
-          <iframe src="https://www.youtube-nocookie.com/embed/{{ project.video_id }}" title="{{ project.alt }}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <button class="project-video-trigger" type="button" data-video-id="{{ project.video_id }}" data-video-title="{{ project.alt }}" aria-label="Play video: {{ project.alt }}">
+            <img src="{{ project.poster | relative_url }}" alt="" loading="lazy">
+            <span class="project-video-play" aria-hidden="true"></span>
+            <span class="sr-only">Play video</span>
+          </button>
         {% else %}
           <img{% if project.media_class %} class="{{ project.media_class }}"{% endif %} src="{{ project.media | relative_url }}" alt="{{ project.alt }}" loading="lazy">
         {% endif %}
         </div>
         <div class="project-body">
-          <div class="project-meta"><span class="lang-en">{{ project.meta_en }}</span><span class="lang-zh">{{ project.meta_zh }}</span></div>
+          {% if project.meta_en %}<div class="project-meta"><span class="lang-en">{{ project.meta_en }}</span><span class="lang-zh">{{ project.meta_zh | default: project.meta_en }}</span></div>{% endif %}
           <h3 class="project-title"><span class="lang-en">{{ project.title_en }}</span><span class="lang-zh">{{ project.title_zh }}</span></h3>
           <p class="project-summary lang-en">{{ project.summary_en }}</p>
           <p class="project-summary lang-zh">{{ project.summary_zh }}</p>
@@ -124,3 +144,17 @@ nav_order: 2
   </section>
 {% endfor %}
 </div>
+
+<script>
+  document.addEventListener("click", function (event) {
+    var button = event.target.closest(".project-video-trigger");
+    if (!button) return;
+    var iframe = document.createElement("iframe");
+    iframe.src = "https://www.youtube-nocookie.com/embed/" + button.dataset.videoId + "?autoplay=1&rel=0&iv_load_policy=3&playsinline=1";
+    iframe.title = button.dataset.videoTitle;
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    iframe.allowFullscreen = true;
+    button.replaceWith(iframe);
+    iframe.focus();
+  });
+</script>

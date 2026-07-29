@@ -7,10 +7,15 @@ test("homepage has clear identity and prose research summary", async ({ page }) 
   await expect(page.locator("article .lang-en").first()).toContainText("13 peer-reviewed journal articles");
   await expect(page.locator("article .lang-en").first()).toContainText("5 granted Chinese invention patents");
   await expect(page.locator(".profile img")).toHaveAttribute("alt", /Yongxue Chen|prof_pic/i);
+  await expect(page.locator(".home-education .edu-item")).toHaveCount(3);
+  await expect(page.locator(".home-education .edu-school")).toHaveCount(6);
+  await expect(page.locator(".home-section h3 .lang-en").nth(1)).toHaveText("Selected Publications");
+  await expect(page.locator(".home-section h3 .lang-en").nth(2)).toHaveText("Selected Awards");
 });
 
 test("publications use one consistent collapsible layout", async ({ page }) => {
   await page.goto("/publications/");
+  await expect(page.locator(".post-header .desc")).toHaveCount(0);
   const entries = page.locator(".publications ol.bibliography li");
   await expect(entries).toHaveCount(13);
   const abstracts = page.locator(".publications .abstract.hidden");
@@ -28,9 +33,14 @@ test("publications use one consistent collapsible layout", async ({ page }) => {
 
 test("projects use the requested card rows and a single embedded video", async ({ page }) => {
   await page.goto("/projects/");
+  await expect(page.locator(".post-header .desc")).toHaveCount(0);
   await expect(page.locator(".project-section")).toHaveCount(4);
   await expect(page.locator(".project-card")).toHaveCount(8);
+  await expect(page.locator(".project-video-trigger")).toHaveCount(1);
+  await expect(page.locator(".project-media iframe")).toHaveCount(0);
+  await page.locator(".project-video-trigger").click();
   await expect(page.locator(".project-media iframe")).toHaveCount(1);
+  await expect(page.locator(".project-meta")).toHaveCount(7);
   const columns = await page
     .locator(".project-grid")
     .evaluateAll((nodes) => nodes.map((node) => getComputedStyle(node).gridTemplateColumns.split(" ").length));
@@ -40,6 +50,7 @@ test("projects use the requested card rows and a single embedded video", async (
 test("CV uses a sticky desktop index and places research experience after education", async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto("/cv/");
+  await expect(page.locator(".post-header .desc")).toHaveCount(0);
   const sidebarStyle = await page.locator(".cv-sidebar").evaluate((node) => getComputedStyle(node));
   expect(sidebarStyle.position).toBe("sticky");
   const navStyle = await page.locator(".cv-nav").evaluate((node) => getComputedStyle(node));
@@ -55,6 +66,9 @@ test("CV uses a sticky desktop index and places research experience after educat
   await expect(page.locator("h2.cv-heading .lang-en").nth(0)).toHaveText("Education");
   await expect(page.locator("h2.cv-heading .lang-en").nth(1)).toHaveText("Research Experience");
   await expect(page.locator(".cv-section-note")).toHaveCount(2);
+  await expect(page.locator("#research-experience + .cv-section .cv-section-note .lang-en").first()).toHaveText("Selected research themes.");
+  await expect(page.locator("#journal-articles + .cv-section .cv-section-note .lang-en").first()).toHaveText("Complete publication list.");
+  await expect(page.locator("h2#selected-awards")).toHaveCount(1);
   await expect(page.locator(".cv-section-note a[href=\"/publications/\"]")).toHaveCount(1);
   await expect(page.locator(".cv-section-note a[href=\"/projects/\"]")).toHaveCount(1);
   await expect(page.locator("#journal-articles + .cv-section .cv-entry")).toHaveCount(13);
