@@ -76,6 +76,10 @@ description: Education, publications, patents, teaching, awards, and research ex
     font-size: 0.9rem;
   }
   .cv-entry ul li { margin-bottom: 0.15rem; }
+  .cv-layout { display: block; }
+  .cv-content,
+  .cv-sidebar { min-width: 0; }
+  h2.cv-heading { scroll-margin-top: 6rem; }
   .cv-section-note {
     display: flex;
     justify-content: space-between;
@@ -101,11 +105,51 @@ description: Education, publications, patents, teaching, awards, and research ex
       gap: 0.35rem;
     }
   }
+  @media (min-width: 992px) {
+    .cv-layout {
+      display: grid;
+      grid-template-columns: minmax(150px, 180px) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: start;
+    }
+    .cv-sidebar {
+      position: sticky;
+      top: 6.25rem;
+      align-self: start;
+    }
+    .cv-layout .cv-nav {
+      flex-direction: column;
+      flex-wrap: nowrap !important;
+      gap: 0.12rem !important;
+      margin: 0 !important;
+      padding: 0 0 0 0.85rem !important;
+      border-bottom: 0 !important;
+      border-left: 1px solid var(--global-divider-color);
+    }
+    .cv-layout .cv-nav a {
+      margin-left: -0.9rem;
+      padding: 0.28rem 0 0.28rem 0.85rem;
+      border-left: 2px solid transparent;
+      color: var(--global-text-color-light);
+      line-height: 1.3;
+      text-decoration: none;
+    }
+    .cv-layout .cv-nav a.active,
+    .cv-layout .cv-nav a:hover {
+      border-left-color: var(--global-theme-color);
+      color: var(--global-theme-color);
+    }
+    .cv-content h2.cv-heading:first-child { margin-top: 0 !important; }
+  }
 </style>
 
-<nav class="cv-nav">
+<div class="cv-layout">
+<aside class="cv-sidebar">
+<nav class="cv-nav" aria-label="CV sections">
 {% for section in site.data.cv.sections %}<a href="#{{ section.name | slugify }}"><span class="lang-en">{{ section.name }}</span><span class="lang-zh">{{ section.name_zh | default: section.name }}</span></a>{% endfor %}
 </nav>
+</aside>
+<div class="cv-content">
 
 {% for section in site.data.cv.sections %}
 <h2 class="cv-heading" id="{{ section.name | slugify }}"><span class="lang-en">{{ section.name }}</span><span class="lang-zh">{{ section.name_zh | default: section.name }}</span></h2>
@@ -152,3 +196,28 @@ description: Education, publications, patents, teaching, awards, and research ex
 </div>
 
 {% endfor %}
+</div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var links = Array.from(document.querySelectorAll(".cv-nav a"));
+    var sections = links.map(function (link) {
+      return document.querySelector(link.getAttribute("href"));
+    });
+    function updateActiveSection() {
+      var current = sections[0];
+      sections.forEach(function (section) {
+        if (section && section.getBoundingClientRect().top <= 150) current = section;
+      });
+      links.forEach(function (link) {
+        var active = current && link.getAttribute("href") === "#" + current.id;
+        link.classList.toggle("active", active);
+        if (active) link.setAttribute("aria-current", "true");
+        else link.removeAttribute("aria-current");
+      });
+    }
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+  });
+</script>

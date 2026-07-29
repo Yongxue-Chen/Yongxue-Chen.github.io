@@ -44,6 +44,64 @@ sections:
         details_zh:
           - "GPA：3.797/4.3，专业排名 6/146"
 
+  - name: Research Experience
+    name_zh: 科研经历
+    summary: Selected research themes and contributions are summarized below. Visual demonstrations, related papers, and code are available on the Projects page.
+    summary_zh: 以下概述主要研究方向与个人贡献；可视化演示、相关论文及代码请见项目页面。
+    more_url: /projects/
+    more_label: View Projects →
+    more_label_zh: 查看项目页面 →
+    items:
+      - title: Hybrid Manufacturing Process Planning
+        title_zh: 增减材复合制造过程规划
+        subtitle: The University of Manchester
+        subtitle_zh: 曼彻斯特大学
+        date: May 2024 – May 2026
+        date_zh: 2024.05 – 2026.05
+        details:
+          - Developed complementary inverse-operation and neural-field frameworks for planning interleaved additive and subtractive processes on complex geometries.
+          - Integrated manufacturability, intermediate structural stability, tool accessibility, and distortion-aware objectives into scalable optimization.
+        details_zh:
+          - 构建基于逆向操作与神经场的互补规划框架，面向复杂几何生成增材与减材交替的制造过程。
+          - 将可制造性、中间结构稳定性、刀具可达性与变形控制纳入可扩展优化。
+
+      - title: Robot-Assisted Machining and Trajectory Co-Optimization
+        title_zh: 机器人辅助加工与轨迹协同优化
+        subtitle: The University of Manchester · Shanghai Jiao Tong University
+        subtitle_zh: 曼彻斯特大学 · 上海交通大学
+        date: Oct 2021 – May 2024
+        date_zh: 2021.10 – 2024.05
+        details:
+          - Jointly optimized tool orientations, kinematic redundancy, and waypoint timing for long multi-axis manufacturing toolpaths.
+          - Developed 6-DoF robotic milling and posture-planning methods balancing accuracy, motion smoothness, stiffness, and geometric constraints.
+        details_zh:
+          - 面向长多轴制造路径，联合优化工具姿态、运动学冗余自由度与路径点时间分配。
+          - 建立机器人铣削六自由度路径与位姿规划方法，兼顾加工精度、运动平滑性、刚度及几何约束。
+
+      - title: Geometric Algebra for Machining Geometry
+        title_zh: 基于几何代数的加工几何建模
+        subtitle: Shanghai Jiao Tong University
+        subtitle_zh: 上海交通大学
+        date: Sept 2020 – Feb 2023
+        date_zh: 2020.09 – 2023.02
+        details:
+          - Used conformal geometric algebra to derive compact analytical representations for five-axis tool motion and machining geometry.
+          - Constructed G³-continuous corner transitions and point-pair-based cutter swept envelopes without iterative synchronization or local-frame transformations.
+        details_zh:
+          - 利用共形几何代数推导五轴刀具运动与加工几何的紧凑解析表达。
+          - 构造 G³ 连续转角过渡与基于点对的刀具扫掠包络面，避免迭代同步和局部坐标变换。
+
+      - title: Aerial Robot Trajectory Planning
+        title_zh: 无人机轨迹规划
+        subtitle: Shanghai Jiao Tong University
+        subtitle_zh: 上海交通大学
+        date: Jul 2019 – Sept 2020
+        date_zh: 2019.07 – 2020.09
+        details:
+          - Developed sequential-convex-programming methods for efficient, smooth, collision-free, and jerk-constrained quadrotor trajectories.
+        details_zh:
+          - 基于序列凸优化生成高效、平滑、无碰撞且满足跃度约束的四旋翼轨迹。
+
   - name: Journal Articles
     name_zh: 期刊论文
     summary: 13 peer-reviewed journal articles are listed below. Abstracts, preview images, and supplementary links are available on the Publications page.
@@ -276,61 +334,3 @@ sections:
         title_zh: 编程语言
         subtitle: C++, Python, MATLAB
         subtitle_zh: C++、Python、MATLAB
-
-  - name: Research Experience
-    name_zh: 科研经历
-    summary: Selected research themes and contributions are summarized below. Visual demonstrations, related papers, and code are available on the Projects page.
-    summary_zh: 以下概述主要研究方向与个人贡献；可视化演示、相关论文及代码请见项目页面。
-    more_url: /projects/
-    more_label: View Projects →
-    more_label_zh: 查看项目页面 →
-    items:
-      - title: Hybrid Manufacturing Process Planning
-        title_zh: 增减材复合制造过程规划
-        subtitle: The University of Manchester
-        subtitle_zh: 曼彻斯特大学
-        date: May 2024 – May 2026
-        date_zh: 2024.05 – 2026.05
-        details:
-          - Developed complementary inverse-operation and neural-field frameworks for planning interleaved additive and subtractive processes on complex geometries.
-          - Integrated manufacturability, intermediate structural stability, tool accessibility, and distortion-aware objectives into scalable optimization.
-        details_zh:
-          - 构建基于逆向操作与神经场的互补规划框架，面向复杂几何生成增材与减材交替的制造过程。
-          - 将可制造性、中间结构稳定性、刀具可达性与变形控制纳入可扩展优化。
-
-      - title: Robot-Assisted Machining and Trajectory Co-Optimization
-        title_zh: 机器人辅助加工与轨迹协同优化
-        subtitle: The University of Manchester · Shanghai Jiao Tong University
-        subtitle_zh: 曼彻斯特大学 · 上海交通大学
-        date: Oct 2021 – May 2024
-        date_zh: 2021.10 – 2024.05
-        details:
-          - Jointly optimized tool orientations, kinematic redundancy, and waypoint timing for long multi-axis manufacturing toolpaths.
-          - Developed 6-DoF robotic milling and posture-planning methods balancing accuracy, motion smoothness, stiffness, and geometric constraints.
-        details_zh:
-          - 面向长多轴制造路径，联合优化工具姿态、运动学冗余自由度与路径点时间分配。
-          - 建立机器人铣削六自由度路径与位姿规划方法，兼顾加工精度、运动平滑性、刚度及几何约束。
-
-      - title: Geometric Algebra for Machining Geometry
-        title_zh: 基于几何代数的加工几何建模
-        subtitle: Shanghai Jiao Tong University
-        subtitle_zh: 上海交通大学
-        date: Sept 2020 – Feb 2023
-        date_zh: 2020.09 – 2023.02
-        details:
-          - Used conformal geometric algebra to derive compact analytical representations for five-axis tool motion and machining geometry.
-          - Constructed G³-continuous corner transitions and point-pair-based cutter swept envelopes without iterative synchronization or local-frame transformations.
-        details_zh:
-          - 利用共形几何代数推导五轴刀具运动与加工几何的紧凑解析表达。
-          - 构造 G³ 连续转角过渡与基于点对的刀具扫掠包络面，避免迭代同步和局部坐标变换。
-
-      - title: Aerial Robot Trajectory Planning
-        title_zh: 无人机轨迹规划
-        subtitle: Shanghai Jiao Tong University
-        subtitle_zh: 上海交通大学
-        date: Jul 2019 – Sept 2020
-        date_zh: 2019.07 – 2020.09
-        details:
-          - Developed sequential-convex-programming methods for efficient, smooth, collision-free, and jerk-constrained quadrotor trajectories.
-        details_zh:
-          - 基于序列凸优化生成高效、平滑、无碰撞且满足跃度约束的四旋翼轨迹。
