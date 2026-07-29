@@ -74,9 +74,6 @@ nav_order: 2
   }
   .project-meta .project-journal { white-space: nowrap; }
   .project-meta .project-year { display: inline-block; white-space: nowrap; }
-  @media (min-width: 901px) and (max-width: 1049px) {
-    .project-grid--three .project-meta { font-size: 0.625rem; letter-spacing: -0.015em; }
-  }
   .project-title {
     margin: 0 0 0.55rem; font-size: 1.03rem; font-weight: 690;
     line-height: 1.38; letter-spacing: -0.018em;
@@ -85,7 +82,7 @@ nav_order: 2
   .project-summary {
     margin: 0 0 1rem; color: var(--global-text-color-light);
     font-size: 0.88rem; line-height: 1.58;
-    text-align: justify; text-justify: inter-word;
+    text-align: left;
   }
   .project-links { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: auto; }
   .project-links a {

@@ -57,14 +57,14 @@ requireMatch(projectsPage, /project-section-heading[\s\S]*?border-left: 4px soli
 requireMatch(projectsData, /video_id: "QE_5t5a_qDg"/, "The inverse-planning project video is missing.");
 requireMatch(projectsData, /poster: "\/assets\/img\/publication_preview\/SIGAsia2025HybridManu\.jpg"/, "The project video poster is missing.");
 requireMatch(projectsPage, /project-video-trigger/, "The clean click-to-play video cover is missing.");
-requireMatch(projectsData, /IEEE Transactions on Automation Science and Engineering · 2025/, "Project metadata must use full journal names and years.");
+requireMatch(projectsData, /IEEE T-ASE · 2025/, "Project metadata must use journal abbreviations and years.");
 requireMatch(projectsData, /HybridFieldOpt\.png/, "The field-optimization project image is missing.");
 requireMatch(projectsData, /meta_en: "Under Review"/, "The first project review status is missing.");
 requireMatch(projectsData, /Inverse Operation-Based Planning for Hybrid Manufacturing/, "The inverse-operation project title is missing.");
 requireMatch(projectsData, /Trajectory Co-Optimization for Robot-Assisted Manufacturing/, "The trajectory co-optimization section title is missing.");
 requireMatch(projectsPage, /project-journal[\s\S]*?white-space: nowrap;/, "Project journal names must remain on one line.");
 requireMatch(projectsPage, /post-header \{ margin-bottom: 3rem !important; \}/, "The Projects title needs more space below it.");
-requireMatch(projectsPage, /\.project-summary \{[\s\S]*?text-align: justify;/, "Project summaries must remain justified.");
+requireMatch(projectsPage, /\.project-summary \{[\s\S]*?text-align: left;/, "Project summaries must remain left aligned.");
 requireMatch(projectsPage, /aspect-ratio: 4 \/ 3;/, "Project images must keep the shared 4:3 preview ratio.");
 requireMatch(enhancements, /aspect-ratio: 4 \/ 3;/, "Publication images must keep the shared 4:3 preview ratio.");
 if ((projectsData.match(/media_type:/g) || []).length !== 8) throw new Error("The Project page must contain exactly eight cards.");
