@@ -78,6 +78,8 @@ nav_order: 4
   .cv-layout { display: block; }
   .cv-content,
   .cv-sidebar { min-width: 0; }
+  .cv-contact,
+  .cv-nav-title { display: none; }
   h2.cv-heading { scroll-margin-top: 6rem; }
   .cv-section-note {
     display: flex;
@@ -133,6 +135,42 @@ nav_order: 4
       top: 6.25rem;
       align-self: start;
     }
+    .cv-contact {
+      display: block;
+      margin-bottom: 1.25rem;
+      padding-bottom: 1.15rem;
+      border-bottom: 1px solid var(--global-divider-color);
+    }
+    .cv-contact-title,
+    .cv-nav-title {
+      margin-bottom: 0.55rem;
+      color: var(--global-text-color);
+      font-size: 0.72rem;
+      font-weight: 750;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .cv-nav-title { display: block; }
+    .cv-contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.32rem;
+    }
+    .cv-contact-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--global-text-color-light);
+      font-size: 0.84rem;
+      line-height: 1.35;
+      text-decoration: none;
+    }
+    .cv-contact-links a:hover { color: var(--global-theme-color); }
+    .cv-contact-links i {
+      width: 1rem;
+      color: var(--global-theme-color);
+      text-align: center;
+    }
     .cv-layout .cv-nav {
       flex-direction: column;
       flex-wrap: nowrap !important;
@@ -161,6 +199,15 @@ nav_order: 4
 
 <div class="cv-layout">
 <aside class="cv-sidebar">
+<section class="cv-contact" aria-label="Contact">
+  <div class="cv-contact-title"><span class="lang-en">Contact</span><span class="lang-zh">联系方式</span></div>
+  <div class="cv-contact-links">
+    <a href="mailto:{{ site.data.socials.email }}"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Email</span></a>
+    <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar" aria-hidden="true"></i><span>Google Scholar</span></a>
+    <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}" target="_blank" rel="external nofollow noopener"><i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
+  </div>
+</section>
+<div class="cv-nav-title"><span class="lang-en">On this page</span><span class="lang-zh">本页目录</span></div>
 <nav class="cv-nav" aria-label="CV sections">
 {% for section in site.data.cv.sections %}<a href="#{{ section.name | slugify }}"><span class="lang-en">{{ section.name }}</span><span class="lang-zh">{{ section.name_zh | default: section.name }}</span></a>{% endfor %}
 </nav>
