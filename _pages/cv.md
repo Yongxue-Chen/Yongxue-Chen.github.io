@@ -92,9 +92,26 @@ nav_order: 4
   }
   .cv-section-note p { margin: 0; }
   .cv-section-note a {
+    display: inline-flex;
     flex: 0 0 auto;
-    font-weight: 650;
+    align-items: center;
+    min-height: 2.15rem;
+    padding: 0.38rem 0.78rem;
+    border: 1px solid var(--global-theme-color);
+    border-radius: 999px;
+    background: var(--global-theme-color);
+    color: #fff !important;
+    font-size: 0.82rem;
+    font-weight: 700;
     white-space: nowrap;
+    text-decoration: none;
+    transition: transform 0.16s ease, box-shadow 0.16s ease;
+  }
+  .cv-section-note a span { color: #fff !important; }
+  .cv-section-note a:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px color-mix(in srgb, var(--global-theme-color) 24%, transparent);
+    text-decoration: none;
   }
   @media (max-width: 576px) {
     .cv-entry-head { flex-direction: column; gap: 0.1rem; }

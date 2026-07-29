@@ -14,6 +14,9 @@ test("homepage has clear identity and prose research summary", async ({ page }) 
   await expect(page.locator(".home-intro.lang-en")).toContainText("robotics");
   await expect(page.locator(".home-intro.lang-en")).toContainText("advanced manufacturing");
   await expect(page.locator(".home-intro.lang-en")).toContainText("hybrid additive-subtractive manufacturing");
+  const profileEmphasisStyle = await page.locator(".home-intro.lang-en strong").first().evaluate((node) => getComputedStyle(node));
+  expect(Number(profileEmphasisStyle.fontWeight)).toBeGreaterThanOrEqual(700);
+  expect(profileEmphasisStyle.backgroundImage).not.toBe("none");
 });
 
 test("publications use one consistent collapsible layout", async ({ page }) => {
@@ -98,8 +101,17 @@ test("CV uses a sticky desktop index and places research experience after educat
   await expect(page.locator("h2#selected-awards")).toHaveCount(1);
   await expect(page.locator(".cv-section-note a[href=\"/publications/\"]")).toHaveCount(1);
   await expect(page.locator(".cv-section-note a[href=\"/projects/\"]")).toHaveCount(1);
+  const cvCtaStyle = await page.locator(".cv-section-note a").first().evaluate((node) => getComputedStyle(node));
+  expect(cvCtaStyle.backgroundColor).not.toBe("rgba(0, 0, 0, 0)");
+  expect(cvCtaStyle.color).toBe("rgb(255, 255, 255)");
+  const cvCtaTextColor = await page.locator(".cv-section-note a span").first().evaluate((node) => getComputedStyle(node).color);
+  expect(cvCtaTextColor).toBe("rgb(255, 255, 255)");
   await expect(page.locator("#journal-articles + .cv-section .cv-entry")).toHaveCount(13);
   await expect(page.locator("#research-experience + .cv-section .cv-entry")).toHaveCount(4);
+  await expect(page.locator("#research-experience + .cv-section .cv-entry").nth(0).locator("ul.lang-en li")).toHaveCount(2);
+  await expect(page.locator("#research-experience + .cv-section .cv-entry").nth(1).locator("ul.lang-en li")).toHaveCount(3);
+  await expect(page.locator("#research-experience + .cv-section .cv-entry").nth(2).locator("ul.lang-en li")).toHaveCount(2);
+  await expect(page.locator("#research-experience + .cv-section .cv-entry").nth(3).locator("ul.lang-en li")).toHaveCount(1);
   await expect(page.locator(".cv-nav a.active")).toHaveAttribute("href", "#education");
   await page.locator("#research-experience").evaluate((node) => node.scrollIntoView());
   await expect(page.locator(".cv-nav a.active")).toHaveAttribute("href", "#research-experience");

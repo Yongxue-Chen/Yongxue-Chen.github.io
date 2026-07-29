@@ -27,11 +27,11 @@ latest_posts:
 <div class="home-intro lang-en" markdown="1">
 <p class="home-eyebrow">Research Profile</p>
 
-I am a PhD candidate in Production and Manufacturing Engineering at **The University of Manchester**, specializing in **robotics** and **advanced manufacturing** with a focus on motion planning, trajectory optimization, and process planning.
+I am a PhD candidate in Production and Manufacturing Engineering at The University of Manchester, specializing in **robotics** and **advanced manufacturing** with a focus on motion planning, trajectory optimization, and process planning.
 
 My research centers on robotic manufacturing and **hybrid additive-subtractive manufacturing**, particularly for multi-axis robotic systems and complex geometries. I develop scalable computational methods that integrate geometric modeling, numerical optimization, and learning-based techniques to improve manufacturability, efficiency, and reliability.
 
-I have published **13 peer-reviewed journal articles** and hold **5 granted Chinese invention patents**.
+I have published 13 peer-reviewed journal articles and hold 5 granted Chinese invention patents.
 
 </div>
 
@@ -42,7 +42,7 @@ I have published **13 peer-reviewed journal articles** and hold **5 granted Chin
 
 我的研究聚焦机器人辅助制造与**增减材复合制造**，尤其面向多轴机器人系统和复杂几何结构的可制造性分析与工艺生成。致力于发展可扩展的计算方法，将几何建模、数值优化与机器学习方法结合，用于提升制造效率、可靠性和复杂零件的可制造性。
 
-目前已发表 **13 篇同行评审期刊论文**，并已获授权 **5 项中国发明专利**。
+目前已发表 13 篇同行评审期刊论文，并已获授权 5 项中国发明专利。
 
 </div>
 
