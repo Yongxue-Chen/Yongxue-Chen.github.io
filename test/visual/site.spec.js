@@ -2,7 +2,7 @@ const { test, expect } = require("@playwright/test");
 
 test("homepage has clear identity and prose research summary", async ({ page }) => {
   await page.goto("/");
-  await expect(page.locator(".site-brand")).toHaveText("Yongxue Chen");
+  await expect(page.locator(".post-header .post-title")).toHaveText("Yongxue Chen");
   await expect(page.locator(".home-stat")).toHaveCount(0);
   await expect(page.locator("article .lang-en").first()).toContainText("13 peer-reviewed journal articles");
   await expect(page.locator("article .lang-en").first()).toContainText("5 granted Chinese invention patents");
