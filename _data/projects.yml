@@ -6,7 +6,6 @@ sections:
     projects:
       - media_type: "image"
         media: "/assets/img/project_preview/HybridFieldOpt.png"
-        media_class: "project-media-contain"
         alt: "Continuous field optimization pipeline for hybrid manufacturing"
         meta_en: "Under Review"
         meta_zh: "审稿中"
