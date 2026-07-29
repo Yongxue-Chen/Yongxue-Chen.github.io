@@ -72,6 +72,11 @@ nav_order: 2
     margin-bottom: 0.45rem; color: var(--global-theme-color);
     font-size: 0.72rem; font-weight: 680; letter-spacing: 0.01em; line-height: 1.4;
   }
+  .project-meta .project-journal { white-space: nowrap; }
+  .project-meta .project-year { display: inline-block; white-space: nowrap; }
+  @media (min-width: 901px) and (max-width: 1049px) {
+    .project-grid--three .project-meta { font-size: 0.625rem; letter-spacing: -0.015em; }
+  }
   .project-title {
     margin: 0 0 0.55rem; font-size: 1.03rem; font-weight: 690;
     line-height: 1.38; letter-spacing: -0.018em;
@@ -135,7 +140,15 @@ nav_order: 2
         {% endif %}
         </div>
         <div class="project-body">
-          {% if project.meta_en %}<div class="project-meta"><span class="lang-en">{{ project.meta_en }}</span><span class="lang-zh">{{ project.meta_zh | default: project.meta_en }}</span></div>{% endif %}
+          {% if project.meta_en %}
+            {% assign meta_en_parts = project.meta_en | split: " · " %}
+            {% assign meta_zh_value = project.meta_zh | default: project.meta_en %}
+            {% assign meta_zh_parts = meta_zh_value | split: " · " %}
+            <div class="project-meta">
+              <span class="lang-en"><span class="project-journal">{{ meta_en_parts | first }}</span>{% if meta_en_parts.size > 1 %}<span class="project-year"> · {{ meta_en_parts | last }}</span>{% endif %}</span>
+              <span class="lang-zh"><span class="project-journal">{{ meta_zh_parts | first }}</span>{% if meta_zh_parts.size > 1 %}<span class="project-year"> · {{ meta_zh_parts | last }}</span>{% endif %}</span>
+            </div>
+          {% endif %}
           <h3 class="project-title"><span class="lang-en">{{ project.title_en }}</span><span class="lang-zh">{{ project.title_zh }}</span></h3>
           <p class="project-summary lang-en">{{ project.summary_en }}</p>
           <p class="project-summary lang-zh">{{ project.summary_zh }}</p>

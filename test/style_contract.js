@@ -61,6 +61,8 @@ requireMatch(projectsData, /IEEE Transactions on Automation Science and Engineer
 requireMatch(projectsData, /HybridFieldOpt\.png/, "The field-optimization project image is missing.");
 requireMatch(projectsData, /meta_en: "Under Review"/, "The first project review status is missing.");
 requireMatch(projectsData, /Inverse Operation-Based Planning for Hybrid Manufacturing/, "The inverse-operation project title is missing.");
+requireMatch(projectsData, /Trajectory Co-Optimization for Robot-Assisted Manufacturing/, "The trajectory co-optimization section title is missing.");
+requireMatch(projectsPage, /project-journal[\s\S]*?white-space: nowrap;/, "Project journal names must remain on one line.");
 requireMatch(projectsPage, /post-header \{ margin-bottom: 3rem !important; \}/, "The Projects title needs more space below it.");
 requireMatch(projectsPage, /\.project-summary \{[\s\S]*?text-align: justify;/, "Project summaries must remain justified.");
 requireMatch(projectsPage, /aspect-ratio: 4 \/ 3;/, "Project images must keep the shared 4:3 preview ratio.");
