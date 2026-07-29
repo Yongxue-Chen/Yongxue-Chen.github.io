@@ -226,6 +226,16 @@
   .home-intro > p:not(.home-eyebrow) {
     margin-bottom: 1rem;
   }
+  .home-intro strong {
+    padding: 0 0.06em;
+    background: linear-gradient(
+      to top,
+      color-mix(in srgb, var(--global-theme-color) 18%, transparent) 0 42%,
+      transparent 42%
+    );
+    color: color-mix(in srgb, var(--global-theme-color) 82%, var(--global-text-color));
+    font-weight: 780;
+  }
   .home-section {
     clear: both;
     margin-top: 3.5rem !important;
