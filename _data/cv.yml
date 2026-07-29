@@ -46,6 +46,11 @@ sections:
 
   - name: Journal Articles
     name_zh: 期刊论文
+    summary: 13 peer-reviewed journal articles are listed below. Abstracts, preview images, and supplementary links are available on the Publications page.
+    summary_zh: 以下列出 13 篇同行评审期刊论文；摘要、预览图片及补充链接请见论文页面。
+    more_url: /publications/
+    more_label: View Publications →
+    more_label_zh: 查看论文页面 →
     items:
       - title: "Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive-Subtractive Manufacturing"
         group: First-author
@@ -274,118 +279,58 @@ sections:
 
   - name: Research Experience
     name_zh: 科研经历
+    summary: Selected research themes and contributions are summarized below. Visual demonstrations, related papers, and code are available on the Projects page.
+    summary_zh: 以下概述主要研究方向与个人贡献；可视化演示、相关论文及代码请见项目页面。
+    more_url: /projects/
+    more_label: View Projects →
+    more_label_zh: 查看项目页面 →
     items:
-      - title: Neural Field Optimization for Hybrid Manufacturing
-        title_zh: 基于神经网络的增减材复合制造过程规划
+      - title: Hybrid Manufacturing Process Planning
+        title_zh: 增减材复合制造过程规划
         subtitle: The University of Manchester
         subtitle_zh: 曼彻斯特大学
-        date: May 2025 – May 2026
-        date_zh: 2025.05 – 2026.05
+        date: May 2024 – May 2026
+        date_zh: 2024.05 – 2026.05
         details:
-          - Developed a neural field-based optimization framework for hybrid additive-subtractive manufacturing, jointly optimizing fabrication sequences and tool orientations for complex geometries.
-          - Formulated an FEA-guided, distortion-aware optimization strategy to improve the mechanical stability of intermediate structures under manufacturability constraints.
-          - Improved efficiency on large-scale models and manufacturing accuracy; first-author manuscript under review.
+          - Developed complementary inverse-operation and neural-field frameworks for planning interleaved additive and subtractive processes on complex geometries.
+          - Integrated manufacturability, intermediate structural stability, tool accessibility, and distortion-aware objectives into scalable optimization.
         details_zh:
-          - 构建面向增减材复合制造的神经场规划框架，解决具有精细特征复杂几何的可扩展工艺规划问题。
-          - 建立考虑变形的优化策略，在制造可行性目标与约束下提升制造过程中中间结构的力学稳定性。
-          - 提升大规模模型的规划效率，生成更连续的制造路径并提高制造精度；期刊论文正在审稿中。
+          - 构建基于逆向操作与神经场的互补规划框架，面向复杂几何生成增材与减材交替的制造过程。
+          - 将可制造性、中间结构稳定性、刀具可达性与变形控制纳入可扩展优化。
 
-      - title: Inverse Operation-Based Planning for Hybrid Manufacturing
-        title_zh: 基于逆向操作的增减材复合制造过程规划
-        subtitle: The University of Manchester
-        subtitle_zh: 曼彻斯特大学
-        date: May 2024 – May 2025
-        date_zh: 2024.05 – 2025.05
+      - title: Robot-Assisted Machining and Trajectory Co-Optimization
+        title_zh: 机器人辅助加工与轨迹协同优化
+        subtitle: The University of Manchester · Shanghai Jiao Tong University
+        subtitle_zh: 曼彻斯特大学 · 上海交通大学
+        date: Oct 2021 – May 2024
+        date_zh: 2021.10 – 2024.05
         details:
-          - Developed an inverse-operation-based planning framework formulating fabrication as a reverse process from the target geometry to an initial state.
-          - Formulated localized stability constraints and an efficient planning strategy for scalability on complex fabrication sequences.
-          - Published in <em>ACM Transactions on Graphics (SIGGRAPH Asia 2025)</em> with oral presentation.
+          - Jointly optimized tool orientations, kinematic redundancy, and waypoint timing for long multi-axis manufacturing toolpaths.
+          - Developed 6-DoF robotic milling and posture-planning methods balancing accuracy, motion smoothness, stiffness, and geometric constraints.
         details_zh:
-          - 提出基于逆向操作的复合制造规划框架，将制造过程表述为从目标几何回溯至空状态的逆过程。
-          - 建立局部稳定性约束与高效规划策略，提升复杂制造序列的可扩展性，并减少冗余操作。
-          - 理论上去除了复杂几何的可制造性约束，形成复合制造新范式；成果发表于 <em>ACM Transactions on Graphics (SIGGRAPH Asia 2025)</em> 并作口头报告。
+          - 面向长多轴制造路径，联合优化工具姿态、运动学冗余自由度与路径点时间分配。
+          - 建立机器人铣削六自由度路径与位姿规划方法，兼顾加工精度、运动平滑性、刚度及几何约束。
 
-      - title: Trajectory Co-Optimization for Robot-Assisted Manufacturing
-        title_zh: 机器人辅助制造的并行轨迹优化
-        subtitle: The University of Manchester
-        subtitle_zh: 曼彻斯特大学
-        date: Sept 2023 – May 2024
-        date_zh: 2023.09 – 2024.05
-        details:
-          - Developed a unified framework jointly optimizing tool orientations, kinematic redundancy, and waypoint timing for multi-axis robot-assisted manufacturing.
-          - Introduced a decomposition-based scheme for efficient solution of the resulting large-scale constrained optimization.
-          - Published in <em>IEEE Transactions on Automation Science and Engineering</em>, 2025.
-        details_zh:
-          - 建立机器人辅助制造统一轨迹优化框架，联合优化工具姿态、运动学冗余自由度与加工速度。
-          - 将问题建模为关于运动学冗余和时间参数的大规模约束优化，并提出基于分解的高效求解策略。
-          - 在复杂大规模刀具路径上实现平滑高效的机器人运动；成果发表于 <em>IEEE Transactions on Automation Science and Engineering</em>, 2025。
-
-      - title: 6-DoF Path Optimization in Robotic Flank Milling
-        title_zh: 机器人侧铣加工中的六自由度路径优化
-        subtitle: Shanghai Jiao Tong University
-        subtitle_zh: 上海交通大学
-        date: Oct 2022 – Mar 2023
-        date_zh: 2022.10 – 2023.03
-        details:
-          - Developed a unified optimization framework for 6-DoF toolpath planning jointly considering machining accuracy, kinematic smoothness, and robot stiffness.
-          - Derived analytical models using conformal geometric algebra for efficient gradient-based optimization.
-          - Published in <em>Robotics and Computer-Integrated Manufacturing</em>, 2023.
-        details_zh:
-          - 针对机器人侧铣建立六自由度刀具路径规划的统一优化框架，联合考虑加工精度、运动平滑性与机器人刚度。
-          - 基于共形几何代数推导加工误差与刚度的解析模型，实现高效准确的梯度优化。
-          - 提升加工质量与计算效率；成果发表于 <em>Robotics and Computer-Integrated Manufacturing</em>, 2023。
-
-      - title: Posture Optimization in Robotic Flat-End Milling
-        title_zh: 机器人平底铣削位姿优化
-        subtitle: Shanghai Jiao Tong University
-        subtitle_zh: 上海交通大学
-        date: Oct 2021 – Oct 2022
-        date_zh: 2021.10 – 2022.10
-        details:
-          - Developed an SQP-based framework jointly optimizing tool orientation and kinematic redundancy under geometric and kinematic constraints.
-          - Published in <em>ASME Journal of Manufacturing Science and Engineering</em>, 2023.
-        details_zh:
-          - 建立基于序列二次规划的优化框架，在几何与运动学约束下联合优化刀具姿态和运动学冗余。
-          - 构建基于机器人关节三阶光顺性以及切削宽度的优化目标，同时避免几何干涉与其他运动学约束。
-          - 为后续机器人制造中的统一优化框架奠定基础；成果发表于 <em>ASME Journal of Manufacturing Science and Engineering</em>, 2023。
-
-      - title: Corner Smoothing of Five-Axis Toolpaths
-        title_zh: 五轴刀具路径转角平滑
-        subtitle: Shanghai Jiao Tong University
-        subtitle_zh: 上海交通大学
-        date: Mar 2021 – Oct 2021
-        date_zh: 2021.03 – 2021.10
-        details:
-          - Built a unified analytical conformal-geometric-algebra framework constructing G³-continuous transitions in 6D without iterative synchronization.
-          - Published in <em>Computer-Aided Design</em>, 2022.
-        details_zh:
-          - 建立六维配置空间中的五轴刀具路径平滑几何建模框架，保证刀具运动的高阶连续性。
-          - 利用共形几何代数构造 G³ 连续过渡曲线，提供解析且统一的刀具路径几何表达。
-          - 通过避免迭代同步过程提升运动平滑性与计算效率；成果发表于 <em>Computer-Aided Design</em>, 2022。
-
-      - title: Analytical Modeling of Cutter Swept Envelopes
-        title_zh: 刀具扫掠包络面的解析建模
+      - title: Geometric Algebra for Machining Geometry
+        title_zh: 基于几何代数的加工几何建模
         subtitle: Shanghai Jiao Tong University
         subtitle_zh: 上海交通大学
         date: Sept 2020 – Feb 2023
         date_zh: 2020.09 – 2023.02
         details:
-          - Developed a compact, unified model of cutter swept envelopes using conformal geometric algebra and point-pair primitives.
-          - Published in <em>Computer-Aided Design</em>, 2023.
+          - Used conformal geometric algebra to derive compact analytical representations for five-axis tool motion and machining geometry.
+          - Constructed G³-continuous corner transitions and point-pair-based cutter swept envelopes without iterative synchronization or local-frame transformations.
         details_zh:
-          - 建立多轴加工刀具扫掠包络面的解析建模框架，为刀具运动提供统一几何表达。
-          - 结合共形几何代数与点对基元，推导紧凑一致的包络面解析表达。
-          - 通过消除局部坐标变换需求提升计算鲁棒性与效率；成果发表于 <em>Computer-Aided Design</em>, 2023。
+          - 利用共形几何代数推导五轴刀具运动与加工几何的紧凑解析表达。
+          - 构造 G³ 连续转角过渡与基于点对的刀具扫掠包络面，避免迭代同步和局部坐标变换。
 
-      - title: Trajectory Planning for Quadrotors
-        title_zh: 四旋翼飞行器轨迹规划
+      - title: Aerial Robot Trajectory Planning
+        title_zh: 无人机轨迹规划
         subtitle: Shanghai Jiao Tong University
         subtitle_zh: 上海交通大学
         date: Jul 2019 – Sept 2020
         date_zh: 2019.07 – 2020.09
         details:
-          - Generated smooth, collision-free, jerk-constrained trajectories via sequential convex programming.
-          - Published in <em>Science China Technological Sciences</em>, 2021.
+          - Developed sequential-convex-programming methods for efficient, smooth, collision-free, and jerk-constrained quadrotor trajectories.
         details_zh:
-          - 基于序列凸优化提出平滑、无碰撞且满足跃度约束的轨迹生成方法。
-          - 相比已有方法实现更高效、更高质量的轨迹生成并缩短计算时间；成果发表于 <em>Science China Technological Sciences</em>, 2021。
+          - 基于序列凸优化生成高效、平滑、无碰撞且满足跃度约束的四旋翼轨迹。

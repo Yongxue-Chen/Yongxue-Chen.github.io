@@ -76,8 +76,30 @@ description: Education, publications, patents, teaching, awards, and research ex
     font-size: 0.9rem;
   }
   .cv-entry ul li { margin-bottom: 0.15rem; }
+  .cv-section-note {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin: 0 0 0.35rem;
+    padding: 0.75rem 0 0.9rem;
+    border-bottom: 1px solid var(--global-divider-color);
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+  }
+  .cv-section-note p { margin: 0; }
+  .cv-section-note a {
+    flex: 0 0 auto;
+    font-weight: 650;
+    white-space: nowrap;
+  }
   @media (max-width: 576px) {
     .cv-entry-head { flex-direction: column; gap: 0.1rem; }
+    .cv-section-note {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
   }
 </style>
 
@@ -89,6 +111,12 @@ description: Education, publications, patents, teaching, awards, and research ex
 <h2 class="cv-heading" id="{{ section.name | slugify }}"><span class="lang-en">{{ section.name }}</span><span class="lang-zh">{{ section.name_zh | default: section.name }}</span></h2>
 
 <div class="cv-section">
+{% if section.summary %}
+  <div class="cv-section-note">
+    <p><span class="lang-en">{{ section.summary }}</span><span class="lang-zh">{{ section.summary_zh | default: section.summary }}</span></p>
+    {% if section.more_url %}<a href="{{ section.more_url }}"><span class="lang-en">{{ section.more_label }}</span><span class="lang-zh">{{ section.more_label_zh | default: section.more_label }}</span></a>{% endif %}
+  </div>
+{% endif %}
 {% assign current_group = "" %}
 {% for item in section.items %}
   {% if item.group and item.group != current_group %}

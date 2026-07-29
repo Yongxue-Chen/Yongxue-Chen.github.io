@@ -56,6 +56,11 @@ test("CV navigation wraps as plain links and sections are visually distinct", as
     .evaluate((node) => getComputedStyle(node));
   expect(headingStyle.borderLeftWidth).toBe("4px");
   expect(headingStyle.backgroundImage).not.toBe("none");
+  await expect(page.locator(".cv-section-note")).toHaveCount(2);
+  await expect(page.locator(".cv-section-note a[href=\"/publications/\"]")).toHaveCount(1);
+  await expect(page.locator(".cv-section-note a[href=\"/projects/\"]")).toHaveCount(1);
+  await expect(page.locator("#journal-articles + .cv-section .cv-entry")).toHaveCount(13);
+  await expect(page.locator("#research-experience + .cv-section .cv-entry")).toHaveCount(4);
 });
 
 test("language selection updates document semantics and navigation", async ({ page }) => {
