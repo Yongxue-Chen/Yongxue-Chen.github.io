@@ -29,8 +29,8 @@ sections:
         meta_zh: "ACM Transactions on Graphics · 2025"
         title_en: "Inverse Operation-Based Planning for Hybrid Manufacturing"
         title_zh: "面向复合制造的逆向操作规划"
-        summary_en: "The planner searches for inverse operations that progressively transform a target model into a null shape, with each operation defining an additive or subtractive step while preserving manufacturability and structural stability of intermediate shapes. The resulting sequence can fabricate arbitrary shapes exactly, while a scalable voxel-based implementation handles large models and has been validated on a hybrid manufacturing system with automatic tool switching."
-        summary_zh: "该规划方法通过搜索一系列逆向操作，将目标模型逐步转化为空形；每个逆向操作对应一个增材或减材制造步骤，并保证中间结构的可制造性与稳定性。所得序列能够精确制造任意形状；其可扩展的体素实现可处理大型模型，并已在具备自动换刀功能的复合制造系统上通过物理实验验证。"
+        summary_en: "The planner searches for inverse operations that progressively transform a target model into a null shape. Each operation defines an AM or SM step while preserving the manufacturability and structural stability of intermediate shapes. We theoretically prove that our method can automatically fabricate any shape exactly."
+        summary_zh: "该规划方法通过搜索一系列逆向操作，将目标模型逐步转化为空形。每个逆向操作对应一个增材制造（AM）或减材制造（SM）步骤，并保证中间结构的可制造性与稳定性。我们从理论上证明，该方法可以自动、精确地制造任意形状。"
         links:
           - label_en: "Project"
             label_zh: "主页"
