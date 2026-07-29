@@ -6,7 +6,7 @@ subtitle: "PhD Candidate in Production and Manufacturing Engineering · The Univ
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic_casual.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Manchester, UK</p>

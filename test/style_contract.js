@@ -68,7 +68,7 @@ requireMatch(projectsPage, /\.project-summary \{[\s\S]*?text-align: left;/, "Pro
 requireMatch(projectsPage, /aspect-ratio: 4 \/ 3;/, "Project images must keep the shared 4:3 preview ratio.");
 requireMatch(enhancements, /aspect-ratio: 4 \/ 3;/, "Publication images must keep the shared 4:3 preview ratio.");
 if ((projectsData.match(/media_type:/g) || []).length !== 8) throw new Error("The Project page must contain exactly eight cards.");
-if ((projectsData.match(/video_id:/g) || []).length !== 1) throw new Error("Only the inverse-planning project should embed a video.");
+if ((projectsData.match(/video_id:/g) || []).length !== 2) throw new Error("The inverse-planning and T-ASE projects should embed videos.");
 requireMatch(publications, /bibliography --query @\*\[author_type=first\]/, "First-author publications are missing.");
 requireMatch(publications, /bibliography --query @\*\[author_type=co\]/, "Co-authored publications are missing.");
 requireMatch(publications, />Abstract<\/span>/, "Publication abstract buttons must use the full label.");

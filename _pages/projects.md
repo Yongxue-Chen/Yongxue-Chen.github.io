@@ -72,8 +72,16 @@ nav_order: 2
     margin-bottom: 0.45rem; color: var(--global-theme-color);
     font-size: 0.72rem; font-weight: 680; letter-spacing: 0.01em; line-height: 1.4;
   }
+  .project-meta .lang-en, .project-meta .lang-zh {
+    align-items: baseline; flex-wrap: wrap; column-gap: 0.38em;
+  }
+  html[data-lang="en"] .project-meta .lang-en,
+  html[data-lang="zh"] .project-meta .lang-zh { display: inline-flex; }
   .project-meta .project-journal { white-space: nowrap; }
-  .project-meta .project-year { display: inline-block; white-space: nowrap; }
+  .project-meta .project-year {
+    display: inline-flex; align-items: baseline; gap: 0.38em; white-space: nowrap;
+  }
+  .project-meta .project-year::before { content: "·"; }
   .project-title {
     margin: 0 0 0.55rem; font-size: 1.03rem; font-weight: 690;
     line-height: 1.38; letter-spacing: -0.018em;
@@ -142,8 +150,8 @@ nav_order: 2
             {% assign meta_zh_value = project.meta_zh | default: project.meta_en %}
             {% assign meta_zh_parts = meta_zh_value | split: " · " %}
             <div class="project-meta">
-              <span class="lang-en"><span class="project-journal">{{ meta_en_parts | first }}</span>{% if meta_en_parts.size > 1 %}<span class="project-year"> · {{ meta_en_parts | last }}</span>{% endif %}</span>
-              <span class="lang-zh"><span class="project-journal">{{ meta_zh_parts | first }}</span>{% if meta_zh_parts.size > 1 %}<span class="project-year"> · {{ meta_zh_parts | last }}</span>{% endif %}</span>
+              <span class="lang-en"><span class="project-journal">{{ meta_en_parts | first }}</span>{% if meta_en_parts.size > 1 %}<span class="project-year">{{ meta_en_parts | last }}</span>{% endif %}</span>
+              <span class="lang-zh"><span class="project-journal">{{ meta_zh_parts | first }}</span>{% if meta_zh_parts.size > 1 %}<span class="project-year">{{ meta_zh_parts | last }}</span>{% endif %}</span>
             </div>
           {% endif %}
           <h3 class="project-title"><span class="lang-en">{{ project.title_en }}</span><span class="lang-zh">{{ project.title_zh }}</span></h3>
