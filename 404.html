@@ -583,16 +583,21 @@
       padding: 0.25rem 0 0.45rem;
     }
     .navbar.navbar-light .navbar-nav .nav-item .nav-link { padding: 0.35rem 0.55rem; }
-    .lang-switch-item { margin-top: 0; margin-left: 0.1rem; }
+    /* Keep the language control pinned to the right edge even when the navigation
+       wraps onto a second row. Auto margin absorbs the remaining row width. */
+    .lang-switch-item { margin-top: 0; margin-left: auto; }
 
     /* A copy of the navbar icons under the name; the theme's own social block stays
        where it is, centred at the foot of the page. */
+    .post-header:has(+ .home-socials) {
+      padding-bottom: 0.15rem;
+    }
     .home-socials {
       display: flex;
       justify-content: flex-start;
       gap: 1.1rem;
       font-size: 1.25rem;
-      margin: 0.1rem 0 1.1rem;
+      margin: 0 0 2rem;
     }
     .home-socials a { color: var(--global-text-color-light); }
     /* Let the contact lines use the full column width so the email stays on one line;
