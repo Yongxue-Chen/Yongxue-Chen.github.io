@@ -1,6 +1,6 @@
 sections:
   - number: "01"
-    title_en: "Hybrid Manufacturing Process Planning"
+    title_en: "Hybrid Additive-Subtractive Manufacturing"
     title_zh: "增减材复合制造过程规划"
     layout: "two"
     projects:
@@ -10,10 +10,10 @@ sections:
         alt: "Continuous field optimization pipeline for hybrid manufacturing"
         meta_en: "Under Review"
         meta_zh: "审稿中"
-        title_en: "Scalable and Distortion-Aware Field Optimization"
-        title_zh: "可扩展且考虑变形的连续场优化"
-        summary_en: "A continuous neural-field formulation for optimizing hybrid manufacturing states, fabrication time, structural strength, support usage, and tool accessibility on complex geometries."
-        summary_zh: "以连续神经场表示制造状态，联合优化制造时间、结构强度、支撑材料与刀具可达性，面向复杂几何生成考虑变形的复合制造规划。"
+        title_en: "Scalable and Distortion-Aware Field Optimization for Hybrid Manufacturing"
+        title_zh: "面向复合制造的可扩展且考虑变形的场优化"
+        summary_en: "We present a field-based optimization framework for hybrid additive-subtractive manufacturing. Continuous neural fields determine fabrication sequences, support material, and tool configurations while optimizing shape conformance, fabrication time, and intermediate-structure distortion under manufacturing constraints. The method scales to large models, preserves fine features, reduces unnecessary support, and improves toolpath smoothness."
+        summary_zh: "我们提出了一种面向增减材复合制造的基于场的优化框架。连续神经场在制造约束下确定制造序列、支撑材料与刀具配置，同时优化形状一致性、制造时间和中间结构变形。该方法可扩展至大型模型，能够保留精细特征、减少不必要的支撑，并提高刀具路径的平滑性。"
         links:
           - label_en: "Project"
             label_zh: "主页"
