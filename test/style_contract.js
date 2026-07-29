@@ -49,6 +49,8 @@ requireMatch(
 );
 if (/\.cv-nav a \{[\s\S]*?background: var\(--site-surface\)/.test(enhancements)) throw new Error("CV navigation links must not look like cards.");
 requireMatch(projectsPage, /project-grid--{{ section\.layout }}/, "Project cards must use the requested row layouts.");
+if (!projectsPage.includes(".project-grid--single { grid-template-columns: minmax(0, calc((100% - var(--project-gap)) / 2)); }")) throw new Error("The single Project card must remain half width.");
+requireMatch(projectsPage, /project-section-heading[\s\S]*?border-left: 4px solid var\(--global-theme-color\)[\s\S]*?linear-gradient/, "Project section headings need a clear visual hierarchy.");
 requireMatch(projectsData, /video_id: "QE_5t5a_qDg"/, "The inverse-planning project video is missing.");
 requireMatch(projectsData, /poster: "\/assets\/img\/publication_preview\/SIGAsia2025HybridManu\.jpg"/, "The project video poster is missing.");
 requireMatch(projectsPage, /project-video-trigger/, "The clean click-to-play video cover is missing.");

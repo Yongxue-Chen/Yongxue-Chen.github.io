@@ -10,22 +10,26 @@ nav_order: 2
 
 <style>
   .projects-page { --project-gap: 1.15rem; margin-top: 0.2rem; }
-  .project-section { margin-top: 3.5rem; }
+  .project-section { margin-top: 4rem; }
   .project-section:first-child { margin-top: 0.4rem; }
   .project-section-heading {
-    display: flex; align-items: baseline; gap: 0.8rem;
-    margin: 0 0 1rem; padding-bottom: 0.7rem;
-    border-bottom: 1px solid var(--site-border);
+    display: flex; align-items: center; gap: 0.72rem;
+    margin: 0 0 1.25rem; padding: 0.72rem 0.9rem;
+    border-left: 4px solid var(--global-theme-color);
+    background: linear-gradient(90deg, var(--site-accent-soft), transparent 88%);
   }
   .project-section-index {
-    color: var(--global-theme-color); font-size: 0.78rem;
-    font-weight: 760; letter-spacing: 0.1em;
+    color: var(--global-theme-color); font-size: 0.74rem;
+    font-weight: 780; letter-spacing: 0.12em;
   }
-  .project-section-heading h2 { margin: 0; font-size: 1.38rem; line-height: 1.3; }
+  .project-section-heading h2 {
+    margin: 0; color: var(--global-theme-color);
+    font-size: 1.55rem; font-weight: 720; line-height: 1.25;
+  }
   .project-grid { display: grid; gap: var(--project-gap); }
   .project-grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .project-grid--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .project-grid--single { grid-template-columns: minmax(0, calc((100% - 2 * var(--project-gap)) / 3)); }
+  .project-grid--single { grid-template-columns: minmax(0, calc((100% - var(--project-gap)) / 2)); }
   .project-card {
     display: flex; min-width: 0; flex-direction: column; overflow: hidden;
     border: 1px solid var(--site-border); border-radius: 16px;
@@ -98,7 +102,7 @@ nav_order: 2
     .project-section { margin-top: 2.8rem; }
     .project-grid--two, .project-grid--three, .project-grid--single { grid-template-columns: minmax(0, 1fr); }
     .project-section-heading { align-items: flex-start; }
-    .project-section-heading h2 { font-size: 1.2rem; }
+    .project-section-heading h2 { font-size: 1.28rem; }
   }
   @media (prefers-reduced-motion: reduce) {
     .project-card { transition: none; }

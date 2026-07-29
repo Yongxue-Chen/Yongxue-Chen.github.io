@@ -45,6 +45,15 @@ test("projects use the requested card rows and a single embedded video", async (
     .locator(".project-grid")
     .evaluateAll((nodes) => nodes.map((node) => getComputedStyle(node).gridTemplateColumns.split(" ").length));
   expect(columns).toEqual([2, 3, 2, 1]);
+  const singleWidthRatio = await page.locator(".project-grid--single").evaluate((grid) => {
+    const card = grid.querySelector(".project-card");
+    return card.getBoundingClientRect().width / grid.getBoundingClientRect().width;
+  });
+  expect(singleWidthRatio).toBeGreaterThan(0.48);
+  expect(singleWidthRatio).toBeLessThan(0.51);
+  const sectionHeadingStyle = await page.locator(".project-section-heading").first().evaluate((node) => getComputedStyle(node));
+  expect(sectionHeadingStyle.borderLeftWidth).toBe("4px");
+  expect(sectionHeadingStyle.backgroundImage).not.toBe("none");
 });
 
 test("CV uses a sticky desktop index and places research experience after education", async ({ page }) => {
