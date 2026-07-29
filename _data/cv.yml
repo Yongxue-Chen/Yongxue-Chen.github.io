@@ -52,44 +52,46 @@ sections:
     more_label: View Projects →
     more_label_zh: 查看项目页面 →
     items:
-      - title: Hybrid Manufacturing Process Planning
-        title_zh: 增减材复合制造过程规划
+      - title: Hybrid Additive-Subtractive Manufacturing
+        title_zh: 增减材复合制造
         subtitle: The University of Manchester
         subtitle_zh: 曼彻斯特大学
         date: May 2024 – May 2026
         date_zh: 2024.05 – 2026.05
         details:
-          - Developed complementary inverse-operation and neural-field frameworks for planning interleaved additive and subtractive processes on complex geometries.
-          - Integrated manufacturability, intermediate structural stability, tool accessibility, and distortion-aware objectives into scalable optimization.
+          - Developed a scalable, distortion-aware neural-field framework that jointly optimizes fabrication sequences, support material, and tool configurations for hybrid manufacturing.
+          - Developed inverse-operation-based planning for interleaved AM and SM processes, with a theoretical guarantee of automatically fabricating arbitrary shapes exactly.
         details_zh:
-          - 构建基于逆向操作与神经场的互补规划框架，面向复杂几何生成增材与减材交替的制造过程。
-          - 将可制造性、中间结构稳定性、刀具可达性与变形控制纳入可扩展优化。
+          - 构建可扩展且考虑变形的神经场框架，联合优化复合制造的制造序列、支撑材料与刀具配置。
+          - 构建基于逆向操作的增减材交替规划方法，并从理论上保证能够自动、精确地制造任意形状。
 
-      - title: Robot-Assisted Machining and Trajectory Co-Optimization
-        title_zh: 机器人辅助加工与轨迹协同优化
+      - title: Trajectory Co-Optimization for Robot-Assisted Manufacturing
+        title_zh: 面向机器人辅助制造的轨迹协同优化
         subtitle: The University of Manchester · Shanghai Jiao Tong University
         subtitle_zh: 曼彻斯特大学 · 上海交通大学
         date: Oct 2021 – May 2024
         date_zh: 2021.10 – 2024.05
         details:
-          - Jointly optimized tool orientations, kinematic redundancy, and waypoint timing for long multi-axis manufacturing toolpaths.
-          - Developed 6-DoF robotic milling and posture-planning methods balancing accuracy, motion smoothness, stiffness, and geometric constraints.
+          - Developed scalable concurrent planning of tool orientations, kinematic redundancy, and waypoint timing for AM and SM in single- and multi-robot systems.
+          - Developed direct 6-DoF toolpath planning for robotic flank milling by jointly optimizing machining accuracy, path smoothness, and robot stiffness.
+          - Developed tool-orientation and redundancy co-optimization for robotic flat-end milling under machining-width, joint-limit, and gouging-avoidance constraints.
         details_zh:
-          - 面向长多轴制造路径，联合优化工具姿态、运动学冗余自由度与路径点时间分配。
-          - 建立机器人铣削六自由度路径与位姿规划方法，兼顾加工精度、运动平滑性、刚度及几何约束。
+          - 面向单机器人和多机器人系统中的 AM 与 SM，构建工具姿态、运动学冗余自由度及路径点时间的可扩展协同规划方法。
+          - 面向机器人侧铣直接规划六自由度刀具路径，联合优化加工精度、路径平滑性与机器人刚度。
+          - 面向机器人平底刀铣削协同优化刀具姿态与冗余自由度，同时满足加工宽度、关节限位及过切避免约束。
 
-      - title: Geometric Algebra for Machining Geometry
-        title_zh: 基于几何代数的加工几何建模
+      - title: Geometric Algebra for Manufacturing Geometry
+        title_zh: 基于几何代数的制造几何建模
         subtitle: Shanghai Jiao Tong University
         subtitle_zh: 上海交通大学
         date: Sept 2020 – Feb 2023
         date_zh: 2020.09 – 2023.02
         details:
-          - Used conformal geometric algebra to derive compact analytical representations for five-axis tool motion and machining geometry.
-          - Constructed G³-continuous corner transitions and point-pair-based cutter swept envelopes without iterative synchronization or local-frame transformations.
+          - Developed analytical G³ corner smoothing for five-axis toolpaths using a six-dimensional conformal-geometric-algebra representation with direct deviation control.
+          - Developed a unified point-pair expression of cutter swept envelopes for conical, drum-shaped, and toroidal cutters, enabling efficient five-axis collision detection.
         details_zh:
-          - 利用共形几何代数推导五轴刀具运动与加工几何的紧凑解析表达。
-          - 构造 G³ 连续转角过渡与基于点对的刀具扫掠包络面，避免迭代同步和局部坐标变换。
+          - 基于六维共形几何代数表示构建五轴刀具路径的解析 G³ 转角光顺方法，并直接控制轮廓偏差。
+          - 建立锥形、鼓形与环形刀具扫掠包络面的统一点对表达，用于高效五轴碰撞检测。
 
       - title: Aerial Robot Trajectory Planning
         title_zh: 无人机轨迹规划
@@ -98,9 +100,9 @@ sections:
         date: Jul 2019 – Sept 2020
         date_zh: 2019.07 – 2020.09
         details:
-          - Developed sequential-convex-programming methods for efficient, smooth, collision-free, and jerk-constrained quadrotor trajectories.
+          - Developed efficient C³-continuous path planning through sparse waypoints and jerk-constrained velocity planning for dynamically smooth aerial-robot trajectories in cluttered environments.
         details_zh:
-          - 基于序列凸优化生成高效、平滑、无碰撞且满足跃度约束的四旋翼轨迹。
+          - 面向复杂环境中的空中机器人，构建高效的稀疏路点 C³ 连续路径规划与跃度约束速度规划方法。
 
   - name: Journal Articles
     name_zh: 期刊论文
