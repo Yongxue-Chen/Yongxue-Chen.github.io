@@ -3,6 +3,7 @@
 Personal academic website for **Yongxue Chen**, a PhD candidate at The University of Manchester working on robotics, advanced manufacturing, motion planning, trajectory optimization, and computational process planning.
 
 - Website: https://yongxue-chen.github.io/
+- Projects: https://yongxue-chen.github.io/projects/
 - Publications: https://yongxue-chen.github.io/publications/
 - CV: https://yongxue-chen.github.io/cv/
 
