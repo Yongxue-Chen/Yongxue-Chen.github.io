@@ -60,6 +60,7 @@ requireMatch(projectsPage, /project-video-trigger/, "The clean click-to-play vid
 requireMatch(projectsData, /IEEE Transactions on Automation Science and Engineering · 2025/, "Project metadata must use full journal names and years.");
 requireMatch(projectsData, /HybridFieldOpt\.png/, "The field-optimization project image is missing.");
 requireMatch(projectsData, /meta_en: "Under Review"/, "The first project review status is missing.");
+requireMatch(projectsData, /Inverse Operation-Based Planning for Hybrid Manufacturing/, "The inverse-operation project title is missing.");
 requireMatch(projectsPage, /post-header \{ margin-bottom: 3rem !important; \}/, "The Projects title needs more space below it.");
 requireMatch(projectsPage, /aspect-ratio: 4 \/ 3;/, "Project images must keep the shared 4:3 preview ratio.");
 requireMatch(enhancements, /aspect-ratio: 4 \/ 3;/, "Publication images must keep the shared 4:3 preview ratio.");
