@@ -4,7 +4,7 @@ test("homepage has clear identity and prose research summary", async ({ page }) 
   await page.goto("/");
   await expect(page.locator(".post-header .post-title")).toHaveText("Yongxue Chen");
   await expect(page.locator(".home-stat")).toHaveCount(0);
-  await expect(page.locator("article .lang-en").first()).toContainText("13 peer-reviewed journal articles");
+  await expect(page.locator("article .lang-en").first()).toContainText("14 peer-reviewed journal articles");
   await expect(page.locator("article .lang-en").first()).toContainText("5 granted Chinese invention patents");
   await expect(page.locator(".profile img")).toHaveAttribute("alt", /Yongxue Chen|prof_pic/i);
   await expect(page.locator(".home-education .edu-item")).toHaveCount(3);
@@ -23,7 +23,7 @@ test("publications use one consistent collapsible layout", async ({ page }) => {
   await page.goto("/publications/");
   await expect(page.locator(".post-header .desc")).toHaveCount(0);
   const entries = page.locator(".publications ol.bibliography li");
-  await expect(entries).toHaveCount(13);
+  await expect(entries).toHaveCount(14);
   const abstracts = page.locator(".publications .abstract.hidden");
   await expect(abstracts).toHaveCount(13);
   for (const abstract of await abstracts.all()) await expect(abstract).toBeHidden();
@@ -112,7 +112,7 @@ test("CV uses a sticky desktop index and places research experience after educat
   expect(cvCtaStyle.color).toBe("rgb(255, 255, 255)");
   const cvCtaTextColor = await page.locator(".cv-section-note a span").first().evaluate((node) => getComputedStyle(node).color);
   expect(cvCtaTextColor).toBe("rgb(255, 255, 255)");
-  await expect(page.locator("#journal-articles + .cv-section .cv-entry")).toHaveCount(13);
+  await expect(page.locator("#journal-articles + .cv-section .cv-entry")).toHaveCount(14);
   await expect(page.locator("#research-experience + .cv-section .cv-entry")).toHaveCount(4);
   await expect(page.locator("#research-experience + .cv-section .cv-entry").nth(0).locator("ul.lang-en li")).toHaveCount(2);
   await expect(page.locator("#research-experience + .cv-section .cv-entry").nth(1).locator("ul.lang-en li")).toHaveCount(3);

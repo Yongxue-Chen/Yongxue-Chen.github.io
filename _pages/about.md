@@ -31,7 +31,7 @@ I am a PhD candidate in Production and Manufacturing Engineering at The Universi
 
 My research centers on robotic manufacturing and **hybrid additive-subtractive manufacturing**, particularly for multi-axis robotic systems and complex geometries. I develop scalable computational methods that integrate geometric modeling, numerical optimization, and learning-based techniques to improve manufacturability, efficiency, and reliability.
 
-I have published 13 peer-reviewed journal articles and hold 5 granted Chinese invention patents.
+I have 14 peer-reviewed journal articles published or accepted, and hold 5 granted Chinese invention patents.
 
 </div>
 
@@ -42,7 +42,7 @@ I have published 13 peer-reviewed journal articles and hold 5 granted Chinese in
 
 我的研究聚焦机器人辅助制造与**增减材复合制造**，尤其面向多轴机器人系统和复杂几何结构的可制造性分析与工艺生成。致力于发展可扩展的计算方法，将几何建模、数值优化与机器学习方法结合，用于提升制造效率、可靠性和复杂零件的可制造性。
 
-目前已发表 13 篇同行评审期刊论文，并已获授权 5 项中国发明专利。
+目前已发表或接收 14 篇同行评审期刊论文，并已获授权 5 项中国发明专利。
 
 </div>
 
@@ -79,6 +79,15 @@ I have published 13 peer-reviewed journal articles and hold 5 granted Chinese in
 <div class="home-section">
 
 <h3><span class="lang-en">Selected Publications</span><span class="lang-zh">代表性论文</span></h3>
+
+<div class="pub-item">
+  <span class="pub-title">Field Optimization for Scalable and Distortion-Aware Process Planning in Hybrid Additive-Subtractive Manufacturing</span>
+  <div class="pub-authors"><strong>Yongxue Chen</strong>, et al.</div>
+  <div class="pub-venue">
+    <span class="lang-en"><em>ACM Transactions on Graphics</em> &middot; Conditionally accepted</span>
+    <span class="lang-zh"><em>ACM Transactions on Graphics</em> &middot; 有条件接收</span>
+  </div>
+</div>
 
 <div class="pub-item">
   <a href="https://doi.org/10.1145/3763355">Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive-Subtractive Manufacturing</a>

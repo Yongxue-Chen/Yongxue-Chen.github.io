@@ -27,7 +27,7 @@ requireMatch(config, /^footer_fixed: false$/m, "The footer must not obscure page
 requireMatch(config, /^serve_og_meta: true\b/m, "Open Graph metadata must stay enabled.");
 requireMatch(config, /^serve_schema_org: true\b/m, "Schema.org metadata must stay enabled.");
 requireMatch(config, /fonts: "\/assets\/css\/system-fonts\.css"/, "The site must not load unused render-blocking web fonts.");
-requireMatch(home, /13 peer-reviewed journal articles/, "The homepage publication count is missing from the prose.");
+requireMatch(home, /14 peer-reviewed journal articles/, "The homepage publication count is missing from the prose.");
 requireMatch(home, /5 granted Chinese invention patents/, "The homepage patent count is missing from the prose.");
 if (/class="home-stat/.test(home)) throw new Error("Homepage metrics must remain in prose, not cards.");
 requireMatch(home, /Selected Publications/, "The homepage selected-publications heading is missing.");
@@ -60,7 +60,7 @@ requireMatch(projectsData, /video_id: "QE_5t5a_qDg"/, "The inverse-planning proj
 requireMatch(projectsData, /poster: "\/assets\/img\/publication_preview\/SIGAsia2025HybridManu\.jpg"/, "The project video poster is missing.");
 requireMatch(projectsPage, /project-video-trigger/, "The clean click-to-play video cover is missing.");
 requireMatch(projectsData, /IEEE T-ASE · 2025/, "Project metadata must use journal abbreviations and years.");
-requireMatch(projectsData, /HybridFieldOpt\.png/, "The field-optimization project image is missing.");
+requireMatch(projectsData, /HybridFieldOpt\.jpg/, "The field-optimization project image is missing.");
 requireMatch(projectsData, /meta_en: "Under Review"/, "The first project review status is missing.");
 requireMatch(projectsData, /Inverse Operation-Based Planning for Hybrid Manufacturing/, "The inverse-operation project title is missing.");
 requireMatch(projectsData, /Trajectory Co-Optimization for Robot-Assisted Manufacturing/, "The trajectory co-optimization section title is missing.");
