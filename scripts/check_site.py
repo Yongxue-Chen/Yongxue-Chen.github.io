@@ -37,7 +37,14 @@ def target_for(root: Path, reference: str) -> Path | None:
 
 def main() -> int:
     root = Path(sys.argv[1] if len(sys.argv) > 1 else "_site").resolve()
-    required = [root / "index.html", root / "projects/index.html", root / "publications/index.html", root / "cv/index.html", root / "404.html"]
+    required = [
+        root / "index.html",
+        root / "projects/index.html",
+        root / "publications/index.html",
+        root / "cv/index.html",
+        root / "life/index.html",
+        root / "404.html",
+    ]
     failures = [f"Missing required page: {path.relative_to(root)}" for path in required if not path.is_file()]
 
     for page in root.rglob("*.html"):
