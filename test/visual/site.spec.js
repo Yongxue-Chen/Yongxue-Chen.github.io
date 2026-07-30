@@ -139,13 +139,36 @@ test("language selection updates document semantics and navigation", async ({ pa
   await expect(page.locator(".links a.abstract.btn .lang-zh").first()).toHaveText("摘要");
   await expect(page.locator('a.nav-link[href="/projects/"]')).toContainText("项目");
   await expect(page.locator('a.nav-link[href="/cv/"]')).toContainText("简历");
+  await expect(page.locator('a.nav-link[href="/life/"]')).toContainText("生活");
 });
 
 test("primary pages do not overflow a mobile viewport", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
-  for (const path of ["/", "/projects/", "/publications/", "/cv/"]) {
+  for (const path of ["/", "/projects/", "/publications/", "/cv/", "/life/"]) {
     await page.goto(path);
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
     expect(overflow).toBeLessThanOrEqual(1);
   }
+});
+
+test("Life page provides four simple, responsive personal photo slots", async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto("/life/");
+  await expect(page.locator(".post-header .desc")).toHaveCount(0);
+  await expect(page.locator(".life-section")).toHaveCount(0);
+  await expect(page.locator(".life-photo")).toHaveCount(4);
+  await expect(page.locator(".life-placeholder")).toHaveCount(0);
+  await expect(page.locator(".life-photo img")).toHaveCount(4);
+  await expect(page.locator(".life-photo--hiking")).toHaveCount(2);
+  await expect(page.locator(".life-photo--diving")).toHaveCount(1);
+  await expect(page.locator(".life-photo--drumming")).toHaveCount(1);
+  await expect(page.locator(".life-page figcaption")).toHaveCount(0);
+  const desktopColumns = await page.locator(".life-grid").evaluate((node) => getComputedStyle(node).gridTemplateColumns.split(" ").length);
+  expect(desktopColumns).toBe(12);
+  const hikingTops = await page.locator(".life-photo--hiking").evaluateAll((nodes) => nodes.map((node) => node.getBoundingClientRect().top));
+  expect(hikingTops[1] - hikingTops[0]).toBeGreaterThan(30);
+
+  await page.setViewportSize({ width: 390, height: 844 });
+  const mobileColumns = await page.locator(".life-grid").evaluate((node) => getComputedStyle(node).gridTemplateColumns.split(" ").length);
+  expect(mobileColumns).toBe(1);
 });

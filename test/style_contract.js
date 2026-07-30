@@ -17,10 +17,12 @@ const projectsData = read("_data/projects.yml");
 const publications = read("_pages/publications.md");
 const cv = read("_data/cv.yml");
 const cvPage = read("_pages/cv.md");
+const life = read("_data/life.yml");
+const lifePage = read("_pages/life.md");
 const workflows = [".github/workflows/deploy.yml", ".github/workflows/quality.yml"].map(read);
 
 requireMatch(config, /^external_sources: \[\]$/m, "Template external posts must stay disabled.");
-requireMatch(config, /^search_enabled: false$/m, "Global search should stay disabled for this four-page site.");
+requireMatch(config, /^search_enabled: false$/m, "Global search should stay disabled for this focused personal site.");
 requireMatch(config, /^footer_fixed: false$/m, "The footer must not obscure page content.");
 requireMatch(config, /^serve_og_meta: true\b/m, "Open Graph metadata must stay enabled.");
 requireMatch(config, /^serve_schema_org: true\b/m, "Schema.org metadata must stay enabled.");
@@ -34,7 +36,7 @@ requireMatch(home, /class="edu-school"/, "Homepage institutions are not emphasiz
 requireMatch(home, /\*\*robotics\*\*/, "Robotics emphasis is missing from the homepage profile.");
 requireMatch(home, /\*\*advanced manufacturing\*\*/, "Advanced-manufacturing emphasis is missing from the homepage profile.");
 requireMatch(home, /\*\*hybrid additive-subtractive manufacturing\*\*/, "Hybrid-manufacturing emphasis is missing from the homepage profile.");
-for (const page of [projectsPage, publications, cvPage]) {
+for (const page of [projectsPage, publications, cvPage, lifePage]) {
   if (/^description:/m.test(page)) throw new Error("Primary subpages must not show a description below the title.");
 }
 requireMatch(language, /include site_enhancements\.liquid/, "Shared site enhancements are not wired in.");
@@ -76,6 +78,14 @@ requireMatch(cv, /date_zh: "2025\.10"/, "Quoted Chinese October date regressed."
 requireMatch(cv, /name: Selected Awards/, "CV awards must be labeled as selected.");
 requireMatch(cv, /summary: Selected research themes\./, "The concise Projects description is missing from the CV.");
 requireMatch(cv, /summary: Complete publication list\./, "The concise Publications description is missing from the CV.");
+requireMatch(lifePage, /permalink: \/life\//, "The personal gallery route is missing.");
+requireMatch(lifePage, /grid-template-columns: repeat\(12, minmax\(0, 1fr\)\)/, "The desktop Life gallery must use an asymmetric editorial grid.");
+requireMatch(lifePage, /@media \(max-width: 800px\)[\s\S]*?grid-template-columns: 1fr/, "The Life gallery must collapse to one mobile column.");
+if ((life.match(/^\s*- image:/gm) || []).length !== 4) throw new Error("The Life page must contain exactly four photo slots.");
+if ((life.match(/type: hiking/g) || []).length !== 2) throw new Error("The Life page must reserve two hiking photos.");
+requireMatch(life, /type: diving/, "The Life page must reserve one diving photo.");
+requireMatch(life, /type: drumming/, "The Life page must reserve one drumming photo.");
+if (/figcaption|life-card-caption|location_en|caption_en|year:/.test(lifePage + life)) throw new Error("Life photos must not display detailed captions or metadata.");
 
 for (const workflow of workflows) {
   for (const line of workflow.split("\n").filter((entry) => entry.trim().startsWith("uses:"))) {

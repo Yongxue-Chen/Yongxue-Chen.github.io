@@ -1,0 +1,29 @@
+# Add four personal photos under assets/img/life/ and set each image field below.
+# Recommended export: at least 1200 px on the long edge, sRGB JPEG or WebP.
+# Use position (for example "50% 30%") to adjust the crop around the subject.
+
+photos:
+  - image: "/assets/img/life/hiking-peak-district.webp"
+    position: "center"
+    ratio: "745 / 482"
+    type: hiking
+    alt_en: Hiking outdoors
+    alt_zh: 户外徒步
+  - image: "/assets/img/life/hiking-dolomites.webp"
+    position: "center"
+    ratio: "3 / 4"
+    type: hiking
+    alt_en: A view from a hiking trail
+    alt_zh: 徒步途中的风景
+  - image: "/assets/img/life/drumming-cajon.webp"
+    position: "center"
+    ratio: "2 / 3"
+    type: drumming
+    alt_en: Playing drums
+    alt_zh: 打鼓
+  - image: "/assets/img/life/diving-underwater.webp"
+    position: "center"
+    ratio: "4 / 3"
+    type: diving
+    alt_en: Diving underwater
+    alt_zh: 水下潜水
