@@ -54,7 +54,7 @@ test("projects use the requested card rows and embedded videos", async ({ page }
   await page.locator(".project-video-trigger").first().click();
   await expect(page.locator(".project-media iframe")).toHaveCount(1);
   await expect(page.locator(".project-meta")).toHaveCount(8);
-  await expect(page.locator(".project-card").first().locator(".project-meta .lang-en")).toHaveText("Under Review");
+  await expect(page.locator(".project-card").first().locator(".project-meta .lang-en")).toHaveText("ACM TOG (Conditionally Accepted)");
   const projectMediaRatio = await page.locator(".project-media").first().evaluate((media) => {
     const box = media.getBoundingClientRect();
     return box.width / box.height;

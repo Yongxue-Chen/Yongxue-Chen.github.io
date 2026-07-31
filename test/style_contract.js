@@ -61,7 +61,7 @@ requireMatch(projectsData, /poster: "\/assets\/img\/publication_preview\/SIGAsia
 requireMatch(projectsPage, /project-video-trigger/, "The clean click-to-play video cover is missing.");
 requireMatch(projectsData, /IEEE T-ASE · 2025/, "Project metadata must use journal abbreviations and years.");
 requireMatch(projectsData, /HybridFieldOpt\.jpg/, "The field-optimization project image is missing.");
-requireMatch(projectsData, /meta_en: "Under Review"/, "The first project review status is missing.");
+requireMatch(projectsData, /meta_en: "ACM TOG \(Conditionally Accepted\)"/, "The first project review status is missing.");
 requireMatch(projectsData, /Inverse Operation-Based Planning for Hybrid Manufacturing/, "The inverse-operation project title is missing.");
 requireMatch(projectsData, /Trajectory Co-Optimization for Robot-Assisted Manufacturing/, "The trajectory co-optimization section title is missing.");
 requireMatch(projectsPage, /project-journal[\s\S]*?white-space: nowrap;/, "Project journal names must remain on one line.");
