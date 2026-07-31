@@ -116,14 +116,14 @@ sections:
         group: First-author
         group_zh: 第一作者
         subtitle: "<strong>Y. Chen</strong>, et al. <em>ACM Transactions on Graphics</em>. Conditionally accepted."
-        subtitle_zh: "<strong>Y. Chen</strong>, et al.，<em>ACM Transactions on Graphics</em>，Conditionally accepted。"
+        subtitle_zh: "<strong>Y. Chen</strong>, et al.，<em>ACM Transactions on Graphics</em>，Conditionally accepted."
         date: "2026"
 
       - title: "Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive-Subtractive Manufacturing"
         group: First-author
         group_zh: 第一作者
         subtitle: "<strong>Y. Chen</strong>, T. Liu, Y. Huang, W. Wang, T. Zhang, K. Qian, Z. Shi, and C. C. L. Wang. <em>ACM Transactions on Graphics (SIGGRAPH Asia)</em>. Oral presentation."
-        subtitle_zh: "<strong>Y. Chen</strong>, T. Liu, Y. Huang, W. Wang, T. Zhang, K. Qian, Z. Shi, and C. C. L. Wang，<em>ACM Transactions on Graphics (SIGGRAPH Asia)</em>，Oral presentation。"
+        subtitle_zh: "<strong>Y. Chen</strong>, T. Liu, Y. Huang, W. Wang, T. Zhang, K. Qian, Z. Shi, and C. C. L. Wang，<em>ACM Transactions on Graphics (SIGGRAPH Asia)</em>，Oral presentation."
         date: "2025"
         url: https://doi.org/10.1145/3763355
 
@@ -217,7 +217,7 @@ sections:
       - title: Unmanned Aerial Vehicle Speed Planning Method
         title_zh: 无人机速度规划方法
         subtitle: "<strong>Y. Chen</strong>, W. Dong, and Y. Ding. Granted Chinese invention patent, CN110879614B."
-        subtitle_zh: "<strong>陈永学</strong>、董伟、丁烨，中国发明专利，CN110879614B。"
+        subtitle_zh: "<strong>陈永学</strong>、董伟、丁烨，中国发明专利，CN110879614B"
         date: Sept 2021
         date_zh: 2021.09
         url: https://patents.google.com/patent/CN110879614B/en
@@ -225,7 +225,7 @@ sections:
       - title: Analytical Calculation Method for the Envelope Surface of Rotary Cutting Tools
         title_zh: 一种回转刀具刚体运动包络面解析计算方法、系统
         subtitle: "Y. Ding, <strong>Y. Chen</strong>, and Q. Li. Granted Chinese invention patent, CN112487657B."
-        subtitle_zh: "丁烨、<strong>陈永学</strong>、李秦川，中国发明专利，CN112487657B。"
+        subtitle_zh: "丁烨、<strong>陈永学</strong>、李秦川，中国发明专利，CN112487657B"
         date: Nov 2022
         date_zh: 2022.11
         url: https://patents.google.com/patent/CN112487657B/en
@@ -233,7 +233,7 @@ sections:
       - title: Collision-Free Path Planning Method for Unmanned Aerial Vehicles
         title_zh: 适用于无人机的无碰撞路径规划方法、系统及介质
         subtitle: "Y. Ding, <strong>Y. Chen</strong>, and W. Dong. Granted Chinese invention patent, CN112504279B."
-        subtitle_zh: "丁烨、<strong>陈永学</strong>、董伟，中国发明专利，CN112504279B。"
+        subtitle_zh: "丁烨、<strong>陈永学</strong>、董伟，中国发明专利，CN112504279B"
         date: Dec 2022
         date_zh: 2022.12
         url: https://patents.google.com/patent/CN112504279B/en
@@ -241,7 +241,7 @@ sections:
       - title: Trajectory Smoothing Method for Linear Motion of a Robotic Arm
         title_zh: 机械臂线性运动轨迹平滑方法及系统和存储介质
         subtitle: "Y. Ding and <strong>Y. Chen</strong>. Granted Chinese invention patent, CN114536337B."
-        subtitle_zh: "丁烨、<strong>陈永学</strong>，中国发明专利，CN114536337B。"
+        subtitle_zh: "丁烨、<strong>陈永学</strong>，中国发明专利，CN114536337B"
         date: Jun 2023
         date_zh: 2023.06
         url: https://patents.google.com/patent/CN114536337B/en
@@ -249,7 +249,7 @@ sections:
       - title: Pose Optimization Method for Flat-End Milling with Industrial Robots
         title_zh: 工业机器人平底铣削加工姿态优化方法及系统
         subtitle: "Y. Ding and <strong>Y. Chen</strong>. Granted Chinese invention patent, CN115016258B."
-        subtitle_zh: "丁烨、<strong>陈永学</strong>，中国发明专利，CN115016258B。"
+        subtitle_zh: "丁烨、<strong>陈永学</strong>，中国发明专利，CN115016258B"
         date: Feb 2025
         date_zh: 2025.02
         url: https://patents.google.com/patent/CN115016258B/en
