@@ -85,7 +85,7 @@ I have 14 peer-reviewed journal articles published or accepted, and hold 5 grant
   <div class="pub-authors"><strong>Yongxue Chen</strong>, et al.</div>
   <div class="pub-venue">
     <span class="lang-en"><em>ACM Transactions on Graphics</em> &middot; Conditionally accepted</span>
-    <span class="lang-zh"><em>ACM Transactions on Graphics</em> &middot; 有条件接收</span>
+    <span class="lang-zh"><em>ACM Transactions on Graphics</em> &middot; Conditionally accepted</span>
   </div>
 </div>
 
@@ -94,7 +94,7 @@ I have 14 peer-reviewed journal articles published or accepted, and hold 5 grant
   <div class="pub-authors"><strong>Yongxue Chen</strong>, Tao Liu, Yuming Huang, Weiming Wang, Tianyu Zhang, Kun Qian, Zikang Shi, Charlie C. L. Wang</div>
   <div class="pub-venue">
     <span class="lang-en"><em>ACM Transactions on Graphics (SIGGRAPH Asia)</em>, 2025 &middot; Oral presentation</span>
-    <span class="lang-zh"><em>ACM Transactions on Graphics (SIGGRAPH Asia)</em>, 2025 &middot; 口头报告</span>
+    <span class="lang-zh"><em>ACM Transactions on Graphics (SIGGRAPH Asia)</em>, 2025 &middot; Oral presentation</span>
   </div>
 </div>
 
