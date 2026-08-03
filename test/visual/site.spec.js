@@ -5,7 +5,7 @@ test("homepage has clear identity and prose research summary", async ({ page }) 
   await expect(page.locator(".post-header .post-title")).toHaveText("Yongxue Chen");
   await expect(page.locator(".home-stat")).toHaveCount(0);
   await expect(page.locator("article .lang-en").first()).toContainText("14 peer-reviewed journal articles");
-  await expect(page.locator("article .lang-en").first()).toContainText("5 granted Chinese invention patents");
+  await expect(page.locator("article .lang-en").first()).not.toContainText("granted Chinese invention patents");
   await expect(page.locator(".profile img")).toHaveAttribute("alt", /Yongxue Chen|prof_pic/i);
   await expect(page.locator(".home-education .edu-item")).toHaveCount(3);
   await expect(page.locator(".home-education .edu-school")).toHaveCount(6);

@@ -212,6 +212,21 @@ sections:
         date: "2023"
         url: https://doi.org/10.1016/j.cad.2023.103588
 
+  - name: Conference Presentations
+    name_zh: 会议报告
+    items:
+      - title: "Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive-Subtractive Manufacturing"
+        subtitle: "Oral presentation, ACM SIGGRAPH Asia, Hong Kong"
+        subtitle_zh: "Oral presentation，ACM SIGGRAPH Asia，中国香港"
+        date: Dec 2025
+        date_zh: 2025.12
+
+      - title: "Co-Optimization of Tool Orientations, Kinematic Redundancy, and Waypoint Timing for Robot-Assisted Manufacturing"
+        subtitle: "Oral presentation, IEEE/RSJ IROS, Hangzhou, China"
+        subtitle_zh: "Oral presentation，IEEE/RSJ IROS，中国杭州"
+        date: Oct 2025
+        date_zh: "2025.10"
+
   - name: Patents
     name_zh: 授权发明专利
     items:
@@ -254,21 +269,6 @@ sections:
         date: Feb 2025
         date_zh: 2025.02
         url: https://patents.google.com/patent/CN115016258B/en
-
-  - name: Conference Presentations
-    name_zh: 会议报告
-    items:
-      - title: "Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive-Subtractive Manufacturing"
-        subtitle: "Oral presentation, ACM SIGGRAPH Asia, Hong Kong"
-        subtitle_zh: "Oral presentation，ACM SIGGRAPH Asia，中国香港"
-        date: Dec 2025
-        date_zh: 2025.12
-
-      - title: "Co-Optimization of Tool Orientations, Kinematic Redundancy, and Waypoint Timing for Robot-Assisted Manufacturing"
-        subtitle: "Oral presentation, IEEE/RSJ IROS, Hangzhou, China"
-        subtitle_zh: "Oral presentation，IEEE/RSJ IROS，中国杭州"
-        date: Oct 2025
-        date_zh: "2025.10"
 
   - name: Teaching
     name_zh: 教学经历

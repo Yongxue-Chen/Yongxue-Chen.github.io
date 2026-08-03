@@ -28,7 +28,7 @@ requireMatch(config, /^serve_og_meta: true\b/m, "Open Graph metadata must stay e
 requireMatch(config, /^serve_schema_org: true\b/m, "Schema.org metadata must stay enabled.");
 requireMatch(config, /fonts: "\/assets\/css\/system-fonts\.css"/, "The site must not load unused render-blocking web fonts.");
 requireMatch(home, /14 peer-reviewed journal articles/, "The homepage publication count is missing from the prose.");
-requireMatch(home, /5 granted Chinese invention patents/, "The homepage patent count is missing from the prose.");
+if (/granted Chinese invention patents|中国发明专利/.test(home)) throw new Error("The homepage profile must not mention the patent count.");
 if (/class="home-stat/.test(home)) throw new Error("Homepage metrics must remain in prose, not cards.");
 requireMatch(home, /Selected Publications/, "The homepage selected-publications heading is missing.");
 requireMatch(home, /Selected Awards/, "The homepage selected-awards heading is missing.");
@@ -78,6 +78,7 @@ requireMatch(cv, /date_zh: "2025\.10"/, "Quoted Chinese October date regressed."
 requireMatch(cv, /name: Selected Awards/, "CV awards must be labeled as selected.");
 requireMatch(cv, /summary: Selected research themes\./, "The concise Projects description is missing from the CV.");
 requireMatch(cv, /summary: Complete publication list\./, "The concise Publications description is missing from the CV.");
+requireMatch(cv, /name: Journal Articles[\s\S]*name: Conference Presentations[\s\S]*name: Patents[\s\S]*name: Teaching/, "Conference presentations must appear before patents in the CV.");
 requireMatch(lifePage, /permalink: \/life\//, "The personal gallery route is missing.");
 requireMatch(lifePage, /grid-template-columns: repeat\(12, minmax\(0, 1fr\)\)/, "The desktop Life gallery must use an asymmetric editorial grid.");
 requireMatch(lifePage, /@media \(max-width: 800px\)[\s\S]*?grid-template-columns: 1fr/, "The Life gallery must collapse to one mobile column.");
