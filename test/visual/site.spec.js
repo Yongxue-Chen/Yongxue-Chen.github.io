@@ -25,9 +25,9 @@ test("publications use one consistent collapsible layout", async ({ page }) => {
   const entries = page.locator(".publications ol.bibliography li");
   await expect(entries).toHaveCount(14);
   const abstracts = page.locator(".publications .abstract.hidden");
-  await expect(abstracts).toHaveCount(13);
+  await expect(abstracts).toHaveCount(14);
   for (const abstract of await abstracts.all()) await expect(abstract).toBeHidden();
-  await expect(page.locator(".links a.abstract.btn")).toHaveCount(13);
+  await expect(page.locator(".links a.abstract.btn")).toHaveCount(14);
   await expect(page.locator(".links a.abstract.btn .lang-en").first()).toHaveText("Abstract");
   const publicationPreviewRatio = await page.locator(".publications img.preview").first().evaluate((image) => {
     const box = image.getBoundingClientRect();
