@@ -115,8 +115,8 @@ sections:
       - title: "Field Optimization for Scalable and Distortion-Aware Process Planning in Hybrid Additive-Subtractive Manufacturing"
         group: First-author
         group_zh: 第一作者
-        subtitle: "<strong>Y. Chen</strong>, et al. <em>ACM Transactions on Graphics</em>. Conditionally accepted."
-        subtitle_zh: "<strong>Y. Chen</strong>, et al.，<em>ACM Transactions on Graphics</em>，Conditionally accepted."
+        subtitle: "<strong>Y. Chen</strong>, T. Liu, A. Lyu, Y. Jiang, N. Dutta, and C. C. L. Wang. <em>ACM Transactions on Graphics (SIGGRAPH Asia)</em>. Conditionally accepted."
+        subtitle_zh: "<strong>Y. Chen</strong>, T. Liu, A. Lyu, Y. Jiang, N. Dutta, and C. C. L. Wang，<em>ACM Transactions on Graphics (SIGGRAPH Asia)</em>，Conditionally accepted."
         date: "2026"
 
       - title: "Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive-Subtractive Manufacturing"

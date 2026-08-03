@@ -82,10 +82,10 @@ I have 14 peer-reviewed journal articles published or accepted, and hold 5 grant
 
 <div class="pub-item">
   <span class="pub-title">Field Optimization for Scalable and Distortion-Aware Process Planning in Hybrid Additive-Subtractive Manufacturing</span>
-  <div class="pub-authors"><strong>Yongxue Chen</strong>, et al.</div>
+  <div class="pub-authors"><strong>Yongxue Chen</strong>, Tao Liu, Aoran Lyu, Yu Jiang, Neelotpal Dutta, Charlie C. L. Wang</div>
   <div class="pub-venue">
-    <span class="lang-en"><em>ACM Transactions on Graphics</em> &middot; Conditionally accepted</span>
-    <span class="lang-zh"><em>ACM Transactions on Graphics</em> &middot; Conditionally accepted</span>
+    <span class="lang-en"><em>ACM Transactions on Graphics (SIGGRAPH Asia)</em> &middot; Conditionally accepted</span>
+    <span class="lang-zh"><em>ACM Transactions on Graphics (SIGGRAPH Asia)</em> &middot; Conditionally accepted</span>
   </div>
 </div>
 
