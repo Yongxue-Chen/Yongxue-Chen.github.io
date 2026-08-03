@@ -118,7 +118,7 @@ sections:
         subtitle: "<strong>Y. Chen</strong>, T. Liu, A. Lyu, Y. Jiang, N. Dutta, and C. C. L. Wang. <em>ACM Transactions on Graphics (SIGGRAPH Asia)</em>. Conditionally accepted."
         subtitle_zh: "<strong>Y. Chen</strong>, T. Liu, A. Lyu, Y. Jiang, N. Dutta, and C. C. L. Wang，<em>ACM Transactions on Graphics (SIGGRAPH Asia)</em>，Conditionally accepted."
         date: "2026"
-        url: https://github.com/Yongxue-Chen/hybManuFieldOpt/releases/download/v0-preprint/hybManuFieldOpt_preprint.pdf
+        url: https://yongxue-chen.github.io/hybManuFieldOpt/hybManuFieldOpt_preprint.pdf
 
       - title: "Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive-Subtractive Manufacturing"
         group: First-author

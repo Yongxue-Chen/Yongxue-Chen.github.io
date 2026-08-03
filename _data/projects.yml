@@ -19,7 +19,7 @@ sections:
             url: "https://yongxue-chen.github.io/hybManuFieldOpt/"
           - label_en: "Paper"
             label_zh: "文章"
-            url: "https://github.com/Yongxue-Chen/hybManuFieldOpt/releases/download/v0-preprint/hybManuFieldOpt_preprint.pdf"
+            url: "https://yongxue-chen.github.io/hybManuFieldOpt/hybManuFieldOpt_preprint.pdf"
           - label_en: "Code"
             label_zh: "代码"
             url: "https://github.com/Yongxue-Chen/hybManuFieldOpt"
