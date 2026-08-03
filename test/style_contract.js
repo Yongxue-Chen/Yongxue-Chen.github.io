@@ -15,6 +15,7 @@ const home = read("_pages/about.md");
 const projectsPage = read("_pages/projects.md");
 const projectsData = read("_data/projects.yml");
 const publications = read("_pages/publications.md");
+const papersBib = read("_bibliography/papers.bib");
 const cv = read("_data/cv.yml");
 const cvPage = read("_pages/cv.md");
 const life = read("_data/life.yml");
@@ -61,6 +62,8 @@ requireMatch(projectsData, /poster: "\/assets\/img\/publication_preview\/SIGAsia
 requireMatch(projectsPage, /project-video-trigger/, "The clean click-to-play video cover is missing.");
 requireMatch(projectsData, /IEEE T-ASE · 2025/, "Project metadata must use journal abbreviations and years.");
 requireMatch(projectsData, /HybridFieldOpt\.jpg/, "The field-optimization project image is missing.");
+requireMatch(projectsData, /https:\/\/youtu\.be\/HE7gqaH4Iv0/, "The field-optimization project video link is missing.");
+requireMatch(papersBib, /video\s*=\s*\{https:\/\/youtu\.be\/HE7gqaH4Iv0\}/, "The field-optimization publication video link is missing.");
 requireMatch(projectsData, /meta_en: "ACM TOG \(Conditionally Accepted\)/, "The first project review status is missing.");
 requireMatch(projectsData, /Inverse Operation-Based Planning for Hybrid Manufacturing/, "The inverse-operation project title is missing.");
 requireMatch(projectsData, /Trajectory Co-Optimization for Robot-Assisted Manufacturing/, "The trajectory co-optimization section title is missing.");
