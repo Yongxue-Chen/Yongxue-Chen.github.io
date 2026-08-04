@@ -62,6 +62,7 @@ requireMatch(projectsData, /poster: "\/assets\/img\/publication_preview\/SIGAsia
 requireMatch(projectsPage, /project-video-trigger/, "The clean click-to-play video cover is missing.");
 requireMatch(projectsData, /IEEE T-ASE · 2025/, "Project metadata must use journal abbreviations and years.");
 requireMatch(projectsData, /HybridFieldOpt\.jpg/, "The field-optimization project image is missing.");
+requireMatch(projectsData, /video_id: "HE7gqaH4Iv0"/, "The field-optimization embedded video is missing.");
 requireMatch(projectsData, /https:\/\/youtu\.be\/HE7gqaH4Iv0/, "The field-optimization project video link is missing.");
 requireMatch(papersBib, /video\s*=\s*\{https:\/\/youtu\.be\/HE7gqaH4Iv0\}/, "The field-optimization publication video link is missing.");
 requireMatch(projectsData, /meta_en: "ACM TOG \(Conditionally Accepted\)/, "The first project review status is missing.");
@@ -73,10 +74,11 @@ requireMatch(projectsPage, /\.project-summary \{[\s\S]*?text-align: left;/, "Pro
 requireMatch(projectsPage, /aspect-ratio: 4 \/ 3;/, "Project images must keep the shared 4:3 preview ratio.");
 requireMatch(enhancements, /aspect-ratio: 4 \/ 3;/, "Publication images must keep the shared 4:3 preview ratio.");
 if ((projectsData.match(/media_type:/g) || []).length !== 8) throw new Error("The Project page must contain exactly eight cards.");
-if ((projectsData.match(/video_id:/g) || []).length !== 2) throw new Error("The inverse-planning and T-ASE projects should embed videos.");
+if ((projectsData.match(/video_id:/g) || []).length !== 3) throw new Error("The field-optimization, inverse-planning, and T-ASE projects should embed videos.");
 requireMatch(publications, /bibliography --query @\*\[author_type=first\]/, "First-author publications are missing.");
 requireMatch(publications, /bibliography --query @\*\[author_type=co\]/, "Co-authored publications are missing.");
 requireMatch(publications, />Abstract<\/span>/, "Publication abstract buttons must use the full label.");
+requireMatch(publications, /btn\.target = "_blank";/, "Publication Paper buttons must open in a new tab.");
 requireMatch(cv, /date_zh: "2025\.10"/, "Quoted Chinese October date regressed.");
 requireMatch(cv, /name: Selected Awards/, "CV awards must be labeled as selected.");
 requireMatch(cv, /summary: Selected research themes\./, "The concise Projects description is missing from the CV.");

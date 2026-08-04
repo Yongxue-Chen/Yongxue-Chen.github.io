@@ -4,8 +4,9 @@ sections:
     title_zh: "增减材复合制造过程规划"
     layout: "two"
     projects:
-      - media_type: "image"
-        media: "/assets/img/project_preview/HybridFieldOpt.jpg"
+      - media_type: "video"
+        video_id: "HE7gqaH4Iv0"
+        poster: "/assets/img/project_preview/HybridFieldOpt.jpg"
         alt: "Continuous field optimization pipeline for hybrid manufacturing"
         meta_en: "ACM TOG (Conditionally Accepted) · The University of Manchester"
         meta_zh: "ACM TOG（有条件接收）· 曼彻斯特大学"

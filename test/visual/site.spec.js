@@ -29,6 +29,9 @@ test("publications use one consistent collapsible layout", async ({ page }) => {
   for (const abstract of await abstracts.all()) await expect(abstract).toBeHidden();
   await expect(page.locator(".links a.abstract.btn")).toHaveCount(14);
   await expect(page.locator(".links a.abstract.btn .lang-en").first()).toHaveText("Abstract");
+  const paperLinks = page.locator(".publications .links a.btn", { hasText: "Paper" });
+  await expect(paperLinks.first()).toHaveAttribute("target", "_blank");
+  await expect(paperLinks.first()).toHaveAttribute("rel", /noopener/);
   const publicationPreviewRatio = await page.locator(".publications img.preview").first().evaluate((image) => {
     const box = image.getBoundingClientRect();
     return box.width / box.height;
@@ -49,7 +52,7 @@ test("projects use the requested card rows and embedded videos", async ({ page }
   await expect(page.locator(".post-header .desc")).toHaveCount(0);
   await expect(page.locator(".project-section")).toHaveCount(4);
   await expect(page.locator(".project-card")).toHaveCount(8);
-  await expect(page.locator(".project-video-trigger")).toHaveCount(2);
+  await expect(page.locator(".project-video-trigger")).toHaveCount(3);
   await expect(page.locator(".project-media iframe")).toHaveCount(0);
   await page.locator(".project-video-trigger").first().click();
   await expect(page.locator(".project-media iframe")).toHaveCount(1);

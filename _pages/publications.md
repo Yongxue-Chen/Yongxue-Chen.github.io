@@ -60,6 +60,8 @@ nav_order: 3
             return a.textContent.trim() === "HTML";
           })[0];
         if (!btn) return;
+        btn.target = "_blank";
+        btn.rel = "external nofollow noopener";
         var link = document.createElement("a");
         link.href = btn.href;
         link.target = "_blank";
