@@ -53,8 +53,8 @@ I have 14 peer-reviewed journal articles published or accepted.
 <div class="edu-item">
   <div class="edu-degree"><span class="lang-en">PhD in Production and Manufacturing Engineering</span><span class="lang-zh">生产与制造工程，博士</span></div>
   <div class="edu-meta">
-    <span class="lang-en"><strong class="edu-school">The University of Manchester, UK</strong> &middot; Sept 2023 – Feb 2027 (expected)<br>Supervisor: Prof. Charlie C. L. Wang</span>
-    <span class="lang-zh"><strong class="edu-school">曼彻斯特大学，英国</strong> &middot; 2023.09 – 2027.02（预计）<br>导师：Charlie C. L. Wang 教授</span>
+    <span class="lang-en"><strong class="edu-school">Digital Manufacturing Lab, The University of Manchester, UK</strong> &middot; Sept 2023 – Feb 2027 (expected)<br>Supervisor: Prof. Charlie C. L. Wang</span>
+    <span class="lang-zh"><strong class="edu-school">Digital Manufacturing Lab，曼彻斯特大学，英国</strong> &middot; 2023.09 – 2027.02（预计）<br>导师：Charlie C. L. Wang 教授</span>
   </div>
 </div>
 
@@ -62,7 +62,7 @@ I have 14 peer-reviewed journal articles published or accepted.
   <div class="edu-degree"><span class="lang-en">MEng in Mechanical Engineering</span><span class="lang-zh">机械工程，硕士</span></div>
   <div class="edu-meta">
     <span class="lang-en"><strong class="edu-school">Shanghai Jiao Tong University, China</strong> &middot; Sept 2020 – Mar 2023<br>Supervisor: Prof. Ye Ding</span>
-    <span class="lang-zh"><strong class="edu-school">上海交通大学，中国</strong> &middot; 2020.09 – 2023.03<br>导师：丁烨 教授</span>
+    <span class="lang-zh"><strong class="edu-school">机器人研究所，上海交通大学，中国</strong> &middot; 2020.09 – 2023.03<br>导师：丁烨 教授</span>
   </div>
 </div>
 

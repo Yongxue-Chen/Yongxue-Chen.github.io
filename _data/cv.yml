@@ -9,8 +9,8 @@ sections:
     items:
       - title: PhD in Production and Manufacturing Engineering
         title_zh: 生产与制造工程，博士
-        subtitle: The University of Manchester, UK
-        subtitle_zh: 曼彻斯特大学，英国
+        subtitle: Digital Manufacturing Lab, The University of Manchester, UK
+        subtitle_zh: Digital Manufacturing Lab，曼彻斯特大学，英国
         date: Sept 2023 – Feb 2027 (expected)
         date_zh: 2023.09 – 2027.02（预计）
         details:
@@ -23,7 +23,7 @@ sections:
       - title: MEng in Mechanical Engineering
         title_zh: 机械工程，硕士
         subtitle: Shanghai Jiao Tong University, China
-        subtitle_zh: 上海交通大学，中国
+        subtitle_zh: 机器人研究所，上海交通大学，中国
         date: Sept 2020 – Mar 2023
         date_zh: 2020.09 – 2023.03
         details:
