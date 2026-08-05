@@ -216,6 +216,12 @@ sections:
     name_zh: 会议报告
     items:
       - title: "Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive-Subtractive Manufacturing"
+        subtitle: "Talk, SAMPE Student Seminar Competition"
+        subtitle_zh: "Talk，SAMPE Student Seminar Competition"
+        date: Jul 2026
+        date_zh: "2026.07"
+
+      - title: "Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive-Subtractive Manufacturing"
         subtitle: "Oral presentation, ACM SIGGRAPH Asia, Hong Kong"
         subtitle_zh: "Oral presentation，ACM SIGGRAPH Asia，中国香港"
         date: Dec 2025
@@ -273,6 +279,16 @@ sections:
   - name: Teaching
     name_zh: 教学经历
     items:
+      - title: "Teaching Assistant — Manufacturing Summer School"
+        title_zh: "助教 — Manufacturing Summer School"
+        subtitle: The University of Manchester
+        subtitle_zh: 曼彻斯特大学
+        date: "2026"
+        details:
+          - Derived the kinematics of machine tools and developed course materials and software for the summer school.
+        details_zh:
+          - 推导机床运动学，编写暑期学校的授课材料与配套软件。
+
       - title: "Teaching Assistant — Additive Manufacturing & 3D Product Modelling"
         title_zh: "助教 — Additive Manufacturing & 3D Product Modelling"
         subtitle: The University of Manchester
