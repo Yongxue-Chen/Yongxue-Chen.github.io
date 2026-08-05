@@ -215,6 +215,12 @@ sections:
   - name: Talks
     name_zh: 学术报告
     items:
+      - title: "Field Optimization for Scalable and Distortion-Aware Process Planning in Hybrid Additive-Subtractive Manufacturing"
+        subtitle: "Oral presentation (expected), ACM SIGGRAPH Asia, Kuala Lumpur, Malaysia"
+        subtitle_zh: "Oral presentation（预计），ACM SIGGRAPH Asia，马来西亚吉隆坡"
+        date: Dec 2026 (expected)
+        date_zh: "2026.12（预计）"
+
       - title: "Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive-Subtractive Manufacturing"
         subtitle: "Talk, SAMPE Student Seminar Competition"
         subtitle_zh: "Talk，SAMPE Student Seminar Competition"
