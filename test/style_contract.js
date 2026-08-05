@@ -83,7 +83,7 @@ requireMatch(cv, /date_zh: "2025\.10"/, "Quoted Chinese October date regressed."
 requireMatch(cv, /name: Selected Awards/, "CV awards must be labeled as selected.");
 requireMatch(cv, /summary: Selected research themes\./, "The concise Projects description is missing from the CV.");
 requireMatch(cv, /summary: Complete publication list\./, "The concise Publications description is missing from the CV.");
-requireMatch(cv, /name: Journal Articles[\s\S]*name: Conference Presentations[\s\S]*name: Patents[\s\S]*name: Teaching/, "Conference presentations must appear before patents in the CV.");
+requireMatch(cv, /name: Journal Articles[\s\S]*name: Talks[\s\S]*name: Patents[\s\S]*name: Teaching/, "Talks must appear before patents in the CV.");
 requireMatch(lifePage, /permalink: \/life\//, "The personal gallery route is missing.");
 requireMatch(lifePage, /grid-template-columns: repeat\(12, minmax\(0, 1fr\)\)/, "The desktop Life gallery must use an asymmetric editorial grid.");
 requireMatch(lifePage, /@media \(max-width: 800px\)[\s\S]*?grid-template-columns: 1fr/, "The Life gallery must collapse to one mobile column.");

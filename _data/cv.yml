@@ -212,8 +212,8 @@ sections:
         date: "2023"
         url: https://doi.org/10.1016/j.cad.2023.103588
 
-  - name: Conference Presentations
-    name_zh: 会议报告
+  - name: Talks
+    name_zh: 学术报告
     items:
       - title: "Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive-Subtractive Manufacturing"
         subtitle: "Talk, SAMPE Student Seminar Competition"
