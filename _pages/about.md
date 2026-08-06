@@ -61,7 +61,7 @@ I have 14 peer-reviewed journal articles published or accepted.
 <div class="edu-item">
   <div class="edu-degree"><span class="lang-en">MEng in Mechanical Engineering</span><span class="lang-zh">机械工程，硕士</span></div>
   <div class="edu-meta">
-    <span class="lang-en"><strong class="edu-school">Shanghai Jiao Tong University, China</strong> &middot; Sept 2020 – Mar 2023<br>Supervisor: Prof. Ye Ding</span>
+    <span class="lang-en"><strong class="edu-school">Robotics Institute, Shanghai Jiao Tong University, China</strong> &middot; Sept 2020 – Mar 2023<br>Supervisor: Prof. Ye Ding</span>
     <span class="lang-zh"><strong class="edu-school">机器人研究所，上海交通大学，中国</strong> &middot; 2020.09 – 2023.03<br>导师：丁烨 教授</span>
   </div>
 </div>
