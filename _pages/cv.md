@@ -68,7 +68,7 @@ nav_order: 4
     color: var(--global-text-color-light);
     margin-top: 0.15rem;
   }
-  .cv-entry-sub strong { color: var(--global-text-color); }
+  .cv-entry-sub strong { color: var(--global-text-color); font-weight: 800; }
   .cv-entry ul {
     margin: 0.35rem 0 0 0;
     padding-left: 1.1rem;
