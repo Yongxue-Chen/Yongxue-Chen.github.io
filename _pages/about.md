@@ -31,7 +31,7 @@ I am a PhD candidate at the Digital Manufacturing Lab, The University of Manches
 
 My research centers on robotic manufacturing and **hybrid additive-subtractive manufacturing**, particularly for multi-axis robotic systems and complex geometries. I develop scalable computational methods that integrate geometric modeling, numerical optimization, and learning-based techniques to improve manufacturability, efficiency, and reliability.
 
-I have 14 peer-reviewed journal articles published or accepted.
+I have 14 peer-reviewed journal articles published or accepted in venues such as *ACM TOG (SIGGRAPH Asia)*, *RCIM*, *IEEE T-ASE*, and *CAD*.
 
 </div>
 
@@ -42,7 +42,7 @@ I have 14 peer-reviewed journal articles published or accepted.
 
 我的研究聚焦机器人辅助制造与**增减材复合制造**，尤其面向多轴机器人系统和复杂几何结构的可制造性分析与工艺生成。致力于发展可扩展的计算方法，将几何建模、数值优化与机器学习方法结合，用于提升制造效率、可靠性和复杂零件的可制造性。
 
-目前已发表或接收 14 篇同行评审期刊论文。
+目前已发表或接收 14 篇同行评审期刊论文，发表于 *ACM TOG (SIGGRAPH Asia)*、*RCIM*、*IEEE T-ASE*、*CAD* 等期刊。
 
 </div>
 
