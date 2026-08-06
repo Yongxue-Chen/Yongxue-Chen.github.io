@@ -27,7 +27,7 @@ latest_posts:
 <div class="home-intro lang-en" markdown="1">
 <p class="home-eyebrow">Research Profile</p>
 
-I am a PhD candidate in Production and Manufacturing Engineering at The University of Manchester, specializing in **robotics** and **advanced manufacturing** with a focus on motion planning, trajectory optimization, and process planning.
+I am a PhD candidate at the Digital Manufacturing Lab, The University of Manchester, specializing in **robotics** and **advanced manufacturing** with a focus on motion planning, trajectory optimization, and process planning.
 
 My research centers on robotic manufacturing and **hybrid additive-subtractive manufacturing**, particularly for multi-axis robotic systems and complex geometries. I develop scalable computational methods that integrate geometric modeling, numerical optimization, and learning-based techniques to improve manufacturability, efficiency, and reliability.
 
@@ -38,7 +38,7 @@ I have 14 peer-reviewed journal articles published or accepted.
 <div class="home-intro lang-zh" markdown="1">
 <p class="home-eyebrow">研究简介</p>
 
-我是英国曼彻斯特大学（The University of Manchester）生产与制造工程专业的博士研究生，研究方向为**机器人学**与**先进制造**的交叉领域，重点关注机器人辅助制造中的运动规划、轨迹优化与工艺规划。
+我是英国曼彻斯特大学（The University of Manchester）Digital Manufacturing Lab 的博士研究生，研究方向为**机器人学**与**先进制造**的交叉领域，重点关注机器人辅助制造中的运动规划、轨迹优化与工艺规划。
 
 我的研究聚焦机器人辅助制造与**增减材复合制造**，尤其面向多轴机器人系统和复杂几何结构的可制造性分析与工艺生成。致力于发展可扩展的计算方法，将几何建模、数值优化与机器学习方法结合，用于提升制造效率、可靠性和复杂零件的可制造性。
 
