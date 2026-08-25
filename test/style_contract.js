@@ -65,7 +65,7 @@ requireMatch(projectsData, /HybridFieldOpt\.jpg/, "The field-optimization projec
 requireMatch(projectsData, /video_id: "HE7gqaH4Iv0"/, "The field-optimization embedded video is missing.");
 requireMatch(projectsData, /https:\/\/youtu\.be\/HE7gqaH4Iv0/, "The field-optimization project video link is missing.");
 requireMatch(papersBib, /video\s*=\s*\{https:\/\/youtu\.be\/HE7gqaH4Iv0\}/, "The field-optimization publication video link is missing.");
-requireMatch(projectsData, /meta_en: "ACM TOG \(Conditionally Accepted\)/, "The first project review status is missing.");
+requireMatch(projectsData, /meta_en: "ACM TOG \(SIGGRAPH Asia 2026\)/, "The first project conference status is missing.");
 requireMatch(projectsData, /Inverse Operation-Based Planning for Hybrid Manufacturing/, "The inverse-operation project title is missing.");
 requireMatch(projectsData, /Trajectory Co-Optimization for Robot-Assisted Manufacturing/, "The trajectory co-optimization section title is missing.");
 requireMatch(projectsPage, /project-journal[\s\S]*?white-space: nowrap;/, "Project journal names must remain on one line.");
