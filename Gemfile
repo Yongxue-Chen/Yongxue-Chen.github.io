@@ -46,7 +46,7 @@ group :al_folio_plugins do
     gem 'al_folio_bootstrap_compat', '= 1.0.0'
     gem 'al_cookie', '= 1.0.0'
 
-    gem 'al_analytics', '= 1.0.0'
+    gem 'al_analytics', '1.0.1'
     gem 'al_citations', '= 1.0.1'
     gem 'al_ext_posts', '= 1.0.1'
     gem 'al_search', '= 1.0.2'
