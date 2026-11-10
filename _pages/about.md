@@ -81,7 +81,7 @@ I have authored 14 peer-reviewed journal articles, including papers published in
 <h3><span class="lang-en">Selected Publications</span><span class="lang-zh">代表性论文</span></h3>
 
 <div class="pub-item">
-  <a href="https://yongxue-chen.github.io/hybManuFieldOpt/hybManuFieldOpt_preprint.pdf">Field Optimization for Scalable and Distortion-Aware Process Planning in Hybrid Additive-Subtractive Manufacturing</a>
+  <a href="https://dl.acm.org/doi/10.1145/3842560">Field Optimization for Scalable and Distortion-Aware Process Planning in Hybrid Additive-Subtractive Manufacturing</a>
   <div class="pub-authors"><strong>Yongxue Chen</strong>, Tao Liu, Aoran Lyu, Yu Jiang, Neelotpal Dutta, Charlie C. L. Wang</div>
   <div class="pub-venue">
     <span class="lang-en"><em>ACM Transactions on Graphics (SIGGRAPH Asia)</em>, 2026 &middot; Oral presentation</span>
